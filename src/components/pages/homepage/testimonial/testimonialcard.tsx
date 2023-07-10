@@ -1,0 +1,68 @@
+// @ts-nocheck
+"use client";
+
+import { TextColor } from "@/lib/customColorFunc";
+import { ArrowRightIcon, StarIcon } from "@heroicons/react/24/outline";
+import { Button, Typography } from "@material-tailwind/react";
+import Image from "next/image";
+
+const TestimonialCard = () => {
+  return (
+    <div className="container mt-56 mb-14 text-center">
+      <div className="mt-20 ">
+        <Typography variant="h4">
+          <TextColor>"Nobody takes ownership like Najm does."</TextColor>
+        </Typography>
+      </div>
+      <Image
+        className="rounded-full mx-auto block mt-5"
+        alt="shubo testimonial"
+        src="/assets/images/shubho.jpeg"
+        width={80}
+        height={80}
+      />
+      <p className="mt-10">
+        <strong> - Shubho Al-Farooque</strong> <br />
+        <span> Founder & CEO, Zantrik</span>
+      </p>
+
+      <div className="my-6">
+        <span className="ml-3 flex justify-center items-center">
+          {[...Array(5).keys()].map((_, i) => (
+            <div key={i}>
+              <StarIcon
+                strokeWidth={2.5}
+                fill="#F0AD4E"
+                className={`h-5 w-5 transition-transform  text-orange-300`}
+              />
+            </div>
+          ))}
+        </span>
+      </div>
+
+      <div className="flex items-center justify-center mt-5 pb-6">
+        <Image
+          className="-ml-14 -mt-9"
+          priority
+          src="/assets/images/big_arrow.svg"
+          alt=""
+          height={80}
+          width={80}
+        />
+        <Button
+          className="py-4 rounded-full hover:bg-[#0C304A] ml-5  mt-5 shadow-lg hover:scale-110 duration-300 flex items-center"
+          size="lg"
+          color="blue"
+        >
+          50+ Reviews & Case Studies{" "}
+          <ArrowRightIcon
+            strokeWidth={2.5}
+            className={`h-5 w-5 transition-transform ml-3`}
+          />
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default TestimonialCard;

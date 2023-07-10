@@ -1,22 +1,28 @@
 "use client";
 import { ThemeProvider } from "@material-tailwind/react";
+import AffordCMO from "./affordCMO/affordCMO";
 import Consulting from "./consulting/consulting";
 import GetMoreLeads from "./getmoreleads/getmoreleads";
 import Introduce from "./introduce/introduce";
+import MeetYourMarketer from "./meetyourmarker/meetyourmarker";
+import Testimonial from "./testimonial/testimonial";
+import TestimonialCard from "./testimonial/testimonialcard";
 import TrustedBy from "./trustedby/trustedby";
 
 const HomePage = () => {
   return (
-    <main className="App">
-      <ThemeProvider>
+    <ThemeProvider>
+      <main className="App">
         <Introduce />
         <TrustedBy />
         <GetMoreLeads />
-        <div className="my-32 bg-[#F3F7FB]">
-          <Consulting />
-        </div>
-      </ThemeProvider>
-    </main>
+        <Consulting />
+        <AffordCMO />
+        <Testimonial />
+        <TestimonialCard />
+        <MeetYourMarketer />
+      </main>
+    </ThemeProvider>
   );
 };
 
