@@ -5,16 +5,13 @@ import { Typography } from "@material-tailwind/react";
 
 const Testimonial = () => {
   return (
-    <section
-      //   id="TESTIMONIAL"
-      className="my-14 bg-[url('/assets/images/video-section-bg.svg')] p-24 bg-[#F3F7FB] bg-center bg-contain bg-no-repeat relative "
-    >
+    <section className="my-14 bg-[url('/assets/images/video-section-bg.svg')] p-24 bg-[#F3F7FB] bg-center bg-contain bg-no-repeat relative ">
       <div className="container">
         <div className=" text-center py-44">
           <Typography variant="h2">
             <TextColor>
-              These Companies Understood The Real <br /> Meaning Of "Growth"
-              When They Worked <br /> With Najm Consultant.
+              These Companies Understood The Real <br /> Meaning Of
+              &#34;Growth&#34; When They Worked <br /> With Najm Consultant.
             </TextColor>
           </Typography>
         </div>

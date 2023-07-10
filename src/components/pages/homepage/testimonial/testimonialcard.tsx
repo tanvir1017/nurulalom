@@ -11,7 +11,9 @@ const TestimonialCard = () => {
     <div className="container mt-56 mb-14 text-center">
       <div className="mt-20 ">
         <Typography variant="h4">
-          <TextColor>"Nobody takes ownership like Najm does."</TextColor>
+          <TextColor>
+            &#34;Nobody takes ownership like Najm does.&#34;
+          </TextColor>
         </Typography>
       </div>
       <Image

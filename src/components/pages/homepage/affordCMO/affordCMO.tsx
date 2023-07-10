@@ -14,7 +14,7 @@ const AffordCMO = () => {
         <div className="pb-6">
           <TextColor>
             <Typography variant="h2">
-              Can't Afford A Top-Of-The Line CMO? <br /> Now You Can.
+              Can&#39;t Afford A Top-Of-The Line CMO? <br /> Now You Can.
             </Typography>
           </TextColor>
         </div>
