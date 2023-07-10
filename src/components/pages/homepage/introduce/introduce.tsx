@@ -17,7 +17,8 @@ const Introduce = () => {
             <Typography variant="h1">
               <TextColor>
                 <span className="font-bold">
-                  My Name Is Najm & I'm Your <br /> Digital Marketing Consultant
+                  My Name Is Najm & I&#39;m Your <br /> Digital Marketing
+                  Consultant
                 </span>
               </TextColor>
             </Typography>
