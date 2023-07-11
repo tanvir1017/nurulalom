@@ -2,25 +2,10 @@ import { NavType } from "@/types/globaltypes";
 import {
   FaceSmileIcon,
   FlagIcon,
-  FolderIcon,
-  GiftIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
 
 export const navListMenuItems: NavType[] = [
-  {
-    color: "blue-gray",
-    icon: FolderIcon,
-    title: "Services",
-    description: "All the stuff that we dan from legal made us add.",
-  },
-  {
-    color: "pink",
-    icon: GiftIcon,
-    title: "Free resource",
-    description: "List of all our open-source projects, it's all free.",
-  },
-
   {
     color: "purple",
     icon: RocketLaunchIcon,

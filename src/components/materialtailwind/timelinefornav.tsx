@@ -17,7 +17,7 @@ const TimelineForNav = ({ children }: { children: React.ReactNode }) => {
 };
 export const ServicesNav = () => {
   return (
-    <ul className="m-5 lg:h-[250px] overflow-auto" id="scroll">
+    <ul className="m-5 h-[250px] overflow-auto" id="scroll">
       <Timeline>
         <TimelineItem>
           <TimelineForNav>

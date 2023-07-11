@@ -1,5 +1,5 @@
 "use client";
-import { CmoCardDataType } from "@/data/cmocarddata";
+
 import {
   Button,
   Card,
@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
+import { CmoCardDataType } from "@/types/globaltypes";
 import { ArrowLongRightIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
