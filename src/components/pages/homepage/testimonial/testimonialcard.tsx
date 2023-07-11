@@ -45,9 +45,8 @@ const TestimonialCard = () => {
       <div className="flex items-center justify-center mt-5 pb-6">
         <Image
           className="-ml-14 -mt-9"
-          priority
           src="/assets/images/big_arrow.svg"
-          alt=""
+          alt="Arrow indicate 50+ reviews"
           height={80}
           width={80}
         />

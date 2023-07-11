@@ -32,9 +32,8 @@ const AffordCMO = () => {
         <div className="pt-5">
           <Image
             className="block mx-auto rotate-45"
-            priority
             src="/assets/images/big_arrow.svg"
-            alt=""
+            alt="arrow indicate two options small company or mid size company"
             height={80}
             width={80}
           />
