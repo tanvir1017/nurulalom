@@ -1,7 +1,8 @@
 "use client";
 import CmoCard from "@/components/materialtailwind/cmocard";
-import { CmoCardDataType, cmoCardData } from "@/data/cmocarddata";
+import { cmoCardData } from "@/data/cmocarddata";
 import { TextColor } from "@/lib/customColorFunc";
+import { CmoCardDataType } from "@/types/globaltypes";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -33,7 +34,7 @@ const AffordCMO = () => {
         <div className="pt-5">
           <Image
             className="block mx-auto rotate-45"
-            src="/assets/images/big_arrow.svg"
+            src="/assets/images/big_arrow.webp"
             alt="arrow indicate two options small company or mid size company"
             height={80}
             width={80}

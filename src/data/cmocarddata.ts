@@ -1,13 +1,4 @@
-export type CmoCardDataType = {
-  image: string;
-  title: string;
-  time: string;
-  wm: string;
-  price: string;
-  shortDescription: string;
-  href: string;
-  category: "small" | "mid";
-};
+import { CmoCardDataType } from "@/types/globaltypes";
 
 export const cmoCardData: CmoCardDataType[] = [
   {
@@ -22,7 +13,7 @@ export const cmoCardData: CmoCardDataType[] = [
   },
   {
     title: "Startup Marketing",
-    image: "/assets/images/cmo/startup-mini.jpg.webp",
+    image: "/assets/images/cmo/startup-mini.webp",
     time: "1 Hour",
     wm: "weekly",
     price: "25,000 Tk.",

@@ -34,7 +34,7 @@ const Introduce = () => {
           <div className="flex items-center justify-start mt-5 pb-6">
             <Image
               className="-ml-10 -mt-9"
-              src="/assets/images/big_arrow.svg"
+              src="/assets/images/big_arrow.webp"
               alt="Arrow indicate to explore growth plans!"
               height={80}
               width={80}

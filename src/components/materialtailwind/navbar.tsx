@@ -2,22 +2,19 @@
 
 "use client";
 
+import { navListMenuItems } from "@/data/navmenu";
 import {
   ArrowRightIcon,
   Bars3Icon,
-  ChatBubbleOvalLeftIcon,
   ChevronDownIcon,
-  FaceSmileIcon,
-  FlagIcon,
-  FolderIcon,
-  GiftIcon,
-  PuzzlePieceIcon,
-  RocketLaunchIcon,
+  ChevronRightIcon,
   Square3Stack3DIcon,
-  UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
   Button,
   Chip,
   Collapse,
@@ -32,6 +29,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import React from "react";
+import { FreeResourceNav, ServicesNav } from "./timelinefornav";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -44,96 +42,135 @@ const colors = {
   pink: "bg-pink-50 text-pink-500",
 };
 
-const navListMenuItems = [
-  {
-    color: "blue",
-    icon: FlagIcon,
-    title: "About us",
-    description: "Learn about our story and our mission statement.",
-  },
-  {
-    color: "orange",
-    icon: ChatBubbleOvalLeftIcon,
-    title: "Press",
-    description: "News and writings, press releases, and resources",
-  },
-  {
-    color: "green",
-    icon: UsersIcon,
-    title: (
-      <div className="flex items-center gap-1">
-        Careers{" "}
-        <Chip
-          size="sm"
-          color="green"
-          variant="ghost"
-          value="We're hiring!"
-          className="capitalize"
-        />
-      </div>
-    ),
-    description: "We are always looking for talented people. Join us!",
-  },
-  {
-    color: "blue-gray",
-    icon: FolderIcon,
-    title: "Legal",
-    description: "All the stuff that we dan from legal made us add.",
-  },
-  {
-    color: "purple",
-    icon: RocketLaunchIcon,
-    title: "Products",
-    description: "Checkout our products that helps a startup running.",
-  },
-  {
-    color: "teal",
-    icon: FaceSmileIcon,
-    title: "Icons",
-    description: "Set of beautiful icons that you can use in your project.",
-  },
-  {
-    color: "cyan",
-    icon: PuzzlePieceIcon,
-    title: "UI Kits",
-    description: "High quality UI Kits helps you to 2x faster.",
-  },
-  {
-    color: "pink",
-    icon: GiftIcon,
-    title: "Open Source",
-    description: "List of all our open-source projects, it's all free.",
-  },
-];
-
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [mouseOver, setMouseOver] = React.useState(false);
+  const [mouseEnter, setMouseEnter] = React.useState(false);
+  const createIcon = React.createElement(ChevronRightIcon, {
+    strokeWidth: 2,
+    className: `h-4 w-4 ${mouseOver ? "rotate-90 duration-300" : ""}`,
+  });
+  const createIcon1 = React.createElement(ChevronRightIcon, {
+    strokeWidth: 2,
+    className: `h-4 w-4 ${mouseEnter ? "rotate-90 duration-300" : ""}`,
+  });
 
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 w-6",
-            })}
-          </div>
-          <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm"
+      <div key={key}>
+        {key === 0 ? (
+          <Accordion open={mouseOver}>
+            <AccordionHeader className="border-none">
+              <div
+                onMouseEnter={() => setMouseOver(true)}
+                onMouseLeave={() => setMouseOver(!true)}
+                className={`rounded-lg border   p-5 ${colors[color]}`}
+              >
+                {React.createElement(icon, {
+                  strokeWidth: 2,
+                  className: "h-6 w-6",
+                })}
+                <Typography variant="h6" color="blue-gray" className="">
+                  <span className="flex items-center justify-between text-sm">
+                    {title}{" "}
+                    <Chip
+                      size="sm"
+                      color={color}
+                      variant="ghost"
+                      value={createIcon}
+                      className={`capitalize ml-3`}
+                    />
+                  </span>
+                </Typography>
+              </div>
+            </AccordionHeader>
+            <AccordionBody
+              onMouseEnter={() => setMouseOver(true)}
+              onMouseLeave={() => setMouseOver(!true)}
             >
-              {title}
-            </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </a>
+              <MenuItem className="flex items-start gap-3 rounded-lg relative">
+                <div>
+                  <Typography
+                    variant="small"
+                    color="gray"
+                    className="font-normal"
+                  >
+                    {description}
+                  </Typography>
+                  <ServicesNav />
+                </div>
+              </MenuItem>
+            </AccordionBody>
+          </Accordion>
+        ) : key === 1 ? (
+          <Accordion open={mouseEnter}>
+            <AccordionHeader className="border-none">
+              <div
+                onMouseEnter={() => setMouseEnter(true)}
+                onMouseLeave={() => setMouseEnter(!true)}
+                className={`rounded-lg p-5 ${colors[color]}`}
+              >
+                {React.createElement(icon, {
+                  strokeWidth: 2,
+                  className: "h-6 w-6",
+                })}
+                <Typography variant="h6" color="blue-gray">
+                  <div className="flex items-center justify-between text-sm">
+                    {title}{" "}
+                    <Chip
+                      size="sm"
+                      color={color}
+                      variant="ghost"
+                      value={createIcon1}
+                      className={`capitalize ml-3`}
+                    />
+                  </div>
+                </Typography>
+              </div>
+            </AccordionHeader>
+            <AccordionBody>
+              <MenuItem
+                onMouseEnter={() => setMouseEnter(true)}
+                onMouseLeave={() => setMouseEnter(!true)}
+                className="flex items-start gap-3 rounded-lg "
+              >
+                <div>
+                  <Typography
+                    variant="small"
+                    color="gray"
+                    className="font-normal"
+                  >
+                    {description}
+                  </Typography>
+
+                  <FreeResourceNav />
+                </div>
+              </MenuItem>
+            </AccordionBody>
+          </Accordion>
+        ) : (
+          <MenuItem className="flex items-center gap-3 rounded-lg relative ">
+            <div className={`rounded-lg p-5 ${colors[color]}`}>
+              {React.createElement(icon, {
+                strokeWidth: 2,
+                className: "h-6 w-6",
+              })}
+            </div>
+            <div>
+              <Typography variant="h6" color="blue-gray" className="">
+                <span className="flex items-center justify-between text-sm">
+                  {title}{" "}
+                </span>
+              </Typography>
+
+              <Typography variant="small" color="gray" className="font-normal">
+                {description}
+              </Typography>
+            </div>
+          </MenuItem>
+        )}
+      </div>
     )
   );
 
@@ -171,7 +208,7 @@ function NavListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
+          <ul className={`grid gap-y-2 }`}>{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -183,7 +220,7 @@ function NavListMenu() {
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 ">
       <NavListMenu />
     </List>
   );
@@ -201,7 +238,7 @@ export default function ComplexNavbar() {
 
   return (
     <Navbar className="lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none">
-      <div className="container flex items-center justify-between text-blue-gray-900">
+      <div className="container flex items-center justify-between text-blue-gray-900 ">
         <Typography
           as="a"
           href="#"
@@ -210,7 +247,7 @@ export default function ComplexNavbar() {
         >
           Nurlul Alom
         </Typography>
-        <div className="hidden lg:flex ">
+        <div className="hidden lg:flex">
           <NavList />
           <Button
             className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
