@@ -9,7 +9,7 @@ const Connect = () => {
   return (
     <div>
       <div className="mb-6">
-        <Typography variant="h5">Let's Connect</Typography>
+        <Typography variant="h5">Let&#39;s Connect</Typography>
       </div>
       <TextColor>
         <ul className="space-y-3 ml-5">
