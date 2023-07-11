@@ -1,4 +1,5 @@
 import ComplexNavbar from "@/components/materialtailwind/navbar";
+import Footer from "@/components/pages/shared/footer/footer";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ComplexNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

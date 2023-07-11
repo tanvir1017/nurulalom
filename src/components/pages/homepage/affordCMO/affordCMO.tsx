@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const AffordCMO = () => {
   const [filterByCG, setFilterByCG] = useState<string>("small");
+
   return (
     <section className="container my-14">
       <div className="text-center">
