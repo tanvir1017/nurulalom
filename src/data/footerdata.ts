@@ -46,3 +46,22 @@ export const siteMapData: ServicesAndSiteMapType[] = [
     href: "/",
   },
 ];
+
+export const connect: ServicesAndSiteMapType[] = [
+  {
+    title: "Facebook",
+    href: "/",
+  },
+  {
+    title: "LinkedIn",
+    href: "/",
+  },
+  {
+    title: "Instagram",
+    href: "/",
+  },
+  {
+    title: "YouTube",
+    href: "/",
+  },
+];
