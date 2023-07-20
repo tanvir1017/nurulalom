@@ -1,3 +1,5 @@
+import { Services, freeResource } from "@/data/navmenu";
+import { NestedNavType } from "@/types/globaltypes";
 import {
   Timeline,
   TimelineConnector,
@@ -20,78 +22,17 @@ export const ServicesNav = () => {
     <ul className="m-5 h-[250px] overflow-auto" id="scroll">
       <Timeline>
         <TimelineItem>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a Marketing Strategy Free Course</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Digital Marketing (Free Course)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Marketing Budget Template</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Buyer Persona Template</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-gray-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Marketing Blogs</li>
-            </Link>
-          </TimelineForNav>
+          {Services.map((item: NestedNavType, i: number) => (
+            <TimelineForNav key={i}>
+              <TimelineIcon className="bg-gray-500/95" />
+              <Link
+                href={item.href}
+                className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
+              >
+                <li>{item.title}</li>
+              </Link>
+            </TimelineForNav>
+          ))}
         </TimelineItem>
       </Timeline>
     </ul>
@@ -102,78 +43,17 @@ export const FreeResourceNav = () => {
     <ul className="m-5 h-[200px] overflow-auto" id="scroll">
       <Timeline>
         <TimelineItem>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a marketing team (Free Guide)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Build a Marketing Strategy Free Course</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Digital Marketing (Free Course)</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Marketing Budget Template</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Buyer Persona Template</li>
-            </Link>
-          </TimelineForNav>
-          <TimelineForNav>
-            <TimelineIcon className="bg-pink-500/95" />
-            <Link
-              href="/"
-              className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
-            >
-              <li>Marketing Blogs</li>
-            </Link>
-          </TimelineForNav>
+          {freeResource.map((item: NestedNavType, i: number) => (
+            <TimelineForNav key={i}>
+              <TimelineIcon className="bg-pink-500/95" />
+              <Link
+                href={item.href}
+                className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2"
+              >
+                <li>{item.title}</li>
+              </Link>
+            </TimelineForNav>
+          ))}
         </TimelineItem>
       </Timeline>
     </ul>

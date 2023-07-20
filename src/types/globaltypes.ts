@@ -19,4 +19,7 @@ export type NavType = {
   icon: any;
   title: string;
   description: string;
+  href: string;
 };
+
+export type NestedNavType = { title: string; href: string };

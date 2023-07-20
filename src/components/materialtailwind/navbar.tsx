@@ -30,6 +30,7 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 import { FreeResourceNav, ServicesNav } from "./timelinefornav";
 
@@ -59,7 +60,7 @@ function NavListMenu() {
   });
 
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, color }, key) => (
+    ({ icon, title, description, color, href }, key) => (
       <div key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg relative ">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
@@ -69,15 +70,17 @@ function NavListMenu() {
             })}
           </div>
           <div>
-            <Typography variant="h6" color="blue-gray" className="">
-              <span className="flex items-center justify-between text-sm">
-                {title}{" "}
-              </span>
-            </Typography>
+            <Link href={href}>
+              <Typography variant="h6" color="blue-gray" className="">
+                <span className="flex items-center justify-between text-sm">
+                  {title}{" "}
+                </span>
+              </Typography>
 
-            <Typography variant="small" color="gray" className="font-normal">
-              {description}
-            </Typography>
+              <Typography variant="small" color="gray" className="font-normal">
+                {description}
+              </Typography>
+            </Link>
           </div>
         </MenuItem>
       </div>
@@ -328,57 +331,57 @@ export default function ComplexNavbar() {
   }, []);
 
   return (
-    <Navbar className="lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none">
-      <div className="container flex items-center justify-between text-blue-gray-900 ">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Nurlul Alom
-        </Typography>
-        <div className="hidden lg:flex ">
+    <>
+      <Navbar className=" lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none">
+        <div className="container flex items-center justify-between text-blue-gray-900 ">
+          <Typography
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            <Link href="/">Nurlul Alom</Link>
+          </Typography>
+          <div className="hidden lg:flex ">
+            <NavList />
+            <Button
+              className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
+              size="lg"
+            >
+              Book a Meting{" "}
+              <ArrowRightIcon
+                strokeWidth={2.5}
+                className={` h-3 w-3 transition-transform ml-3`}
+              />
+            </Button>
+          </div>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="lg:hidden"
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        </div>
+        <Collapse open={openNav}>
           <NavList />
-          <Button
-            className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
-            size="lg"
-          >
-            Book a Meting{" "}
-            <ArrowRightIcon
-              strokeWidth={2.5}
-              className={` h-3 w-3 transition-transform ml-3`}
-            />
-          </Button>
-        </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button
-            className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
-            size="lg"
-          >
-            Book a Meting{" "}
-            <ArrowRightIcon
-              strokeWidth={2.5}
-              className={` h-3 w-3 transition-transform `}
-            />
-          </Button>
-        </div>
-      </Collapse>
-    </Navbar>
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+            <Button
+              className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
+              size="lg"
+            >
+              Book a Meting{" "}
+              <ArrowRightIcon
+                strokeWidth={2.5}
+                className={` h-3 w-3 transition-transform `}
+              />
+            </Button>
+          </div>
+        </Collapse>
+      </Navbar>
+    </>
   );
 }
