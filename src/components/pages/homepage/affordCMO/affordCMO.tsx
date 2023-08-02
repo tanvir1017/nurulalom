@@ -34,7 +34,7 @@ const AffordCMO = () => {
         <div className="pt-5">
           <Image
             className="block mx-auto rotate-45"
-            src="/assets/images/big_arrow.webp"
+            src="https://res.cloudinary.com/djbcnjkin/image/upload/v1690994194/xtxfow6u2ozsmafu8prb.webp"
             alt="arrow indicate two options small company or mid size company"
             height={80}
             width={80}
