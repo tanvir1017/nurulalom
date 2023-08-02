@@ -7,7 +7,7 @@ const PastExperience3 = () => {
   return (
     <div className="container mt-16">
       <Image
-        src="/assets/images/about/najm-marketing-consulting-2020.jpg.webp"
+        src="/assets/images/about/hire-cmo.jpg.webp"
         alt="Past experience big image"
         width={1150}
         height={100}
