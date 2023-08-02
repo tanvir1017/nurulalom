@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutHeading = () => {
   return (
-    <section className="lg:bg-[url('/assets/images/bungee-jumping-nazmul-ahmed-du.jpg.webp')] lg:p-48 bg-cover bg-center bg-no-repeat flex justify-end">
+    <section className="lg:bg-[url('/assets/images/bungee-jumping-nazmul-ahmed-du.jpg.webp')] lg:p-64 md:p-48 bg-cover bg-center bg-no-repeat flex justify-end">
       <Image
         className="lg:hidden block mx-auto"
         src="/assets/images/bungee-jumping-nazmul-ahmed-du.jpg.webp"

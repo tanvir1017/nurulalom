@@ -2,7 +2,7 @@ import { marketingResourceData } from "@/data/footerdata";
 import { TextColor } from "@/lib/customColorFunc";
 import { SiteMapType } from "@/types/globaltypes";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Tooltip, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Link from "next/link";
 
 const FreeMarketingResources = () => {
@@ -22,11 +22,9 @@ const FreeMarketingResources = () => {
                 strokeWidth={3.5}
                 className="h-3 w-3 text-gray-700 mr-3"
               />{" "}
-              <Tooltip content={item.title}>
-                <Link href={item.href}>
-                  <span>{item.title}</span>
-                </Link>
-              </Tooltip>
+              <Link href={item.href}>
+                <span>{item.title}</span>
+              </Link>
             </li>
           ))}
         </ul>

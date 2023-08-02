@@ -1,7 +1,11 @@
 import AboutHeading from "@/components/pages/about/aboutheading/aboutheading";
 import CareerHighlights from "@/components/pages/about/careerhighlights/careerhighlights";
 import Certificate from "@/components/pages/about/certificate/certificate";
+import FewClients from "@/components/pages/about/fewclients/fewclients";
+import IDontBite from "@/components/pages/about/idontbite";
+import RealExperiences from "@/components/pages/about/pastexperiences/realexperiences";
 import ProcessOfWorkingWithMe from "@/components/pages/about/processofworkingwithme/processofworkingwithme";
+import StoryOfMarketer from "@/components/pages/about/storyofmarketer";
 
 const About = () => {
   return (
@@ -27,6 +31,10 @@ const About = () => {
         <Certificate />
         <CareerHighlights />
         <ProcessOfWorkingWithMe />
+        <StoryOfMarketer />
+        <RealExperiences />
+        <FewClients />
+        <IDontBite />
       </section>
     </main>
   );

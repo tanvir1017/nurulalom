@@ -30,6 +30,7 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FreeResourceNav, ServicesNav } from "./timelinefornav";
@@ -338,7 +339,14 @@ export default function ComplexNavbar() {
             variant="h6"
             className="mr-4 cursor-pointer py-1.5 lg:ml-2"
           >
-            <Link href="/">Nurlul Alom</Link>
+            <Link href="/">
+              <Image
+                src="/assets/images/brand-logo-black.svg"
+                alt="Brand logo for nurul alom"
+                width={200}
+                height={100}
+              />
+            </Link>
           </Typography>
           <div className="hidden lg:flex ">
             <NavList />

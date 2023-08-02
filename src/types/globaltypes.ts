@@ -23,3 +23,9 @@ export type NavType = {
 };
 
 export type NestedNavType = { title: string; href: string };
+
+export type AboutCardDataType = {
+  image: string;
+  title: string;
+  description: string;
+};

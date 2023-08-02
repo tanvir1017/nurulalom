@@ -1,6 +1,7 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
 import { Typography } from "@material-tailwind/react";
+import ProcessOfWorkingWithMeCard from "./processofworkingwithmecard";
 
 const ProcessOfWorkingWithMe = () => {
   return (
@@ -12,6 +13,8 @@ const ProcessOfWorkingWithMe = () => {
         The steps that I take to start bringing the desired outcomes are very
         crucial and I believe this is where it gets me the most success.
       </Typography>
+
+      <ProcessOfWorkingWithMeCard />
     </div>
   );
 };

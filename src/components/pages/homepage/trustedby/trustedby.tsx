@@ -16,18 +16,23 @@ const TrustedBy = () => {
       <div className="mt-24">
         <div className="flex items-center justify-center space-x-5">
           {[
-            "/assets/images/cramstack.png",
-            "/assets/images/prothom-alo.png.webp",
-            "/assets/images/southtech.webp",
-            "/assets/images/cutoutwix.png",
-            "/assets/images/sheba.webp",
-            "/assets/images/brainstation23.webp",
-            "/assets/images/invogue-Black.png",
-            "/assets/images/zantrik.webp",
-            "/assets/images/jobike.webp",
+            "/assets/images/brand/cramstack.png",
+            "/assets/images/brand/prothom-alo.png.webp",
+            "/assets/images/brand/southtech.webp",
+            "/assets/images/brand/cutoutwix.png",
+            "/assets/images/brand/sheba.webp",
+            "/assets/images/brand/brainstation23.webp",
+            "/assets/images/brand/invogue-Black.png",
+            "/assets/images/brand/zantrik.webp",
+            "/assets/images/brand/jobike.webp",
           ].map((_: string, i: number) => (
             <div key={i}>
-              <Image alt="" src={_} height={100} width={100} />
+              <Image
+                alt="trusted founders brand image"
+                src={_}
+                height={100}
+                width={100}
+              />
             </div>
           ))}
         </div>
