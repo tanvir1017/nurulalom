@@ -1,5 +1,13 @@
-const ClientSuccess = () => {
-  return <div className="App">ClientSuccess</div>;
+import ClientSuccess from "@/components/pages/clientsuccess/clientsuccess";
+
+const MarketingCaseStudies = () => {
+  return (
+    <div className="App">
+      <div className="container">
+        <ClientSuccess />
+      </div>
+    </div>
+  );
 };
 
-export default ClientSuccess;
+export default MarketingCaseStudies;
