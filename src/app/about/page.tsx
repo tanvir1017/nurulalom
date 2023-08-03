@@ -7,6 +7,13 @@ import RealExperiences from "@/components/pages/about/pastexperiences/realexperi
 import ProcessOfWorkingWithMe from "@/components/pages/about/processofworkingwithme/processofworkingwithme";
 import StoryOfMarketer from "@/components/pages/about/storyofmarketer";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Nurul Alom consultant - Nurul Alom | Digital Marketing...",
+  description: "Digital Marketing Consultant",
+};
+
 const About = () => {
   return (
     <main className="App">

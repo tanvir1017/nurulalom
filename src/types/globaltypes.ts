@@ -29,3 +29,12 @@ export type AboutCardDataType = {
   title: string;
   description: string;
 };
+
+export type TableHeadType = {
+  firstColumn: string;
+  secondColumn: string;
+  thirdColumn: string;
+  fourthColumn: string;
+  fifthColumn: string;
+  company: "mid" | "small";
+};
