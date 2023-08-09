@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const PricePlan = () => {
-  const [filterByCG, setFilterByCG] = useState<string>("small");
+  const [filterByCG, setFilterByCG] = useState<string>("mid");
   return (
     <section className="container bg-[url('/assets/images/home-banner-bg.svg')] bg-no-repeat bg-cover">
       <div className="max-w-xl mx-auto">

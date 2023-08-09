@@ -1,34 +1,8 @@
-import { TABLE_HEAD_MERGED } from "@/data/tabledata";
-import { TableHeadType } from "@/types/globaltypes";
-import { Card, Typography } from "@material-tailwind/react";
-
-export const TABLE_ROWS = [
-  {
-    name: "John Michael",
-    job: "Manager",
-    date: "23/04/18",
-  },
-  {
-    name: "Alexa Liras",
-    job: "Developer",
-    date: "23/04/18",
-  },
-  {
-    name: "Laurent Perrier",
-    job: "Executive",
-    date: "19/09/17",
-  },
-  {
-    name: "Michael Levi",
-    job: "Developer",
-    date: "24/12/08",
-  },
-  {
-    name: "Richard Gran",
-    job: "Manager",
-    date: "04/10/21",
-  },
-];
+import { TABLE_HEAD_MERGED, TABLE_ROWS } from "@/data/tabledata";
+import { TableData as TableDataType } from "@/types/globaltypes";
+import { Button, Card, Typography } from "@material-tailwind/react";
+import DeliverablesRow from "../pages/price/deliverablesrow";
+import ExecutionRow from "../pages/price/executionrow";
 
 export function PricePlanTable({ companySize }: { companySize: string }) {
   return (
@@ -36,7 +10,7 @@ export function PricePlanTable({ companySize }: { companySize: string }) {
       <table className="w-full min-w-max table-auto text-left">
         <thead className="bg-gradient-to-r from-blue-400 to-blue-600">
           {TABLE_HEAD_MERGED.filter((h) => h.company === companySize).map(
-            (trdata: TableHeadType, i: number) => {
+            (trdata: TableDataType, i: number) => {
               const tableHead = [
                 trdata.firstColumn,
                 trdata.secondColumn,
@@ -92,53 +66,86 @@ export function PricePlanTable({ companySize }: { companySize: string }) {
           )}
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, job, date }, index) => {
-            const isLast = index === TABLE_ROWS.length - 1;
-            const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
+          {TABLE_ROWS.filter((item) => item.company === companySize).map(
+            (
+              {
+                firstColumn,
+                secondColumn,
+                thirdColumn,
+                fourthColumn,
+                fifthColumn,
+              }: TableDataType,
+              index
+            ) => {
+              const isLast = index === TABLE_ROWS.length - 1;
+              const classes = isLast
+                ? "p-4"
+                : "p-4 border-b border-blue-gray-50";
 
-            return (
-              <tr key={name}>
-                <td className={classes}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
+              return (
+                <tr key={index}>
+                  <td className={`${classes} text-xl`}>{firstColumn}</td>
+                  <td
+                    className={`${classes} text-[#48D300] font-bold text-2xl text-center`}
                   >
-                    {name}
-                  </Typography>
-                </td>
-                <td className={`${classes} bg-blue-gray-50/50`}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
+                    {secondColumn}
+                  </td>
+                  <td
+                    className={`${classes} text-[#48D300] font-bold text-2xl text-center`}
                   >
-                    {job}
-                  </Typography>
-                </td>
-                <td className={classes}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
+                    {thirdColumn}
+                  </td>
+                  <td
+                    className={`${classes} text-[#48D300] font-bold text-2xl text-center`}
                   >
-                    {date}
-                  </Typography>
-                </td>
-                <td className={`${classes} bg-blue-gray-50/50`}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    variant="small"
-                    color="blue"
-                    className="font-medium"
+                    {fourthColumn}
+                  </td>
+                  <td
+                    className={`${classes} text-[#48D300] font-bold text-2xl text-center`}
                   >
-                    Edit
-                  </Typography>
-                </td>
-              </tr>
-            );
-          })}
+                    {fifthColumn}
+                  </td>
+                </tr>
+              );
+            }
+          )}
+          {/* check details row */}
+          <tr>
+            <td className="p-4 border-b border-blue-gray-50 text-xl">
+              Check Details
+            </td>
+            <td className="text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>
+            <td className="text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+            <td className="text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+            <td className="text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+          </tr>
+
+          <DeliverablesRow companySize={companySize} />
+
+          <ExecutionRow companySize={companySize} />
+          <tr>
+            <td className="p-4 border-b border-blue-gray-50 text-xl"></td>
+            <td className="text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>
+            <td className="p-4 text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+            <td className="p-4 text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+            <td className="p-4 text-center">
+              <Button className="rounded-full">Explore</Button>
+            </td>{" "}
+          </tr>
         </tbody>
       </table>
     </Card>

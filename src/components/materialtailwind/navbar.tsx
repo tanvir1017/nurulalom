@@ -63,15 +63,15 @@ function NavListMenu() {
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, color, href }, key) => (
       <div key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg relative ">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 w-6",
-            })}
-          </div>
-          <div>
-            <Link href={href}>
+        <Link href={href}>
+          <MenuItem className="flex items-center gap-3 rounded-lg relative ">
+            <div className={`rounded-lg p-5 ${colors[color]}`}>
+              {React.createElement(icon, {
+                strokeWidth: 2,
+                className: "h-6 w-6",
+              })}
+            </div>
+            <div>
               <Typography variant="h6" color="blue-gray" className="">
                 <span className="flex items-center justify-between text-sm">
                   {title}{" "}
@@ -81,9 +81,9 @@ function NavListMenu() {
               <Typography variant="small" color="gray" className="font-normal">
                 {description}
               </Typography>
-            </Link>
-          </div>
-        </MenuItem>
+            </div>
+          </MenuItem>
+        </Link>
       </div>
     )
   );
@@ -124,92 +124,101 @@ function NavListMenu() {
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
           <div className="space-y-3">
             <ul className="grid grid-cols-2 gap-3">
-              <Accordion open={mouseOver}>
-                <AccordionHeader
-                  onMouseEnter={() => setMouseOver(true)}
-                  onMouseLeave={() => setMouseOver(!true)}
-                  className={`rounded-lg p-5 ${colors["blue-gray"]}`}
-                >
-                  <div>
-                    <GiftIcon strokeWidth={2} className="h-6 w-6" />
-                    <Typography variant="h6" color="blue-gray" className="">
-                      <span className="flex items-center justify-between text-sm">
-                        <span>
-                          Services
-                          <Typography
-                            variant="small"
-                            color="gray"
-                            className="font-normal"
-                          >
-                            All the stuff that we dan from legal made us add.
-                          </Typography>
-                        </span>
-                        <Chip
-                          size="sm"
-                          color="blue-gray"
-                          variant="ghost"
-                          value={createIcon}
-                          className={`capitalize ml-3`}
-                        />
-                      </span>
-                    </Typography>
-                  </div>
-                </AccordionHeader>
-                <AccordionBody
-                  onMouseEnter={() => setMouseOver(true)}
-                  onMouseLeave={() => setMouseOver(!true)}
-                >
-                  <MenuItem className="flex items-start gap-3 rounded-lg relative">
-                    <div>
-                      <ServicesNav />
-                    </div>
-                  </MenuItem>
-                </AccordionBody>
-              </Accordion>
-
-              <Accordion open={mouseEnter}>
-                <AccordionHeader
-                  className={`rounded-lg p-5 ${colors["pink"]}`}
-                  onMouseEnter={() => setMouseEnter(true)}
-                  onMouseLeave={() => setMouseEnter(!true)}
-                >
-                  <div>
-                    <FolderIcon strokeWidth={2} className={`h-6 w-6 `} />
-                    <Typography variant="h6" color="blue-gray">
-                      <div className="flex items-center justify-between text-sm">
-                        <span>
-                          Free resource
-                          <Typography
-                            variant="small"
-                            color="gray"
-                            className="font-normal"
-                          >
-                            ist of all our open-source projects, it's all free.
-                          </Typography>
-                        </span>
-                        <Chip
-                          size="sm"
-                          color="pink"
-                          variant="ghost"
-                          value={createIcon1}
-                          className={`capitalize ml-3`}
-                        />
+              <li>
+                <Link href="/marketing-consulting">
+                  <Accordion open={mouseOver}>
+                    <AccordionHeader
+                      onMouseEnter={() => setMouseOver(true)}
+                      onMouseLeave={() => setMouseOver(!true)}
+                      className={`rounded-lg p-5 ${colors["blue-gray"]}`}
+                    >
+                      <div>
+                        <GiftIcon strokeWidth={2} className="h-6 w-6" />
+                        <Typography variant="h6" color="blue-gray" className="">
+                          <span className="flex items-center justify-between text-sm">
+                            <span>
+                              Services
+                              <Typography
+                                variant="small"
+                                color="gray"
+                                className="font-normal"
+                              >
+                                All the stuff that we dan from legal made us
+                                add.
+                              </Typography>
+                            </span>
+                            <Chip
+                              size="sm"
+                              color="blue-gray"
+                              variant="ghost"
+                              value={createIcon}
+                              className={`capitalize ml-3`}
+                            />
+                          </span>
+                        </Typography>
                       </div>
-                    </Typography>
-                  </div>
-                </AccordionHeader>
-                <AccordionBody>
-                  <MenuItem
-                    onMouseEnter={() => setMouseEnter(true)}
-                    onMouseLeave={() => setMouseEnter(!true)}
-                    className="flex items-start gap-3 rounded-lg "
-                  >
-                    <div>
-                      <FreeResourceNav />
-                    </div>
-                  </MenuItem>
-                </AccordionBody>
-              </Accordion>
+                    </AccordionHeader>
+                    <AccordionBody
+                      onMouseEnter={() => setMouseOver(true)}
+                      onMouseLeave={() => setMouseOver(!true)}
+                    >
+                      <MenuItem className="flex items-start gap-3 rounded-lg relative">
+                        <div>
+                          <ServicesNav />
+                        </div>
+                      </MenuItem>
+                    </AccordionBody>
+                  </Accordion>
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources">
+                  <Accordion open={mouseEnter}>
+                    <AccordionHeader
+                      className={`rounded-lg p-5 ${colors["pink"]}`}
+                      onMouseEnter={() => setMouseEnter(true)}
+                      onMouseLeave={() => setMouseEnter(!true)}
+                    >
+                      <div>
+                        <FolderIcon strokeWidth={2} className={`h-6 w-6 `} />
+                        <Typography variant="h6" color="blue-gray">
+                          <div className="flex items-center justify-between text-sm">
+                            <span>
+                              Free resource
+                              <Typography
+                                variant="small"
+                                color="gray"
+                                className="font-normal"
+                              >
+                                ist of all our open-source projects, it's all
+                                free.
+                              </Typography>
+                            </span>
+                            <Chip
+                              size="sm"
+                              color="pink"
+                              variant="ghost"
+                              value={createIcon1}
+                              className={`capitalize ml-3`}
+                            />
+                          </div>
+                        </Typography>
+                      </div>
+                    </AccordionHeader>
+                    <AccordionBody>
+                      <MenuItem
+                        onMouseEnter={() => setMouseEnter(true)}
+                        onMouseLeave={() => setMouseEnter(!true)}
+                        className="flex items-start gap-3 rounded-lg "
+                      >
+                        <div>
+                          <FreeResourceNav />
+                        </div>
+                      </MenuItem>
+                    </AccordionBody>
+                  </Accordion>
+                </Link>
+              </li>
             </ul>
             <ul className={`grid  gap-y-2 }`}>{renderItems}</ul>
           </div>

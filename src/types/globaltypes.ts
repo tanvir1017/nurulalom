@@ -30,11 +30,23 @@ export type AboutCardDataType = {
   description: string;
 };
 
-export type TableHeadType = {
+export type TableData = {
   firstColumn: string;
   secondColumn: string;
   thirdColumn: string;
   fourthColumn: string;
   fifthColumn: string;
-  company: "mid" | "small";
+  company?: "mid" | "small";
+};
+
+export type TABLE_ROWS_Type = {
+  firstColumn: {
+    label: string;
+    labelText: string;
+  };
+  secondColumn: boolean;
+  thirdColumn: boolean;
+  fourthColumn: boolean;
+  fifthColumn: boolean;
+  company?: "mid" | "small";
 };
