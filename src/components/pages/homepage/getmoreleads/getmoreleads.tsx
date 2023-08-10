@@ -35,7 +35,7 @@ const GetMoreLeads = () => {
             </span>
           </Typography>
           <div className="mt-5">
-            <Typography variant="paragraph">
+            <Typography>
               Not just digital marketing strategy. <br /> Execution as well.
             </Typography>
           </div>
@@ -54,7 +54,7 @@ const GetMoreLeads = () => {
             </span>
           </Typography>
           <div className="mt-5">
-            <Typography variant="paragraph">
+            <Typography>
               Sales pipeline filled with leads. I <br /> mean sales qualified
               leads.
             </Typography>
@@ -74,7 +74,7 @@ const GetMoreLeads = () => {
             </span>
           </Typography>
           <div className="mt-5">
-            <Typography variant="paragraph">
+            <Typography>
               Establish your own in-house <br /> marketing team.
             </Typography>
           </div>

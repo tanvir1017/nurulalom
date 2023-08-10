@@ -12,7 +12,7 @@ const FewClients = () => {
           <TextColor>A Few Clients I Have Worked With</TextColor>
         </Typography>
 
-        <Typography variant="paragraph" className="text-center">
+        <Typography className="text-center">
           Southtech, JoBike, CutOutWiz, Cramstack, OpticTour (Texas, USA),
           Unique Asset Strategies (Chicago, USA), Jobike, Sheba, Brainstation
           23, & Service Chai are some of the startups I had the pleasure of

@@ -26,7 +26,7 @@ const AboutHeading = () => {
             Take A Leap Of Faith
           </Typography>
         </div>
-        <Typography variant="paragraph">
+        <Typography>
           “You can replace everything in your company. But one thing you can’t
           replace is your clients. You ALWAYS need clients, doesn’t matter what
           business you are in.”

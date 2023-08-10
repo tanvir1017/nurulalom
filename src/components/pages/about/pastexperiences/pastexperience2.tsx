@@ -26,7 +26,7 @@ const PastExperience2 = () => {
           <TextColor>Ennovision Ltd & LLC</TextColor>
         </Typography>
         <div className="space-y-6">
-          <Typography variant="paragraph">
+          <Typography>
             My dream venture was a user experience design company that went by
             the name Ennovision. It was the craziest experience I ever had. So
             much to do and no one to mentor me. Get Co-founders. Hire Employees.
@@ -38,7 +38,7 @@ const PastExperience2 = () => {
             More than me building Ennovision into a business, it was the company
             that built a founder out of me.
           </Typography>{" "}
-          <Typography variant="paragraph">
+          <Typography>
             I had a first-hand insight into the endless pile of responsibilities
             a CEO has to deal with, the first and foremost to bring customers,
             and the last but not the least, still bringing more customers! And

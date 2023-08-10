@@ -50,3 +50,5 @@ export type TABLE_ROWS_Type = {
   fifthColumn: boolean;
   company?: "mid" | "small";
 };
+
+export type AccordionDataType = { title: string; desc: string };

@@ -26,7 +26,7 @@ const PastExperience3 = () => {
           <TextColor>Digital Marketing Consultant</TextColor>
         </Typography>
         <div className="space-y-6">
-          <Typography variant="paragraph">
+          <Typography>
             By taking a leap of faith. Being a marketing consultant for the past
             5 years and a half has shown me that small and medium companies also
             deserve to grow and generate revenue like the large ones. One

@@ -21,7 +21,7 @@ const DigitalMarketingConsultant = () => {
           <Typography variant="h5">Digital Marketing Consultant</Typography>
         </div>
         <div className="mb-6">
-          <Typography variant="paragraph">
+          <Typography>
             <TextColor>
               With over 14+ years of experience in digital marketing, I help
               both small and mid-size companies grow sales pipeline and revenue

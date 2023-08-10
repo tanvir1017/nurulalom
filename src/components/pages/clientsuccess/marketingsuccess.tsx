@@ -13,7 +13,7 @@ const MarketingSuccess = () => {
         <Typography variant="h1" className="pb-6">
           <TextColor>Marketing Success Stories</TextColor>
         </Typography>
-        <Typography variant="paragraph">
+        <Typography>
           A story is not successful if it doesn’t surprise you. Let’s hear my
           clients tell theirs.
         </Typography>
@@ -46,7 +46,7 @@ const MarketingSuccess = () => {
               <Typography variant="h3">
                 <TextColor>Get Your 1st Meeting Within 24 Hours</TextColor>
               </Typography>
-              <Typography variant="paragraph">
+              <Typography>
                 Inbound Marketing for small & medium businesses.
               </Typography>
             </div>

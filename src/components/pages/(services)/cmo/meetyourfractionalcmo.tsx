@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 
-const MeetYourMarketer = () => {
+const MeetYourFractionalCMO = () => {
   return (
     <section className="container  my-20 px-32">
       <div className=" bg-[#F0F7FB]">
@@ -19,17 +19,16 @@ const MeetYourMarketer = () => {
             <div className="mb-6">
               <Typography variant="h2">
                 <TextColor>
-                  Meet Your Digital Marketing Consultant - Najm
+                  Meet Your Fractional CMO - Nazmul Ahmed (Najm)
                 </TextColor>
               </Typography>
             </div>
 
             <div className="mb-6">
               <Typography>
-                I am a digital marketing consultant with a proven track record
-                in doubling customers. I have been working with businesses like
-                yours for the last 14+ years and I work diligently to learn how
-                to get more customers.
+                As a former founder and seasoned marketer, I understand the
+                unique challenges and pain points that business owners face –
+                and I’m here to help you overcome them.
               </Typography>
             </div>
             <hr className="border-b-black border" />
@@ -47,7 +46,7 @@ const MeetYourMarketer = () => {
                     strokeWidth={3.5}
                     className="h-3 w-3 text-blue-500 mr-3"
                   />{" "}
-                  Ex-CMO of a 700+ employee company
+                  Former CMO of 700+ employee tech company
                 </li>
                 <li className="flex items-center">
                   {" "}
@@ -55,7 +54,7 @@ const MeetYourMarketer = () => {
                     strokeWidth={3.5}
                     className="h-3 w-3 text-blue-500 mr-3"
                   />{" "}
-                  Ex-CEO of a digital marketing company for 3 years
+                  Former CEO of a web design company in Austin, TX.
                 </li>
                 <li className="flex items-center">
                   {" "}
@@ -63,7 +62,24 @@ const MeetYourMarketer = () => {
                     strokeWidth={3.5}
                     className="h-3 w-3 text-blue-500 mr-3"
                   />{" "}
-                  HubSpot certified digital marketing consultant
+                  Been building marketing teams for the past 7+ years.
+                </li>{" "}
+                <li className="flex items-center">
+                  {" "}
+                  <ArrowRightIcon
+                    strokeWidth={3.5}
+                    className="h-3 w-3 text-blue-500 mr-3"
+                  />{" "}
+                  I'm a practitioner who executes marketing every day.
+                </li>{" "}
+                <li className="flex items-center">
+                  {" "}
+                  <ArrowRightIcon
+                    strokeWidth={3.5}
+                    className="h-3 w-3 text-blue-500 mr-3"
+                  />{" "}
+                  Certified marketer by Australian Marketing Institute, HubSpot
+                  & DigitalMarketer
                 </li>
               </ul>
 
@@ -94,4 +110,4 @@ const MeetYourMarketer = () => {
   );
 };
 
-export default MeetYourMarketer;
+export default MeetYourFractionalCMO;

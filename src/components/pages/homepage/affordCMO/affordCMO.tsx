@@ -21,7 +21,7 @@ const AffordCMO = () => {
           </TextColor>
         </div>
         <div className="max-w-2xl mx-auto pb-6">
-          <Typography variant="paragraph">
+          <Typography>
             Whether you want a CMO or just someone to take your startup to the
             desired level, I can help you revolutionize your digital marketing
             strategy and marketing goals like no other.

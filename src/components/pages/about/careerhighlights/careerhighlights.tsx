@@ -11,7 +11,7 @@ const CareerHighlights = () => {
           <Typography variant="h2" className="pb-6">
             <TextColor>Career Highlights</TextColor>
           </Typography>
-          <Typography variant="paragraph" className="pb-6">
+          <Typography className="pb-6">
             You can't connect the dots looking forward; you can only connect
             them looking backwards.” - Steve Jobs.
           </Typography>

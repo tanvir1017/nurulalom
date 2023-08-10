@@ -29,7 +29,7 @@ const PastExperience = () => {
             Brain Station 23, Experience Bangladesh, Southtech Etc.
           </TextColor>
         </Typography>
-        <Typography variant="paragraph">
+        <Typography>
           My experience in digital marketing and being able to run large
           marketing departments was largely shaped by the companies were I
           worked for many years. My journey through the intricate landscape of
