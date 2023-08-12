@@ -1,9 +1,13 @@
 import BuildMarketingHeadingSection from "@/components/pages/(services)/build-marketing-team/buildmarketingheadingsection";
 import FindingMarketer from "@/components/pages/(services)/build-marketing-team/findingmarketer";
 import HowDoWeDoIt from "@/components/pages/(services)/build-marketing-team/howdowedoit";
+import MeetYourFractionalCMOForMarketingTeamBuild from "@/components/pages/(services)/build-marketing-team/meetyourfractionalcmoformarketingteambuild";
 import ProudlyBuiltTeams from "@/components/pages/(services)/build-marketing-team/proudlybuilt32teams";
+import ReadyToBuildContactForm from "@/components/pages/(services)/build-marketing-team/readytobuildcontactform";
 import StrugglesOfCompanyForBuildMarket from "@/components/pages/(services)/build-marketing-team/strugglesofcompany";
 import TheStageWeWillGo from "@/components/pages/(services)/build-marketing-team/thestagewewillgo";
+import WhatMyClientSayAboutTheirGrowthBuildMarketingTeam from "@/components/pages/(services)/build-marketing-team/whatmyclientsayabouttheirgrowthbuildmarketingteam";
+import YourTeamsLookDependingOnMarketingNeeds from "@/components/pages/(services)/build-marketing-team/yourteamslookdependingonmarketingneeds";
 
 const BuildAMarketingTeam = () => {
   return (
@@ -14,6 +18,10 @@ const BuildAMarketingTeam = () => {
       <HowDoWeDoIt />
       <TheStageWeWillGo />
       <FindingMarketer />
+      <YourTeamsLookDependingOnMarketingNeeds />
+      <MeetYourFractionalCMOForMarketingTeamBuild />
+      <WhatMyClientSayAboutTheirGrowthBuildMarketingTeam />
+      <ReadyToBuildContactForm />
     </main>
   );
 };

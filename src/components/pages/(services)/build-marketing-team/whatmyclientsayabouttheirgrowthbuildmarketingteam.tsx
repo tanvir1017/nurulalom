@@ -4,7 +4,7 @@ import { TextColor } from "@/lib/customColorFunc";
 import { StarIcon } from "@heroicons/react/24/outline";
 import { Typography } from "@material-tailwind/react";
 
-const WhatMyClientSayAboutTheirGrowth = () => {
+const WhatMyClientSayAboutTheirGrowthBuildMarketingTeam = () => {
   return (
     <section>
       <div className="bg-[#F0F7FB] bg-[url('/assets/images/part-time-cmo/video-section-bg.svg')] bg-no-repeat bg-cover p-40">
@@ -34,21 +34,19 @@ const WhatMyClientSayAboutTheirGrowth = () => {
 
           <div className="grid grid-cols-2 gap-5 pt-6">
             <iframe
-              className="rounded-lg"
               width="540"
               height="304"
-              src="https://www.youtube.com/embed/nkk2ASQOUHg"
-              title="What you didn&#39;t know about Najm Consultant. Shahed Islam CEO of SJ Innovaton LLC shared his opinion"
+              src="https://www.youtube.com/embed/rvNdnejqC6o"
+              title="Raisul Kabir Founder &amp; CEO of Brainstation 23 talks about Najm | Marketing Consultant"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
             <iframe
-              className="rounded-lg"
               width="540"
               height="304"
-              src="https://www.youtube.com/embed/p8owDD4OJrc"
-              title="Ramin Jahedi CEO of Optictour Google Trusted Agency talks about Nazmul"
+              src="https://www.youtube.com/embed/3R4kuJo7bcg"
+              title="Shubho Al-Farooque- Co-Founder, CEO of Zantrik talks about Najm | Marketing Consultant"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -81,8 +79,13 @@ const WhatMyClientSayAboutTheirGrowth = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="max-w-4xl mx-auto">
+          <hr className="my-28 border-gray-400 " />
+        </div>
+      </div>
     </section>
   );
 };
 
-export default WhatMyClientSayAboutTheirGrowth;
+export default WhatMyClientSayAboutTheirGrowthBuildMarketingTeam;

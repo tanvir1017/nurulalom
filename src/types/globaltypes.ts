@@ -52,3 +52,10 @@ export type TABLE_ROWS_Type = {
 };
 
 export type AccordionDataType = { title: string; desc: string };
+
+export type TeamsLookingCardDataType = {
+  image: string;
+  title: string;
+  item?: string[];
+  desc?: string;
+};

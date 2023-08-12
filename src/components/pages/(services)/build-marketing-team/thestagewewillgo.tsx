@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TheStageWeWillGo = () => {
   return (
-    <section className="bg-[#F0F7FB] p-10">
+    <section className="bg-[#F0F7FB] p-10 mt-28">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center">
           <Typography variant="h2" className="pb-6">

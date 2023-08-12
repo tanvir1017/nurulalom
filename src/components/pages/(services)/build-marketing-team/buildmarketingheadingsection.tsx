@@ -53,6 +53,7 @@ const BuildMarketingHeadingSection = () => {
                 alt="marketing-consultant-najm-team-meeting"
                 width={850}
                 height={100}
+                priority
               />
             </div>
           </div>

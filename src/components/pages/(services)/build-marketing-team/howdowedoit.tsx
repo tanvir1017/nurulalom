@@ -35,7 +35,7 @@ const HowDoWeDoItCardData: HowDoWeDoItCardDataType[] = [
 
 const HowDoWeDoIt = () => {
   return (
-    <section className="container mt-16">
+    <section className="container mt-28">
       <div className="max-w-fit mx-auto text-center">
         <h5 className="text-blue-500 pb-6 font-bold text-lg">
           How Do We Do It?
