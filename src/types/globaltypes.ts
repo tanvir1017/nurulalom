@@ -59,3 +59,9 @@ export type TeamsLookingCardDataType = {
   item?: string[];
   desc?: string;
 };
+
+export type SuccessFullyGenerateLeadsWithWeeklyMeetingCardDataType = {
+  image: string;
+  title: string;
+  desc: string;
+};

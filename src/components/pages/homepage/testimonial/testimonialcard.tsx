@@ -3,7 +3,7 @@
 
 import { TextColor } from "@/lib/customColorFunc";
 import { ArrowRightIcon, StarIcon } from "@heroicons/react/24/outline";
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 
 const TestimonialCard = () => {
@@ -50,17 +50,13 @@ const TestimonialCard = () => {
           height={80}
           width={80}
         />
-        <Button
-          className="py-4 rounded-full hover:bg-[#0C304A] ml-5  mt-5 shadow-lg hover:scale-110 duration-300 flex items-center"
-          size="lg"
-          color="blue"
-        >
+        <DefaultButton className=" hover:scale-110">
           50+ Reviews & Case Studies{" "}
           <ArrowRightIcon
             strokeWidth={2.5}
             className={`h-5 w-5 transition-transform ml-3`}
           />
-        </Button>
+        </DefaultButton>
       </div>
     </div>
   );
