@@ -8,6 +8,12 @@ import StrugglesOfCompanyForBuildMarket from "@/components/pages/(services)/buil
 import TheStageWeWillGo from "@/components/pages/(services)/build-marketing-team/thestagewewillgo";
 import WhatMyClientSayAboutTheirGrowthBuildMarketingTeam from "@/components/pages/(services)/build-marketing-team/whatmyclientsayabouttheirgrowthbuildmarketingteam";
 import YourTeamsLookDependingOnMarketingNeeds from "@/components/pages/(services)/build-marketing-team/yourteamslookdependingonmarketingneeds";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hire In-House Marketing Team",
+  description: "Digital Marketing Consultant",
+};
 
 const BuildAMarketingTeam = () => {
   return (

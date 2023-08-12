@@ -19,8 +19,11 @@ const BuildMarketingHeadingSection = () => {
           <div className="max-w-2xl">
             <h1 className="text-6xl font-bold leading-[4.5rem] pb-6">
               <TextColor>
-                Hire <span className="text-blue-500">In-House</span> Verified
-                Marketing Team
+                Hire{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-tr from-blue-900 via-[#00589E]  to-[#008D9E]">
+                  In-House
+                </span>{" "}
+                Verified Marketing Team
               </TextColor>
             </h1>
 

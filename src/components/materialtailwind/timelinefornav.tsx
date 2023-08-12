@@ -27,9 +27,9 @@ export const ServicesNav = () => {
           {Services.map((item: NestedNavType, i: number) => (
             <TimelineForNav key={i}>
               <TimelineIcon className="bg-gray-500/95" />
-              <li className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2">
+              <span className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2">
                 <Link href={item.href}> {item.title} </Link>
-              </li>
+              </span>
             </TimelineForNav>
           ))}
         </TimelineItem>
@@ -45,9 +45,9 @@ export const FreeResourceNav = () => {
           {freeResource.map((item: NestedNavType, i: number) => (
             <TimelineForNav key={i}>
               <TimelineIcon className="bg-pink-500/95" />
-              <li className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2">
+              <span className="mb-3 block bg-white rounded-lg hover:shadow-md duration-200 transition-all p-2">
                 <Link href={item.href}>{item.title}</Link>
-              </li>
+              </span>
             </TimelineForNav>
           ))}
         </TimelineItem>

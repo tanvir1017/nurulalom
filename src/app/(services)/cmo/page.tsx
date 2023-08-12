@@ -8,7 +8,12 @@ import TrustedByForCMO from "@/components/pages/(services)/cmo/trustedbyforcmo";
 import WantMeAsYourCmo from "@/components/pages/(services)/cmo/wantmeasyourcmo";
 import WhatMyClientSayAboutTheirGrowth from "@/components/pages/(services)/cmo/whatmyclientsayabouttheirgrowth";
 import WhoShouldHire from "@/components/pages/(services)/cmo/whoshouldhire";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Hire me as your fractional CMO, Build a marketing department",
+  description: "Nurul alam Digital Marketing Consultant",
+};
 const CMO = () => {
   return (
     <main className="App">

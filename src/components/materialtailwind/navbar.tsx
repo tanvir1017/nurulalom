@@ -342,7 +342,7 @@ export default function ComplexNavbar() {
 
   return (
     <>
-      <Navbar className=" lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none">
+      <Navbar className="bg-[#f0f7fb]  lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none">
         <div className="container flex items-center justify-between text-blue-gray-900 ">
           <Typography
             variant="h6"
