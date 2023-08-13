@@ -31,7 +31,7 @@ const MarketingAdvisorPlanPage = () => {
       <MarketingAdvisorPlan />
       <WhatMyClientSayAboutTheirStartupMarketing />
       {/* InBoundConsultation OR Book a meeting form start 🌟*/}
-      <div className="bg-gradient-to-r from-blue-100 to-blue-gray-50 p-10">
+      <div className="bg-gradient-to-r from-blue-100 to-blue-gray-50 px-10 py-28">
         <div className="container">
           <InboundMarketingConsultation />
         </div>
