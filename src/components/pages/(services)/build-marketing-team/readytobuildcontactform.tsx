@@ -1,14 +1,20 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
 import { CheckIcon } from "@heroicons/react/24/outline";
-import { Button, Checkbox, Radio, Textarea } from "@material-tailwind/react";
+import {
+  Button,
+  Input,
+  List,
+  ListItem,
+  ListItemPrefix,
+  Radio,
+  Textarea,
+  Typography,
+} from "@material-tailwind/react";
 import { BiRename } from "react-icons/bi";
 import { BsLink45Deg, BsPhone } from "react-icons/bs";
 import { CiSquareInfo } from "react-icons/ci";
-import { GiPayMoney } from "react-icons/gi";
 import { MdAlternateEmail } from "react-icons/md";
-
-import { Input, Typography } from "@material-tailwind/react";
 
 const ReadyToBuildContactForm = () => {
   return (
@@ -102,9 +108,29 @@ const ReadyToBuildContactForm = () => {
                   "Complete Marketing Team",
                   "Others",
                 ].map((labelText: string) => (
-                  <div key={labelText}>
-                    <Checkbox label={labelText} />
-                  </div>
+                  <List key={labelText}>
+                    <ListItem className="p-0 rounded-full">
+                      <label
+                        htmlFor="IAmInterestedIn"
+                        className="flex w-full cursor-pointer items-center px-3 py-2"
+                      >
+                        <ListItemPrefix className="mr-3">
+                          <Radio
+                            name="IAmInterestedIn"
+                            id="IAmInterestedIn"
+                            ripple={false}
+                            className="hover:before:opacity-0"
+                            containerProps={{
+                              className: "p-0",
+                            }}
+                          />
+                        </ListItemPrefix>
+                        <Typography color="blue-gray" className="font-medium">
+                          {labelText}
+                        </Typography>
+                      </label>
+                    </ListItem>
+                  </List>
                 ))}
               </div>{" "}
               <div className="text-start">
@@ -118,13 +144,29 @@ const ReadyToBuildContactForm = () => {
                   "$5,000 - $10,000",
                   "$10,000+",
                 ].map((labelText: string) => (
-                  <div key={labelText} className="space-y-2 ">
-                    <Radio
-                      name="type"
-                      label={labelText}
-                      icon={<GiPayMoney />}
-                    />
-                  </div>
+                  <List key={labelText}>
+                    <ListItem className="p-0 rounded-full">
+                      <label
+                        htmlFor="MonthlyMarketingBudget"
+                        className="flex w-full cursor-pointer items-center px-3 py-2"
+                      >
+                        <ListItemPrefix className="mr-3">
+                          <Radio
+                            name="MonthlyMarketingBudget"
+                            id="MonthlyMarketingBudget"
+                            ripple={false}
+                            className="hover:before:opacity-0"
+                            containerProps={{
+                              className: "p-0",
+                            }}
+                          />
+                        </ListItemPrefix>
+                        <Typography color="blue-gray" className="font-medium">
+                          {labelText}
+                        </Typography>
+                      </label>
+                    </ListItem>
+                  </List>
                 ))}
               </div>
             </div>

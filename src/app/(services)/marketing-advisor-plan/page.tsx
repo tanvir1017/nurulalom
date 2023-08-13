@@ -4,9 +4,12 @@ import MarketingAdvisor from "@/components/pages/(services)/marketing-plan-advis
 import MarketingAdvisorPlan from "@/components/pages/(services)/marketing-plan-advisor/marketing-avisor-plan";
 import MidSizeClientReview from "@/components/pages/(services)/marketing-plan-advisor/mid-size-clients-review";
 import MoneyBackGuarantee from "@/components/pages/(services)/marketing-plan-advisor/mone-back-guarantee";
+import MyPhilosophies from "@/components/pages/(services)/marketing-plan-advisor/my-philosophies";
 import NoFakePromises from "@/components/pages/(services)/marketing-plan-advisor/no-fake-promises";
 import SuccessFullyGenerateLeadsWithWeeklyMeeting from "@/components/pages/(services)/marketing-plan-advisor/successfully-lead-generate-with-weekly-meetings";
 import UnfairAdvantages from "@/components/pages/(services)/marketing-plan-advisor/unfair-advantage";
+import WhatMyClientSayAboutTheirStartupMarketing from "@/components/pages/(services)/marketing-plan-advisor/what-myclient-say-about-their-startup-marketing";
+import InboundMarketingConsultation from "@/components/pages/shared/inbound-marketing-consultation/inbound-marketing-consultation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,6 +29,15 @@ const MarketingAdvisorPlanPage = () => {
       <NoFakePromises />
       <UnfairAdvantages />
       <MarketingAdvisorPlan />
+      <WhatMyClientSayAboutTheirStartupMarketing />
+      {/* InBoundConsultation OR Book a meeting form start 🌟*/}
+      <div className="bg-gradient-to-r from-blue-100 to-blue-gray-50 p-10">
+        <div className="container">
+          <InboundMarketingConsultation />
+        </div>
+      </div>
+      {/* InBoundConsultation OR Book a meeting form end 🔚*/}
+      <MyPhilosophies />
     </main>
   );
 };

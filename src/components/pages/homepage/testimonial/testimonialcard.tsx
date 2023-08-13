@@ -51,11 +51,11 @@ const TestimonialCard = () => {
           height={80}
           width={80}
         />
-        <DefaultButton className=" hover:scale-110">
+        <DefaultButton className="ml-10 hover:scale-110">
           50+ Reviews & Case Studies{" "}
           <ArrowRightIcon
             strokeWidth={2.5}
-            className={`h-5 w-5 transition-transform ml-3`}
+            className={`h-5 w-5 transition-transform ml-3 inline`}
           />
         </DefaultButton>
       </div>
