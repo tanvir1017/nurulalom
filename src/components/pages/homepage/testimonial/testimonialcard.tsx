@@ -2,10 +2,11 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
-import { ArrowRightIcon, StarIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import DefaultButton from "../../shared/button/default-button";
+import FiveStarRating from "../../shared/five-star-rating";
 
 const TestimonialCard = () => {
   return (
@@ -31,15 +32,7 @@ const TestimonialCard = () => {
 
       <div className="my-6">
         <span className="ml-3 flex justify-center items-center">
-          {[...Array(5).keys()].map((_, i) => (
-            <div key={i}>
-              <StarIcon
-                strokeWidth={2.5}
-                fill="#F0AD4E"
-                className={`h-5 w-5 transition-transform  text-orange-300`}
-              />
-            </div>
-          ))}
+          <FiveStarRating />
         </span>
       </div>
 

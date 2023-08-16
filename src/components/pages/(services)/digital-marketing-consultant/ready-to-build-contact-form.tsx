@@ -1,6 +1,5 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
-import { CheckIcon } from "@heroicons/react/24/outline";
 import {
   Button,
   Input,
@@ -18,38 +17,18 @@ import { MdAlternateEmail } from "react-icons/md";
 
 const ReadyToBuildContactForm = () => {
   return (
-    <section className="container mb-16">
-      <div>
-        <div className="max-w-fit mx-auto text-center space-y-5">
+    <section className="bg-gradient-to-r from-blue-100 to-blue-gray-50 px-10 py-28">
+      <div className="container">
+        <div className="max-w-6xl mx-auto text-center space-y-5">
           <Typography variant="h2">
-            <TextColor>
-              I'm Ready To Help You Build Your Team - Start Now!
-            </TextColor>
+            <TextColor>Interested? Book A Free Meeting Today!</TextColor>
           </Typography>
-          <Typography variant="h5">
-            <TextColor>Build In-House Team Plan</TextColor>
-          </Typography>
-
-          <ul className="flex items-center justify-center space-x-5">
-            {["20 Hours a month", "Total 4 Months", "2 Lac Taka per month"].map(
-              (item: string) => (
-                <li key={item}>
-                  <CheckIcon
-                    strokeWidth={4.5}
-                    className="w-4 h-4 text-blue-500 inline-flex mr-2"
-                  />
-
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-
           <Typography>
-            Book a meeting and get started as soon as 5 days.
+            Doesn't hurt to talk. Let's meet on a video call and see if I can
+            help you.
           </Typography>
 
-          <div className="border-t-4 border-blue-500 border  rounded-lg p-5">
+          <div className="border-t-4 border-blue-500 border  rounded-lg p-5 bg-white ">
             <div className="grid grid-cols-2 gap-5">
               <Input
                 label="Email"
@@ -179,7 +158,9 @@ const ReadyToBuildContactForm = () => {
               />
             </div>
             <div className="mt-5">
-              <Button className="rounded-full">Book A Meeting</Button>
+              <Button className="rounded-full">
+                Send Consultation Request
+              </Button>
             </div>
           </div>
         </div>

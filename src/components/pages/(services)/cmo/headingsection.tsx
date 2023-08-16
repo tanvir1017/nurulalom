@@ -11,8 +11,8 @@ import Image from "next/image";
 const HeadingSection = () => {
   return (
     <section className="container mt-16">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-5 place-items-center">
+      <div className="grid grid-cols-2 gap-5 place-items-center">
+        <div className="max-w-6xl mx-auto">
           <div>
             <Typography
               variant="h1"
@@ -46,14 +46,14 @@ const HeadingSection = () => {
               Explore Now <ArrowRightIcon className="h-5 w-5 ml-3" />
             </Button>
           </div>{" "}
-          <div>
-            <Image
-              src="/assets/images/part-time-cmo/fractional-cmo.png"
-              alt="Author png picture"
-              width={900}
-              height={200}
-            />
-          </div>
+        </div>
+        <div>
+          <Image
+            src="/assets/images/part-time-cmo/fractional-cmo.png"
+            alt="Author png picture"
+            width={1200}
+            height={100}
+          />
         </div>
       </div>
     </section>
