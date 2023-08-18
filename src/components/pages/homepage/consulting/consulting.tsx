@@ -3,12 +3,15 @@ import { Typography } from "@material-tailwind/react";
 
 const Consulting = () => {
   return (
-    <section className="bg-[url('/assets/images/home-im-consultant-bg.svg')] bg-center bg-contain bg-no-repeat py-32 bg-[#F3F7FB] my-14">
+    <section className="md:bg-[url('/assets/images/home-im-consultant-bg.svg')] bg-center bg-contain bg-no-repeat md:py-32 py-16 bg-[#F3F7FB] md:my-14 my-7">
       <div className=" container">
         <div className="grid place-items-center bg-white max-w-xl mx-auto rounded-lg overflow-clip">
           <div className="bg-blue-500 h-1 w-full "></div>
-          <span className="px-10 py-14">
-            <Typography variant="h2">
+          <span className="px-3 py-8 md:px-10 md:py-14">
+            <Typography
+              variant="h2"
+              className="md:text-4xl md:leading-[3rem] text-xl"
+            >
               <TextColor>
                 Consulting Is More Than <br /> Giving Advice
               </TextColor>

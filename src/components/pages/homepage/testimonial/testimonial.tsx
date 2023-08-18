@@ -5,7 +5,7 @@ import { Typography } from "@material-tailwind/react";
 
 const Testimonial = () => {
   return (
-    <section className="my-14 bg-[url('/assets/images/video-section-bg.svg')] p-24 bg-[#F3F7FB] bg-center bg-contain bg-no-repeat relative ">
+    <section className=" hidden md:block my-14 bg-[url('/assets/images/video-section-bg.svg')] p-24 bg-[#F3F7FB] bg-center bg-contain bg-no-repeat relative ">
       <div className="container">
         <div className=" text-center py-44">
           <Typography variant="h2">

@@ -2,7 +2,8 @@
 import { ThemeProvider } from "@material-tailwind/react";
 import AffordCMO from "./affordCMO/affordCMO";
 import Consulting from "./consulting/consulting";
-import GetMoreLeads from "./getmoreleads/getmoreleads";
+
+import GetMoreLeads from "./get-more-leads/get-more-leads";
 import Introduce from "./introduce/introduce";
 import MeetYourMarketer from "./meetyourmarker/meetyourmarker";
 import Testimonial from "./testimonial/testimonial";

@@ -7,17 +7,20 @@ import Image from "next/image";
 
 const MeetYourMarketer = () => {
   return (
-    <section className="container  my-20 px-32">
+    <section className="md:container px-1 md:my-20 my-10 md:px-32">
       <div className=" bg-[#F0F7FB]">
         <div
-          className="grid grid-cols-2 place-items-center"
+          className="grid grid-cols-1 md:grid-cols-2 md:place-items-center"
           style={{
             justifyItems: "end",
           }}
         >
-          <div className="p-10">
-            <div className="mb-6">
-              <Typography variant="h2">
+          <div className="md:p-10 px-3 md:order-1 order-2">
+            <div className="md:mb-6 my-5">
+              <Typography
+                variant="h2"
+                className="text-xl md:text-4xl md:leading-[3.3rem]"
+              >
                 <TextColor>
                   Meet Your Digital Marketing Consultant - Najm
                 </TextColor>
@@ -67,20 +70,22 @@ const MeetYourMarketer = () => {
                 </li>
               </ul>
 
-              <Button
-                className="py-3 rounded-full bg-blue-500 text-xs hover:shadow-none shadow-none flex items-center mt-12 "
-                size="lg"
-              >
-                Book a Meting{" "}
-                <ArrowRightIcon
-                  strokeWidth={2.5}
-                  className={` h-3 w-3 transition-transform ml-3`}
-                />
-              </Button>
+              <div className="md:pb-0 pb-3">
+                <Button
+                  className="py-3 rounded-full bg-blue-500 text-xs hover:shadow-none shadow-none flex items-center mt-12 "
+                  size="lg"
+                >
+                  Book a Meting{" "}
+                  <ArrowRightIcon
+                    strokeWidth={2.5}
+                    className={` h-3 w-3 transition-transform ml-3`}
+                  />
+                </Button>
+              </div>
             </div>
           </div>
 
-          <div className="">
+          <div className="md:order-2 order-1">
             <Image
               src="/assets/images/najm-consultant-at-work.jpg.webp"
               alt=""

@@ -11,24 +11,24 @@ const Connect = () => {
       <div className="mb-6">
         <Typography variant="h5">Let's Connect</Typography>
       </div>
-      <TextColor>
-        <ul className="space-y-3 ml-5">
-          {connect.map((item: SiteMapType, i: number) => (
-            <li key={i} className="flex items-center">
+      <ul className="space-y-3 ml-5">
+        {connect.map((item: SiteMapType, i: number) => (
+          <li key={i} className="flex items-center">
+            <TextColor>
               {" "}
               <Link href={item.href}>
                 <span>{item.title}</span>
               </Link>
-            </li>
-          ))}
-        </ul>
-      </TextColor>{" "}
+            </TextColor>{" "}
+          </li>
+        ))}
+      </ul>
       <div className="mb-7 mt-14">
         <Typography variant="h6">Not sure where to start?</Typography>
       </div>
       <div>
         <Button
-          className="py-3 px-7  rounded-full hover:bg-[#0C304A] shadow-lg hover:scale-110 duration-300 flex items-center normal-case"
+          className="py-3 px-7 rounded-full hover:bg-[#0C304A] shadow-lg hover:scale-110 duration-300 flex items-center normal-case"
           size="lg"
           color="blue"
         >

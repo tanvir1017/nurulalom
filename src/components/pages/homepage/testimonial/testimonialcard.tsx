@@ -10,9 +10,9 @@ import FiveStarRating from "../../shared/five-star-rating";
 
 const TestimonialCard = () => {
   return (
-    <div className="container mt-56 mb-14 text-center">
+    <div className="container md:mt-56 md:mb-14 mb-7 text-center">
       <div className="mt-20 ">
-        <Typography variant="h4">
+        <Typography variant="h4" className="md:text-2xl text-xl">
           <TextColor>
             &#34;Nobody takes ownership like Najm does.&#34;
           </TextColor>
@@ -25,26 +25,26 @@ const TestimonialCard = () => {
         width={80}
         height={80}
       />
-      <p className="mt-10">
+      <p className="md:mt-10 mt-7">
         <strong> - Shubho Al-Farooque</strong> <br />
         <span> Founder & CEO, Zantrik</span>
       </p>
 
       <div className="my-6">
-        <span className="ml-3 flex justify-center items-center">
+        <span className="md:ml-3 flex justify-center items-center">
           <FiveStarRating />
         </span>
       </div>
 
       <div className="flex items-center justify-center mt-5 pb-6">
         <Image
-          className="-ml-14 -mt-9"
+          className="md:block hidden -ml-14 -mt-9"
           src="https://res.cloudinary.com/djbcnjkin/image/upload/v1690994194/xtxfow6u2ozsmafu8prb.webp"
           alt="Arrow indicate 50+ reviews"
           height={80}
           width={80}
         />
-        <DefaultButton className="ml-10 hover:scale-110">
+        <DefaultButton className="md:ml-10 hover:scale-110 flex">
           50+ Reviews & Case Studies{" "}
           <ArrowRightIcon
             strokeWidth={2.5}
