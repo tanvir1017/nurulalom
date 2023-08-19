@@ -6,22 +6,25 @@ import Image from "next/image";
 
 const WhoShouldHire = () => {
   return (
-    <section className="container">
+    <section className="md:container px-5">
       <div className="max-w-fit mx-auto text-center space-y-5">
-        <Typography variant="h4" className="text-blue-500">
+        <Typography variant="h4" className="text-blue-500 md:text-xl text-lg">
           Who Should You Hire?
         </Typography>
-        <Typography variant="h2" className="">
+        <Typography
+          variant="h2"
+          className="md:text-4xl text-2xl font-extrabold md:font-bold"
+        >
           <TextColor>Fractional CMO VS Full-Time CMO</TextColor>
         </Typography>
         <Typography className="">
-          The good news: No need to hire an $7K/ month CMO. Let’s work together
+          The good news: No need to hire an $7K/ month CMO. Let's work together
           and I will prove the power of outbound marketing.
         </Typography>
       </div>
       <div className="my-28">
-        <div className="grid grid-cols-2  max-w-6xl mx-auto ">
-          <div className="shadow border-gray-400 p-10">
+        <div className="grid md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto">
+          <div className="shadow border-gray-400 md:p-10 p-6">
             <Image
               src="/assets/images/part-time-cmo/Najm-consultant-working.svg"
               alt="Najm consultant working illustration"
@@ -30,7 +33,7 @@ const WhoShouldHire = () => {
               className="mx-auto"
             />
             <div className="py-12">
-              <Typography variant="h3">
+              <Typography variant="h3" className="md:text-3xl text-xl">
                 <TextColor>Najm - Your Fractional CMO</TextColor>
               </Typography>
               <div className="mt-8 space-y-5">
@@ -72,13 +75,13 @@ const WhoShouldHire = () => {
                     height={30}
                     className="mr-3"
                   />
-                  <p>Only consulting fee. No extra charges​</p>
+                  <p>Only consulting fee. No extra charges</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="shadow p-10 bg-[#F0F7FB]">
+          <div className="shadow md:p-10 p-6 bg-[#F0F7FB]">
             <Image
               src="/assets/images/part-time-cmo/full-time-cmo.svg"
               alt="Najm consultant working illustration"
@@ -87,7 +90,7 @@ const WhoShouldHire = () => {
               className="mx-auto"
             />
             <div className="py-12">
-              <Typography variant="h3">
+              <Typography variant="h3" className="md:text-3xl text-xl">
                 <TextColor>$10K Regular Full Time CMO</TextColor>
               </Typography>
               <div className="mt-8 space-y-5">

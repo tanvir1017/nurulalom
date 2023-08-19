@@ -28,7 +28,7 @@ const jobTitle = ["Founder", "Coder", "Marketer", "Student", "Others"];
 const BookAMeeting = () => {
   return (
     <>
-      <Typography variant="h2" className="pb-6">
+      <Typography variant="h2" className="pb-6 md:text-4xl text-2xl ">
         <TextColor>Book A Meeting Today!</TextColor>
       </Typography>
       <Typography className="pb-6">
@@ -37,7 +37,7 @@ const BookAMeeting = () => {
       </Typography>
 
       <div className="border-t-4 border-blue-500 border  rounded-lg p-5 shadow bg-white/50 backdrop-blur-2xl">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-y-2">
           <Input
             label="Email"
             required
@@ -84,7 +84,7 @@ const BookAMeeting = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-5 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-5 gap-0">
           <div className="text-start">
             <Typography variant="h6">
               I want to hire you for{" "}
@@ -95,7 +95,7 @@ const BookAMeeting = () => {
                 <ListItem className="p-0 rounded-full">
                   <label
                     htmlFor="Hire_For_Action"
-                    className="flex w-full cursor-pointer items-center px-3 py-2"
+                    className="flex w-full cursor-pointer items-center px-3 md:py-2 py-0.5"
                   >
                     <ListItemPrefix className="mr-3">
                       <Radio
@@ -126,7 +126,7 @@ const BookAMeeting = () => {
                 <ListItem className="p-0 rounded-full">
                   <label
                     htmlFor="Job_Title_Action"
-                    className="flex w-full cursor-pointer items-center px-3 py-2"
+                    className="flex w-full cursor-pointer items-center px-3 md:py-2 py-0.5"
                   >
                     <ListItemPrefix className="mr-3">
                       <Radio

@@ -16,7 +16,7 @@ const Stage1 = () => {
               team."
           />
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 gap-5 place-items-center mt-16">
+            <div className="md:grid md:grid-cols-2 flex flex-col-reverse  md:gap-5 md:place-items-center mt-16">
               <div className="max-w-md ">
                 <Stage1Accordion />
               </div>

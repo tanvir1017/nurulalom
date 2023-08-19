@@ -10,17 +10,17 @@ import Image from "next/image";
 
 const HeadingSection = () => {
   return (
-    <section className="container mt-16">
-      <div className="grid grid-cols-2 gap-5 place-items-center">
+    <section className="md:container px-4 mt-16">
+      <div className="md:grid md:grid-cols-2 md:gap-5 place-items-center flex flex-col-reverse">
         <div className="max-w-6xl mx-auto">
-          <div>
+          <div className="max-w-xl mx-auto ">
             <Typography
               variant="h1"
-              className="text-5xl font-extrabold pb-6 leading-[4rem]"
+              className="md:text-5xl text-2xl font-extrabold pb-6 md:leading-[4rem]"
             >
               <TextColor>
-                As Your <span className="text-blue-500">Fractional CMO,</span>{" "}
-                <br /> I Will Build Your <br /> Marketing Department
+                As Your <span className="text-blue-500">Fractional CMO,</span> I
+                Will Build Your Marketing Department
               </TextColor>
             </Typography>
 

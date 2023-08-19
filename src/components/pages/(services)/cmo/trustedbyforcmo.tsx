@@ -4,7 +4,7 @@ import Image from "next/image";
 const TrustedByForCMO = () => {
   return (
     <section className="container mb-16">
-      <div className="flex items-center justify-center space-x-5">
+      <div className="md:flex md:items-center md:justify-center grid grid-cols-3 space-x-5">
         {[
           "/assets/images/brand/cramstack.png",
           "/assets/images/brand/prothom-alo.png.webp",

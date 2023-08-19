@@ -7,8 +7,8 @@ import StageHeading from "./stageheading";
 
 const Stage2 = () => {
   return (
-    <section className="mt-16">
-      <div className="container">
+    <section className="md:mt-16 mt-5">
+      <div className="md:container px-3">
         <StageHeading
           stageLevel="Stage 2"
           period="Time Period: 3 Months"
@@ -20,7 +20,7 @@ const Stage2 = () => {
 
         {/* Cards of stage 2 section */}
 
-        <div className="grid grid-cols-2 gap-5 max-w-5xl mx-auto py-16">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-5 max-w-5xl mx-auto py-16">
           <div className="shadow-md border-t-4 border-blue-500 px-5 py-8 rounded-lg ">
             <Typography variant="h5" className="text-blue-500 pb-6">
               STEP 2.1:
@@ -30,9 +30,13 @@ const Stage2 = () => {
               alt="free consultation illustration"
               width={300}
               height={100}
+              sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
               className="pb-6"
             />
-            <Typography variant="h3" className="text-blue-500 pb-6">
+            <Typography
+              variant="h3"
+              className="text-blue-500 pb-6 md:text-3xl text-2xl"
+            >
               <TextColor>Building A Marketing Team</TextColor>
             </Typography>
             <div className="flex items-center justify-start space-x-5 pb-6">
@@ -69,12 +73,16 @@ const Stage2 = () => {
               alt="free consultation illustration"
               width={200}
               height={100}
+              sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
               className="pb-6"
             />
-            <Typography variant="h3" className="text-blue-500 pb-6 ">
+            <Typography
+              variant="h3"
+              className="text-blue-500 pb-6 md:text-3xl text-2xl"
+            >
               <TextColor>Kickstart Marketing Activities</TextColor>
             </Typography>
-            <div className="flex items-center justify-start space-x-5 pb-6">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:space-x-5 space-y-3 pb-6">
               <span>
                 {" "}
                 <CheckIcon className="w-5 h-5 text-blue-500 inline" /> Focus On
@@ -98,6 +106,7 @@ const Stage2 = () => {
               alt="Digital marketing consulting for B2Bs Illustration"
               width={500}
               height={100}
+              sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
               className="pt-6"
             />
           </div>{" "}

@@ -7,30 +7,30 @@ import Image from "next/image";
 
 const MeetYourFractionalCMO = () => {
   return (
-    <section className="container  my-20 px-32">
+    <section className="md:container my-20 md:px-32 px-0">
       <div className=" bg-[#F0F7FB]">
         <div
-          className="grid grid-cols-2 place-items-center"
+          className="flex flex-col-reverse md:grid md:grid-cols-2 md:place-items-center"
           style={{
             justifyItems: "end",
           }}
         >
-          <div className="p-10">
-            <div className="mb-6">
-              <Typography variant="h2">
-                <TextColor>
-                  Meet Your Fractional CMO - Nazmul Ahmed (Najm)
-                </TextColor>
-              </Typography>
-            </div>
+          <div className="md:p-10 p-4">
+            <Typography
+              variant="h2"
+              className="md:text-4xl text-2xl font-extrabold md:font-bold mb-6"
+            >
+              <TextColor>
+                Meet Your Fractional CMO - Nazmul Ahmed (Najm)
+              </TextColor>
+            </Typography>
 
-            <div className="mb-6">
-              <Typography>
-                As a former founder and seasoned marketer, I understand the
-                unique challenges and pain points that business owners face –
-                and I’m here to help you overcome them.
-              </Typography>
-            </div>
+            <Typography className="mb-6">
+              As a former founder and seasoned marketer, I understand the unique
+              challenges and pain points that business owners face - and I'm
+              here to help you overcome them.
+            </Typography>
+
             <hr className="border-b-black border" />
 
             <div className="mt-6">

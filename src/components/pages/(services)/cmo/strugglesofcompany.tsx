@@ -13,7 +13,7 @@ const strugglesData: string[] = [
 
 const StrugglesOfCompany = () => {
   return (
-    <section className="bg-[#F0F7FB] px-6 py-12 mt-16">
+    <section className="bg-[#F0F7FB] px-6 py-12 mt-16 md:block hidden">
       <div className="container">
         <div>
           <Image

@@ -11,10 +11,10 @@ const InboundMarketingConsultation = () => {
         <Typography variant="h2" className="pb-6">
           <TextColor>Contact Me</TextColor>
         </Typography>
-        <Typography className="pb-6">
+        <Typography className="md:pb-6 pb-3">
           <TextColor>Reach us today, we would love to hear from you!</TextColor>
         </Typography>
-        <div className="flex items-center justify-around mt-7">
+        <div className="flex flex-col md:flex-row items-center justify-center  md:justify-around mt-7">
           <span className="flex items-center space-x-3 mr-5">
             <PhoneIcon className="w-5 h-5" />
             <Typography variant="h5">+8801721853227 </Typography>
