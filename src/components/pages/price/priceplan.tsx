@@ -7,11 +7,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 const PricePlan = () => {
-  const [filterByCG, setFilterByCG] = useState<string>("mid");
+  const [filterByCG, setFilterByCG] = useState<string>("small");
   return (
     <section className="container bg-[url('/assets/images/home-banner-bg.svg')] bg-no-repeat bg-cover">
       <div className="max-w-xl mx-auto">
-        <h1 className="font-bold pb-6 mt-16 text-5xl text-center leading-tight">
+        <h1 className="font-bold pb-6 mt-16 md:text-5xl text-2xl text-center leading-tight">
           <TextColor>Monthly Retainers For Companies Of All Sizes</TextColor>
         </h1>
       </div>
@@ -21,7 +21,7 @@ const PricePlan = () => {
           basis. You pay a set fee each month for our advice or execution
           depending on the consulting plan you select.
         </p>
-        <h5 className="text-center mt-6 font-semibold">
+        <h5 className="text-center mt-6 font-semibold hidden">
           <TextColor>SELECT YOUR COMPANY SIZE</TextColor>
         </h5>
       </div>
@@ -38,14 +38,14 @@ const PricePlan = () => {
         <div className="pt-6 flex items-center justify-center space-x-5">
           <Button
             variant={filterByCG === "mid" ? "filled" : "outlined"}
-            className="text-sm py-4 rounded-full font-light"
+            className="md:text-sm text-xs md:py-4 py-2 rounded-full font-light"
             onClick={() => setFilterByCG("mid")}
           >
             Mid-Size Company
           </Button>
           <Button
             variant={filterByCG === "small" ? "filled" : "outlined"}
-            className="text-sm py-4 rounded-full font-light"
+            className="md:text-sm text-xs md:py-4 py-2 rounded-full font-light"
             onClick={() => setFilterByCG("small")}
           >
             Small Company

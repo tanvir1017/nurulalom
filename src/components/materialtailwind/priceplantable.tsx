@@ -6,7 +6,7 @@ import ExecutionRow from "../pages/price/executionrow";
 
 export function PricePlanTable({ companySize }: { companySize: string }) {
   return (
-    <Card className="h-full w-full mb-20">
+    <Card className="h-full w-full mb-20 md:overflow-x-hidden overflow-x-auto ">
       <table className="w-full min-w-max table-auto text-left">
         <thead className="bg-gradient-to-r from-blue-400 to-blue-600">
           {TABLE_HEAD_MERGED.filter((h) => h.company === companySize).map(

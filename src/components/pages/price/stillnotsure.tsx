@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const StillNotSure = () => {
   return (
-    <section className=" bg-[url('/assets/images/Still_not_sure_Decor.svg')] bg-no-repeat bg-center my-32">
-      <div className="container bg-[url('/assets/images/Still_not_sure_bg_shape.svg')] bg-no-repeat bg-center  ">
-        <div className="max-w-3xl shadow-xl bg-white mx-auto p-10 py-32 rounded-lg">
+    <section className="md:bg-[url('/assets/images/Still_not_sure_Decor.svg')] bg-no-repeat bg-center md:my-32 my-16">
+      <div className="md:container md:bg-[url('/assets/images/Still_not_sure_bg_shape.svg')] bg-no-repeat bg-center  bg-[#f0fbf6] p-10 md:p-10">
+        <div className="max-w-3xl shadow-xl bg-white mx-auto md:px-10 px-7 md:py-32 py-16 rounded-lg">
           <Image
             src="/assets/images/fev-icon-small.png.webp"
             alt="fev-icon-small"
@@ -16,7 +16,7 @@ const StillNotSure = () => {
             className="rounded-full block mx-auto "
           />
           <div className="space-y-6 pt-6">
-            <h2 className="text-3xl font-bold text-center max-w-xl mx-auto">
+            <h2 className="md:text-3xl text-xl font-bold text-center max-w-xl mx-auto">
               <TextColor>
                 Still Not Sure Which Consulting Plan To Take?
               </TextColor>
