@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const ProcessOfWorkingWithMeCard = () => {
   return (
-    <div className="container mt-16">
-      <div className="grid grid-cols-3 gap-5">
+    <div className="md:container mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-3">
         {aboutCardData.map((item: AboutCardDataType, i: number) => (
-          <Card className="mt-6 w-96" key={i}>
+          <Card className="mt-6 md:w-96 w-full" key={i}>
             <Image
               src={item.image}
               alt={item.title}

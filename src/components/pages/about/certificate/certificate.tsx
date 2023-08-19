@@ -5,9 +5,12 @@ import Image from "next/image";
 
 const Certificate = () => {
   return (
-    <div className="container">
-      <div className="mt-16">
-        <Typography variant="h2" className="max-w-xl text-center mx-auto pb-6">
+    <div className="md:container px-4">
+      <div className="md:mt-16 mt-8">
+        <Typography
+          variant="h2"
+          className="max-w-xl text-center mx-auto pb-6 md:text-4xl text-2xl"
+        >
           <TextColor>
             Nazmul Ahmed Aka Najm's Marketing Certifications
           </TextColor>
@@ -20,22 +23,32 @@ const Certificate = () => {
           digital marketing.
         </Typography>
 
-        <div className="flex items-center justify-center space-x-12 py-16 ">
-          {[
-            "/assets/images/certificate/hubspot.png",
-            "/assets/images/certificate/customer-aquisition-specialist.png.webp",
-            "/assets/images/certificate/hubspot1.png",
-            "/assets/images/certificate/hubspot2.png",
-          ].map((item: string, key: number) => (
-            <div key={key}>
-              <Image
-                src={item}
-                alt="certified brand images"
-                width={key !== 1 ? 220 : 150}
-                height={100}
-              />
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-4 grid-cols-2 gap-5 md:gap-0 place-items-center py-16 ">
+            {[
+              "/assets/images/certificate/hubspot.png",
+              "/assets/images/certificate/customer-aquisition-specialist.png.webp",
+              "/assets/images/certificate/hubspot1.png",
+              "/assets/images/certificate/hubspot2.png",
+            ].map((item: string, key: number) => (
+              <div key={key}>
+                <Image
+                  className="hidden md:block"
+                  src={item}
+                  alt="certified brand images"
+                  width={key !== 1 ? 220 : 150}
+                  height={100}
+                />
+                <Image
+                  className="md:hidden block"
+                  src={item}
+                  alt="certified brand images"
+                  width={key !== 1 ? 220 : 100}
+                  height={100}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

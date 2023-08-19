@@ -5,20 +5,24 @@ import Image from "next/image";
 
 const PastExperience3 = () => {
   return (
-    <div className="container mt-16">
+    <section className="md:container px-5 mt-16">
       <Image
         src="/assets/images/about/hire-cmo.jpg.webp"
         alt="Past experience big image"
         width={1150}
         height={100}
+        sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
         className="block mx-auto"
       />
 
-      <div className="mt-16 px-32">
+      <div className="md:mt-16 mt-8 md:px-32">
         <p className="font-extrabold text-gray-500 pb-6">Current</p>
         <div className="relative overflow-hidden flex items-center pb-4">
-          <div className="w-[3px] h-20 bg-blue-500 mr-10"></div>
-          <Typography variant="h2" className="max-w-2xl font-extrabold">
+          <div className="w-[3px] h-20 bg-blue-500 md:mr-10 mr-3"></div>
+          <Typography
+            variant="h2"
+            className="max-w-2xl font-extrabold md:text-4xl text-2xl"
+          >
             <TextColor>Najm Consultant</TextColor>
           </Typography>
         </div>
@@ -36,7 +40,7 @@ const PastExperience3 = () => {
             customers. Now as a certified marketer, I can vouch for my expertise
             and help you solve your problem areas.
           </Typography>
-          <Typography variant="lead">
+          <Typography variant="lead" className="md:text-xl text-sm">
             Need to build a marketing team? Or a marketing department?
             Conversion optimization? Lead generation? Sales? I have the answers,
             the tips and tricks, and the mistakes, prepared for you.
@@ -51,7 +55,7 @@ const PastExperience3 = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

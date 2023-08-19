@@ -8,6 +8,7 @@ import ProcessOfWorkingWithMe from "@/components/pages/about/processofworkingwit
 import StoryOfMarketer from "@/components/pages/about/storyofmarketer";
 
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Nurul Alom consultant - Nurul Alom | Digital Marketing...",
@@ -18,8 +19,17 @@ const About = () => {
   return (
     <main className="App">
       <AboutHeading />
-      <section className="container max-w-6xl mx-auto pt-24 pb-12 ">
-        <p className="text-[1.375rem] leading-8">
+      <section className="md:container max-w-6xl mx-auto pt-24 pb-12 px-3 ">
+        <Image
+          className="md:hidden block mb-5"
+          src="/assets/images/about/marketing-consulting.jpg"
+          alt="marketing consulting"
+          width={400}
+          height={100}
+          priority
+        />
+
+        <p className="md:text-[1.375rem]  leading-8">
           My happiest moment is getting the text message from my clients that
           says,{" "}
           <b className="italic">
