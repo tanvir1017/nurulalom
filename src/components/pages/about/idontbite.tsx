@@ -7,9 +7,9 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const IDontBite = () => {
   return (
-    <div className="container mt-20 mb-28">
+    <div className="md:container mt-20 mb-28">
       <div className="max-w-6xl mx-auto bg-[#F7FCFF]">
-        <div className="grid grid-cols-2 place-items-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 place-items-center">
           <Image
             src="/assets/images/about/idontbite.webp"
             alt="Confidentially smiling website owner"

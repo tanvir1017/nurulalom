@@ -5,20 +5,24 @@ import Image from "next/image";
 
 const PastExperience2 = () => {
   return (
-    <div className="container mt-16">
+    <div className="md:container px-5 mt-16">
       <Image
         src="/assets/images/about/grameenphone-accelerator-nazmul-ahmed.jpg"
         alt="Past experience big image"
         width={1150}
         height={100}
+        sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
         className="block mx-auto"
       />
 
-      <div className="mt-16 px-32">
+      <div className="md:mt-16 mt-8 md:px-32">
         <p className="font-extrabold text-gray-500 pb-6">Past Experience</p>
         <div className="relative overflow-hidden flex items-center pb-4">
-          <div className="w-[3px] h-20 bg-blue-500 mr-10"></div>
-          <Typography variant="h2" className="max-w-2xl font-extrabold">
+          <div className="w-[3px] h-20 bg-blue-500 md:mr-10 mr-3"></div>
+          <Typography
+            variant="h2"
+            className="max-w-2xl font-extrabold md:text-4xl text-2xl"
+          >
             <TextColor>Former Founder & CEO</TextColor>
           </Typography>
         </div>

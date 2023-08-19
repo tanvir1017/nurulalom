@@ -6,13 +6,16 @@ import BrandImage from "./brandimage";
 
 const FewClients = () => {
   return (
-    <div className="container mt-24">
-      <div className="max-w-xl mx-auto">
-        <Typography variant="h2" className="pb-6">
+    <div className="md:container px-3 mt-24">
+      <div className="md:max-w-xl  mx-auto text-center">
+        <Typography
+          variant="h2"
+          className="md:text-4xl text-2xl md:font-bold font-semibold mb-3 md:mb-0"
+        >
           <TextColor>A Few Clients I Have Worked With</TextColor>
         </Typography>
 
-        <Typography className="text-center">
+        <Typography className="">
           Southtech, JoBike, CutOutWiz, Cramstack, OpticTour (Texas, USA),
           Unique Asset Strategies (Chicago, USA), Jobike, Sheba, Brainstation
           23, & Service Chai are some of the startups I had the pleasure of
