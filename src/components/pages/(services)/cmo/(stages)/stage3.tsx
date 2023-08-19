@@ -5,7 +5,7 @@ import StageHeading from "./stageheading";
 
 const Stage3 = () => {
   return (
-    <section className="mt-24 mb-28">
+    <section className="md:mt-24 mb-28">
       <div className="container">
         <div className="mx-w-6xl  mx-auto ">
           <div className="text-center">
@@ -17,9 +17,12 @@ const Stage3 = () => {
             />
           </div>
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 gap-5 place-items-start mt-20">
+            <div className="md:grid md:grid-cols-2 md:gap-5 flex flex-col-reverse place-items-start mt-20">
               <div className="max-w-lg">
-                <Typography variant="h2" className="text-start">
+                <Typography
+                  variant="h2"
+                  className="text-start md:text-4xl text-2xl md:mt-0 mt-6"
+                >
                   <TextColor>
                     Build A Brand, Generate More Leads & Convert More Clients
                   </TextColor>

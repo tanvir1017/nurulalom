@@ -1,16 +1,17 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
-import { StarIcon } from "@heroicons/react/24/outline";
 import { Typography } from "@material-tailwind/react";
+import ClientSuccessStoryYouTube from "../../shared/client-success-story-ytube/client-success-story-ytube";
+import FiveStarRating from "../../shared/five-star-rating";
 
 const WhatMyClientSayAboutTheirGrowth = () => {
   return (
     <section>
-      <div className="bg-[#F0F7FB] bg-[url('/assets/images/part-time-cmo/video-section-bg.svg')] bg-no-repeat bg-cover p-40">
+      <div className="bg-[#F0F7FB] md:bg-[url('/assets/images/part-time-cmo/video-section-bg.svg')] md:bg-no-repeat md:bg-cover md:p-40 py-24 mb-4">
         <div className="container">
           <div className="max-w-xl mx-auto text-center">
-            <Typography variant="h2">
+            <Typography variant="h2" className="md:text-4xl text-2xl">
               <TextColor>
                 What My Clients Have To Say About Their Revenue Growth
               </TextColor>
@@ -19,46 +20,17 @@ const WhatMyClientSayAboutTheirGrowth = () => {
         </div>
       </div>
 
-      <div className="max-w-fit mx-auto ">
-        <div className="-mt-28">
-          <iframe
-            className="rounded-lg"
-            width="1120"
-            height="630"
-            src="https://www.youtube.com/embed/fsSuGoTpyQg"
-            title="Southtech CEO Syed Mamnun Quader talks about Najm | Marketing Consultant"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-
-          <div className="grid grid-cols-2 gap-5 pt-6">
-            <iframe
-              className="rounded-lg"
-              width="540"
-              height="304"
-              src="https://www.youtube.com/embed/nkk2ASQOUHg"
-              title="What you didn&#39;t know about Najm Consultant. Shahed Islam CEO of SJ Innovaton LLC shared his opinion"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-            <iframe
-              className="rounded-lg"
-              width="540"
-              height="304"
-              src="https://www.youtube.com/embed/p8owDD4OJrc"
-              title="Ramin Jahedi CEO of Optictour Google Trusted Agency talks about Nazmul"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
+      <ClientSuccessStoryYouTube
+        embadedURL1="https://www.youtube.com/embed/fsSuGoTpyQg"
+        title1="Southtech CEO Syed Mamnun Quader talks about Najm | Marketing Consultant"
+        embadedURL2="https://www.youtube.com/embed/nkk2ASQOUHg"
+        title2="What you didn&#39;t know about Najm Consultant. Shahed Islam CEO of SJ Innovaton LLC shared his opinion"
+        embadedURL3="https://www.youtube.com/embed/p8owDD4OJrc"
+        title3="Ramin Jahedi CEO of Optictour Google Trusted Agency talks about Nazmul"
+      />
 
       <div className="max-w-fit mx-auto text-center my-24 space-y-6">
-        <Typography variant="h2">
+        <Typography variant="h2" className="md:text-4xl text-2xl">
           <TextColor>Najm built us an inbound marketing machine!</TextColor>
         </Typography>
         <div>
@@ -70,14 +42,7 @@ const WhatMyClientSayAboutTheirGrowth = () => {
 
         <div className="flex items-center justify-center">
           <div className="flex items-center justify-start">
-            {[1, 2, 3, 4, 5].map((_: number) => (
-              <StarIcon
-                key={_}
-                strokeWidth={2.5}
-                fill="#F0AD4E"
-                className={`h-5 w-5 transition-transform  text-orange-300`}
-              />
-            ))}
+            <FiveStarRating />
           </div>
         </div>
       </div>

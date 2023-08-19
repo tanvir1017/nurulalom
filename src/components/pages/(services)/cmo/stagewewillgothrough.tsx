@@ -10,10 +10,13 @@ import Stage3 from "./(stages)/stage3";
 const StageWeWillGoThrough = () => {
   return (
     <>
-      <section className="mt-16 bg-[#F0F7FB] px-6 py-12">
-        <div className="container">
-          <div className="text-center mx-auto max-w-2xl space-y-6">
-            <Typography variant="h2">
+      <section className="md:mt-16 mt-8 bg-[#F0F7FB] md:px-6 md:py-12 py-8">
+        <div className="md:container px-4">
+          <div className="text-center mx-auto md:max-w-2xl space-y-6">
+            <Typography
+              variant="h2"
+              className="md:text-4xl text-2xl font-extrabold"
+            >
               <TextColor>
                 The <span className="text-blue-500">Stages</span> We Will Go
                 Through Together To Build Your Marketing Machine
@@ -34,7 +37,7 @@ const StageWeWillGoThrough = () => {
               alt="process of fractional cmo picture"
               width={1100}
               height={794}
-              // className="mx-auto"
+              sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
             />
           </div>
         </div>
