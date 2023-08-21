@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const UnfairAdvantages = () => {
   return (
-    <section className="container my-32">
+    <section className="md:container px-4 md:my-32 my-16">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 place-items-center border-2 border-gray-200 rounded-lg p-10">
+        <div className="grid md:grid-cols-2 place-items-center border-2 border-gray-200 rounded-lg md:p-10 p-5">
           <Image
             src="/assets/images/marketing-advisor/unfair-advantages.svg"
             alt="unfair advantages"

@@ -32,9 +32,9 @@ const FounderFriendlyMentorshipCard: FounderFriendlyMentorshipCardDataType[] = [
 
 const FounderFriendlyMentorship = () => {
   return (
-    <section className="container mt-32">
-      <div className="max-w-xl mx-auto text-center pb-14">
-        <Typography variant="h2" className="pb-6">
+    <section className="container mt:mt-32 mt-16">
+      <div className="max-w-xl mx-auto md:text-center text-start pb-14">
+        <Typography variant="h2" className="pb-6 md:text-4xl text-2xl">
           <TextColor>
             Founder Friendly Mentorship & Marketing Guidance For A Team
           </TextColor>
@@ -44,20 +44,23 @@ const FounderFriendlyMentorship = () => {
           marketing expert. The deeper the questions the better I can help.
         </Typography>
       </div>
-      <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 ">
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16 ">
         {FounderFriendlyMentorshipCard.map(
           (item: FounderFriendlyMentorshipCardDataType, i: number) => (
             <div
               key={i}
-              className={`px-6 py-3 ${
-                i === 1 && "border  border-gray-200 border-t-0 border-b-0 "
+              className={`md:px-6 px-4 py-3 ${
+                i === 1 &&
+                "md:border md:border-gray-200 md:border-t-0 md:border-b-0 "
               }`}
             >
-              <span className="pb-6 block">{item.svgIcon}</span>
-              <Typography variant="h5" className="text-center">
+              <span className="pb-6 block ">{item.svgIcon}</span>
+              <Typography variant="h5" className="md:text-center">
                 <TextColor>{item.title}</TextColor>
               </Typography>
-              <Typography className="py-6 text-center">{item.desc}</Typography>
+              <Typography className="py-6 md:text-center">
+                {item.desc}
+              </Typography>
             </div>
           )
         )}

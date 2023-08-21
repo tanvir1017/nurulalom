@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 
 const MyPhilosophies = () => {
   return (
-    <section className="container my-28">
+    <section className="container my-28 md:block hidden">
       <div className="max-w-5xl mx-auto grid grid-cols-5 gap-3">
         <div className="border-r border-gray-300 col-span-2">
           <Typography variant="h3">

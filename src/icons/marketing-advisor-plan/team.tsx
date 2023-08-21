@@ -1,6 +1,6 @@
 const TeamIcon = () => {
   return (
-    <div className=" rounded-full w-28 h-28 p-5 mx-auto bg-[#F0F7FB] flex items-center justify-center">
+    <div className="rounded-full w-28 h-28 p-5 md:mx-auto bg-[#F0F7FB] flex items-center justify-center">
       <svg
         width="55px"
         height="54px"
