@@ -1,4 +1,4 @@
-import InboundMarketingConsultation from "@/components/pages/shared/inbound-marketing-consultation/inbound-marketing-consultation";
+import InboundMarketingConsultation from "@/shared/inbound-marketing-consultation/inbound-marketing-consultation";
 
 const page = () => {
   return (

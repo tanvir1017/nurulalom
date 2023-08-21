@@ -9,7 +9,8 @@ import OneThingAllMyPreviousStartupClientsToldMe from "@/components/pages/(servi
 import StartupMarketingConsultantHeadingSection from "@/components/pages/(services)/startup-marketing-consultant/startup-marketing-consultant-heading";
 import HowToSuccessfullyGenerateLeadsWithTheseWeeklyMeetings from "@/components/pages/(services)/startup-marketing-consultant/successfully-lead-generate-with-weekly-meetings";
 import WhatMyClientSayAboutTheirStartupMarketingMeetings from "@/components/pages/(services)/startup-marketing-consultant/what-myclient-say-about-their-startup-marketing-meetings";
-import InboundMarketingConsultation from "@/components/pages/shared/inbound-marketing-consultation/inbound-marketing-consultation";
+import InboundMarketingConsultation from "@/shared/inbound-marketing-consultation/inbound-marketing-consultation";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
