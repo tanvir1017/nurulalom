@@ -23,9 +23,9 @@ const remoteReviewData: RemoteReviewDataType[] = [
 const OneThingAllMyPreviousStartupClientsToldMe = () => {
   return (
     <>
-      <section className="container mt-28">
-        <div className="max-w-xl mx-auto text-center space-y-6">
-          <Typography variant="h3">
+      <section className="md:container px-5 md:mt-28 my-12">
+        <div className="max-w-xl mx-auto md:text-center space-y-6">
+          <Typography variant="h3" className="">
             <TextColor>
               One Thing ALL My Previous Startup Clients Told Me
             </TextColor>
@@ -38,7 +38,7 @@ const OneThingAllMyPreviousStartupClientsToldMe = () => {
           </p>
         </div>
         <div className="max-w-6xl mx-auto mt-28">
-          <div className="grid grid-cols-2 gap-10 place-items-center">
+          <div className="grid md:grid-cols-2 gap-10 place-items-center">
             <div className="space-y-8">
               {remoteReviewData.map(
                 (item: RemoteReviewDataType, index: number) => (
@@ -66,7 +66,7 @@ const OneThingAllMyPreviousStartupClientsToldMe = () => {
           </div>
         </div>
       </section>
-      <div className="container max-w-4xl mx-auto">
+      <div className="container max-w-4xl mx-auto md:block hidden">
         <hr className="border border-gray-300 my-32" />
       </div>
     </>

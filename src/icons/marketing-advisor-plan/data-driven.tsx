@@ -1,6 +1,6 @@
 const DataDriveLaptopIcon = () => {
   return (
-    <div className=" rounded-full w-28 h-28 p-5 mx-auto bg-[#F0F7FB] flex items-center justify-center">
+    <div className=" rounded-full w-28 h-28 p-5 md:mx-auto bg-[#F0F7FB] flex items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"

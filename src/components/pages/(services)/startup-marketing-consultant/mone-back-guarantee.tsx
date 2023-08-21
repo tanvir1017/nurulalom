@@ -7,9 +7,9 @@ import Image from "next/image";
 
 const HundredPercentMoneyBackGuarantee = () => {
   return (
-    <section className="bg-[#F3F7FB] px-10 py-24">
-      <div className="container ">
-        <div className="grid grid-cols-2 gap-5 place-items-center max-w-5xl mx-auto">
+    <section className="bg-[#F3F7FB] md:px-10 px-5 py-24">
+      <div className="md:container ">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-5 md:place-items-center max-w-5xl mx-auto">
           <div>
             <Typography variant="h3">
               <TextColor>100% Money-Back Guarantee</TextColor>
@@ -22,8 +22,8 @@ const HundredPercentMoneyBackGuarantee = () => {
                 Request Consultation
               </TextColor>
             </p>
-            <div className="pt-10">
-              <DefaultButton>
+            <div className="pt-10 pb-5">
+              <DefaultButton className="md:py-4 py-3">
                 Request Consultation{" "}
                 <ArrowRightIcon
                   strokeWidth={2.5}

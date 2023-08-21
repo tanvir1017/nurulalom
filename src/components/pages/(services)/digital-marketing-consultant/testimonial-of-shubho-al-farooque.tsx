@@ -7,28 +7,31 @@ import Image from "next/image";
 
 const TestimonialOfShubhoAlFarooque = () => {
   return (
-    <section className="bg-[#f0fbf7] py-28 px-10">
+    <section className="bg-[#f0fbf7] md:py-28 py-8 md:px-10 px-4">
       <div className="container">
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl px-12 py-16">
-          <div className="grid grid-cols-3 gap-3 place-items-center">
-            <div className="col-span-1">
+        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl md:px-12 md:py-16">
+          <div className="md:grid md:grid-cols-3 md:gap-3 md:place-items-center flex flex-col">
+            <div className="md:col-span-1">
               <Image
                 src="/assets/images/digital-marketing-consultant/zantrik-co-founders.jpg.webp"
                 alt="zantrik-co-founders group picture with victory sign by two fingers"
                 height={100}
                 width={250}
-                className="rounded-xl"
+                className="rounded-xl block mx-auto pt-3"
               />
             </div>
-            <div className="col-span-2 ml-10">
-              <div className="text-6xl font-black">
+            <div className="md:col-span-2 md:ml-10 px-4">
+              <div className="text-6xl font-black mt-4">
                 <TextColor>&#x1F676;</TextColor>
               </div>
               <span className=" flex  items-center pb-6">
                 <FiveStarRating />
               </span>
               <div className="space-y-5">
-                <Typography variant="h4" className="italic pb-6 font-semibold">
+                <Typography
+                  variant="h4"
+                  className="italic pb-6 font-semibold text-lg md:text-2xl"
+                >
                   <TextColor>
                     He Gives Precise & Honest Feedback. What I Loved Most About
                     Him Is How Much Ownership He Takes About Your Business.

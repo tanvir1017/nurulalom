@@ -8,12 +8,12 @@ const StartupMarketingConsultantHeadingSection = () => {
   return (
     <>
       <section className="bg-[#F0F7FB] py-10">
-        <div className="container mt-20 ">
+        <div className="md:container px-5 md:mt-20 mt-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold pb-6">
+            <h1 className="md:text-5xl text-2xl md:font-bold font-black pb-6">
               <TextColor>Startup Marketing Consultant</TextColor>
             </h1>
-            <h4 className="pb-6">
+            <h4 className="pb-6 md:text-2xl text-xl md:font-normal font-bold">
               <TextColor>
                 Get More Customers For Your Startup Or Small Business.
               </TextColor>
@@ -23,12 +23,15 @@ const StartupMarketingConsultantHeadingSection = () => {
             I sit with you once a week which will help you build a solid
             marketing plan and execute it to bring you more customers.
           </Typography>
-          <Typography variant="h5" className="text-blue-500 text-center pb-6">
+          <Typography
+            variant="h5"
+            className="text-blue-500 text-center pb-6 md:text-2xl text-lg"
+          >
             Weekly 1 Hour Meeting | 25,000 Taka, Monthly Retainer
           </Typography>
         </div>
       </section>
-      <div className="-mb-[22rem]">
+      <div className="md:-mb-[22rem] -mb-[5.2rem]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#F0F7FB"
@@ -48,7 +51,7 @@ const StartupMarketingConsultantHeadingSection = () => {
           />
         </div>
 
-        <div className="my-20">
+        <div className="md:my-20 my-10">
           <TrustedByForCMO />
         </div>
       </section>

@@ -40,25 +40,31 @@ const whatYouWillGet: MustMakeThisWorkDataType[] = [
 
 const NoFakePromisesOnlyMarketingAdvisingAndMentorshipIncluded = () => {
   return (
-    <section className="container">
-      <Typography variant="h2" className="max-w-xl mx-auto text-center">
+    <section className="md:container px-6">
+      <Typography
+        variant="h2"
+        className="max-w-xl mx-auto text-center text-2xl md:text-4xl"
+      >
         <TextColor>
           No Fake Promises. Only Expert Marketing Advising & Mentorship
           Included.
         </TextColor>
       </Typography>
 
-      <div className="max-w-5xl mx-auto mt-24">
-        <div className="grid grid-cols-2 gap-6 bg-[#f0fbf7] p-10 rounded-lg">
-          <div className="space-y-5 border-r-2 border-gray-200 pr-5">
-            <Typography variant="h5">
+      <div className="max-w-5xl mx-auto md:mt-24 mt-12">
+        <div className="grid md:grid-cols-2 gap-6 bg-[#f0fbf7] md:p-10 p-5 rounded-lg">
+          <div className="space-y-5 md:border-r-2 md:border-gray-200 md:pr-5">
+            <Typography variant="h5" className="text-lg md:text-2xl">
               <TextColor>What Is Must To Make This Work:</TextColor>
             </Typography>
 
             <ul className="space-y-6">
               {mustMakeThisWorkData.map(
                 (item: MustMakeThisWorkDataType, index: number) => (
-                  <li key={index} className="flex items-center">
+                  <li
+                    key={index}
+                    className="flex items-center text-sm md:text-base "
+                  >
                     <span className="inline-flex mr-5">{item.icon}</span>
                     <span>{item.text}</span>
                   </li>
@@ -66,15 +72,18 @@ const NoFakePromisesOnlyMarketingAdvisingAndMentorshipIncluded = () => {
               )}
             </ul>
           </div>{" "}
-          <div className="space-y-5 pl-5">
-            <Typography variant="h5">
+          <div className="space-y-5 md:pl-5">
+            <Typography variant="h5" className="text-lg md:text-xl">
               <TextColor>What You Will Not Get:</TextColor>
             </Typography>
 
             <ul className="space-y-6">
               {whatYouWillGet.map(
                 (item: MustMakeThisWorkDataType, index: number) => (
-                  <li key={index} className="flex items-center">
+                  <li
+                    key={index}
+                    className="flex items-center text-sm md:text-base "
+                  >
                     <span className="inline-flex mr-5">{item.icon}</span>
                     <span>{item.text}</span>
                   </li>
