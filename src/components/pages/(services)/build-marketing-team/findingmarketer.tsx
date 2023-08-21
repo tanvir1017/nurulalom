@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const FindingMarketer = () => {
   return (
-    <section className="container mt-28">
+    <section className="container md:mt-28 mt-16">
       <div className="max-w-3xl text-center mx-auto">
         <h2 className="pb-6 md:text-4xl text-xl font-bold">
           <TextColor>
