@@ -1,8 +1,8 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
+import BookAMeeting from "@/shared/book-a-metting/book-a-meeting";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import BookAMeeting from "../../shared/book-a-metting/book-a-meeting";
 
 const WantMeAsYourCmo = () => {
   return (

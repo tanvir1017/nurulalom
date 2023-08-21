@@ -2,11 +2,11 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
+import DefaultButton from "@/shared/button/default-button";
+import FiveStarRating from "@/shared/five-star-rating";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import DefaultButton from "../../shared/button/default-button";
-import FiveStarRating from "../../shared/five-star-rating";
 
 const TestimonialCard = () => {
   return (

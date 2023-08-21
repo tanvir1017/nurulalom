@@ -1,4 +1,5 @@
 import { TextColor } from "@/lib/customColorFunc";
+import { cn } from "@/lib/utils";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -35,12 +36,12 @@ const HowDoWeDoItCardData: HowDoWeDoItCardDataType[] = [
 
 const HowDoWeDoIt = () => {
   return (
-    <section className="container mt-28">
+    <section className="container md:mt-28 mt-12">
       <div className="max-w-fit mx-auto text-center">
         <h5 className="text-blue-500 pb-6 font-bold text-lg">
           How Do We Do It?
         </h5>
-        <h2 className="pb-6 text-4xl font-bold max-w-2xl mx-auto  leading-[3.5rem]">
+        <h2 className="pb-6 md:text-4xl text-xl md:font-bold font-extrabold max-w-2xl mx-auto  md:leading-[3.5rem]">
           <TextColor>
             We Not Only Hire, We Future Proof Your Marketing Department.
           </TextColor>
@@ -49,13 +50,13 @@ const HowDoWeDoIt = () => {
           <TextColor>Time Period: 4 Months</TextColor>
         </p>
 
-        <p className="pb-6 max-w-2xl mx-auto text-center">
+        <p className="pb-6 max-w-2xl mx-auto text-center md:block hidden">
           We identify your business goals, target audience, and industry
           specifics to build a tailored plan that will serve as the foundation
           of your team.
         </p>
 
-        <div className="grid grid-cols-3 gap-3 max-w-6xl mx-auto text-start py-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-3 max-w-6xl mx-auto text-start py-10">
           {HowDoWeDoItCardData.map(
             (item: HowDoWeDoItCardDataType, index: number) => (
               <div
@@ -77,12 +78,13 @@ const HowDoWeDoIt = () => {
                   <TextColor>{item.title}</TextColor>
                 </h2>
                 <div
-                  className={`flex flex-wrap  items-center justify-start pb-6 ${
-                    [1, 2].includes(index) ? "space-x-3" : ""
-                  }`}
+                  className={cn(
+                    `flex flex-wrap  items-center justify-start pb-6`,
+                    [1, 2].includes(index) ? "md:space-x-3" : ""
+                  )}
                 >
                   {item.item.map((text: string, i: number) => (
-                    <span key={i} className="flex items-center ">
+                    <span key={i} className="flex items-center md:m-0 m-1">
                       <CheckIcon className="w-4 h-4 text-white bg-blue-500 rounded-full mr-2" />{" "}
                       <p>{text}</p>
                     </span>

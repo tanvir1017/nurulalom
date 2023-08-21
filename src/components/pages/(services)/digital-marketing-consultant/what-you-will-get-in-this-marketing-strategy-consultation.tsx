@@ -1,8 +1,8 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
+import DefaultButton from "@/shared/button/default-button";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import DefaultButton from "../../shared/button/default-button";
 import WhatYouWillGetInThisMarketingStrategyConsultationCard from "./what-you-will-get-in-this-marketing-strategy-consultation-card";
 
 const WhatYouWillGetInThisMarketingStrategyConsultation = () => {

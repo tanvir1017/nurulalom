@@ -9,7 +9,8 @@ import NoFakePromises from "@/components/pages/(services)/marketing-plan-advisor
 import SuccessFullyGenerateLeadsWithWeeklyMeeting from "@/components/pages/(services)/marketing-plan-advisor/successfully-lead-generate-with-weekly-meetings";
 import UnfairAdvantages from "@/components/pages/(services)/marketing-plan-advisor/unfair-advantage";
 import WhatMyClientSayAboutTheirStartupMarketing from "@/components/pages/(services)/marketing-plan-advisor/what-myclient-say-about-their-startup-marketing";
-import InboundMarketingConsultation from "@/components/pages/shared/inbound-marketing-consultation/inbound-marketing-consultation";
+import InboundMarketingConsultation from "@/shared/inbound-marketing-consultation/inbound-marketing-consultation";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

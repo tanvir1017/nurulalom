@@ -67,9 +67,9 @@ const TeamsLookingCardData: TeamsLookingCardDataType[] = [
 
 const YourTeamsLookDependingOnMarketingNeeds = () => {
   return (
-    <section className="bg-[#f0f7fb] py-20 px-10 mt-28">
+    <section className="bg-[#f0f7fb] py-20 px-10 mt-28 md:block hidden">
       <div className="max-w-3xl mx-auto text-center space-y-5">
-        <Typography variant="h2">
+        <Typography variant="h2" className="md:text-4xl text-2xl">
           <TextColor>
             Here Is How Your Team Might Look Like Depending On Your Marketing
             Needs
@@ -82,7 +82,7 @@ const YourTeamsLookDependingOnMarketingNeeds = () => {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-3 gap-4 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
           {TeamsLookingCardData.map(
             (item: TeamsLookingCardDataType, index: number) => (
               <div

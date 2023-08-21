@@ -1,9 +1,9 @@
 // @ts-nocheck
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
+import FiveStarRating from "@/shared/five-star-rating";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import FiveStarRating from "../../shared/five-star-rating";
 
 const Introduce = () => {
   return (
