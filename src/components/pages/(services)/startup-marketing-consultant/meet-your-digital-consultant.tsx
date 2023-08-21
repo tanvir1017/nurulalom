@@ -7,17 +7,17 @@ import Image from "next/image";
 
 const MeetYOurDigitalConsultantNAJM = () => {
   return (
-    <section className="container  my-20 px-32">
+    <section className="md:container md:my-20 md:px-32 px-0.5">
       <div className="">
         <div
-          className="grid grid-cols-2 place-items-center"
+          className="flex flex-col-reverse md:grid md:grid-cols-2 md:place-items-center"
           style={{
             justifyItems: "end",
           }}
         >
-          <div className="p-10">
+          <div className="md:p-10 p-3">
             <div className="mb-6">
-              <Typography variant="h2">
+              <Typography variant="h2" className="text-2xl md:text-4xl">
                 Meet Your Digital Consultant - Najm
               </Typography>
             </div>
@@ -37,7 +37,7 @@ const MeetYOurDigitalConsultantNAJM = () => {
                 13+ years of experience. Get in touch today!
               </Typography>
               <div className="mt-12">
-                <DefaultButton>
+                <DefaultButton className="md:py-4 py-3">
                   Book for consultation{" "}
                   <ArrowRightIcon className={` h-5 w-5 ml-3 inline`} />
                 </DefaultButton>
@@ -51,7 +51,7 @@ const MeetYOurDigitalConsultantNAJM = () => {
               alt="Najm Digital consultant of your business"
               width={500}
               height={100}
-              className="rounded-xl"
+              className="md:rounded-xl"
             />
           </div>
         </div>

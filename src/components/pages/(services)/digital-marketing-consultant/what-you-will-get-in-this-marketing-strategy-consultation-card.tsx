@@ -32,23 +32,22 @@ const FounderFriendlyMentorshipCard: FounderFriendlyMentorshipCardDataType[] = [
 
 const WhatYouWillGetInThisMarketingStrategyConsultationCard = () => {
   return (
-    <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto my-16 ">
+    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto my-16 ">
       {FounderFriendlyMentorshipCard.map(
         (item: FounderFriendlyMentorshipCardDataType, i: number) => (
           <div
             key={i}
-            className={`px-6 py-3 ${
+            className={`md:px-6 px-2 md:py-3 ${
               i === 1 && "border  border-gray-200 border-t-0 border-b-0 "
             }`}
           >
             <span className="pb-6 block">{item.svgIcon}</span>
-            <Typography variant="h5" className="text-center">
+            <Typography variant="h5" className="md:text-center">
               <TextColor>
-                {i + 1}
-                {item.title}
+                {i + 1}. {item.title}
               </TextColor>
             </Typography>
-            <Typography className="py-6 text-center">{item.desc}</Typography>
+            <Typography className="py-6 md:text-center">{item.desc}</Typography>
           </div>
         )
       )}

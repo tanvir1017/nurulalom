@@ -17,10 +17,10 @@ import { MdAlternateEmail } from "react-icons/md";
 
 const ReadyToBuildContactForm = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-100 to-blue-gray-50 px-10 py-28">
-      <div className="container">
+    <section className="bg-gradient-to-r from-blue-100 to-blue-gray-50 md:px-10 px-4  md:py-28 py-12">
+      <div className="md:container">
         <div className="max-w-6xl mx-auto text-center space-y-5">
-          <Typography variant="h2">
+          <Typography variant="h2" className="text-2xl md:text-4xl">
             <TextColor>Interested? Book A Free Meeting Today!</TextColor>
           </Typography>
           <Typography>
@@ -29,7 +29,7 @@ const ReadyToBuildContactForm = () => {
           </Typography>
 
           <div className="border-t-4 border-blue-500 border  rounded-lg p-5 bg-white ">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
               <Input
                 label="Email"
                 required
@@ -76,7 +76,7 @@ const ReadyToBuildContactForm = () => {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
               <div className="text-start">
                 <Typography variant="h6">TEAM I AM INTERESTED IN</Typography>
                 {[
@@ -91,7 +91,7 @@ const ReadyToBuildContactForm = () => {
                     <ListItem className="p-0 rounded-full">
                       <label
                         htmlFor="IAmInterestedIn"
-                        className="flex w-full cursor-pointer items-center px-3 py-2"
+                        className="flex w-full cursor-pointer items-center px-3 md:py-2 py-0.5"
                       >
                         <ListItemPrefix className="mr-3">
                           <Radio
@@ -127,7 +127,7 @@ const ReadyToBuildContactForm = () => {
                     <ListItem className="p-0 rounded-full">
                       <label
                         htmlFor="MonthlyMarketingBudget"
-                        className="flex w-full cursor-pointer items-center px-3 py-2"
+                        className="flex w-full cursor-pointer items-center px-3 md:py-2 py-0.5"
                       >
                         <ListItemPrefix className="mr-3">
                           <Radio

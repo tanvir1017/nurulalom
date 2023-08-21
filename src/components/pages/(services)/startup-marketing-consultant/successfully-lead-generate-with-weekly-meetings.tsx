@@ -26,28 +26,28 @@ const SuccessFullyGenerateLeadsWithWeeklyMeetingCard: cardDataType[] = [
 
 const HowToSuccessfullyGenerateLeadsWithTheseWeeklyMeetings = () => {
   return (
-    <section className="container mt-28">
+    <section className="md:container px-6 md:mt-28 mt-16">
       <div className="max-w-2xl mx-auto text-center">
-        <Typography variant="h2" className="pb-6">
+        <Typography variant="h2" className="pb-6 md:text-4xl text-2xl">
           <TextColor>
             Here Is How To Successfully Generate Leads With These Weekly
             Meetings
           </TextColor>
         </Typography>
-        <Typography>
+        <Typography className="md:text-base text-sm">
           I build the strategy with you and help your team to execute it on our
           weekly meetings. Here is the step by step recipe.
         </Typography>
       </div>
 
-      <div className="max-w-5xl mx-auto my-28">
-        <div className="grid grid-cols-3 gap-5">
+      <div className="max-w-5xl mx-auto md:my-28 my-12">
+        <div className="grid md:grid-cols-3 gap-5">
           {SuccessFullyGenerateLeadsWithWeeklyMeetingCard.map(
             (item: cardDataType, index: number) => (
               <div className="shadow-md px-5 py-8 rounded-lg" key={index}>
                 <Typography
                   variant="h5"
-                  className="text-blue-500 pb-6 text-center"
+                  className="text-blue-500 pb-6 md:text-center"
                 >
                   Step {index + 1}
                 </Typography>
@@ -57,11 +57,13 @@ const HowToSuccessfullyGenerateLeadsWithTheseWeeklyMeetings = () => {
                     alt={item.title}
                     width={150}
                     height={100}
-                    className="mx-auto"
+                    className="md:mx-auto"
                   />
                 </div>
                 <div className="space-y-5">
-                  <Typography variant="h3">{item.title}</Typography>
+                  <Typography variant="h3" className="text-xl md:text-3xl">
+                    {item.title}
+                  </Typography>
                   <Typography>{item.desc}</Typography>
                 </div>
               </div>
