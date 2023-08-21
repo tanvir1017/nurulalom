@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TrustedByForCMO = () => {
   return (
-    <section className="container mb-16">
+    <section className="md:container md:mb-16 mb-8">
       <div className="md:flex md:items-center md:justify-center grid grid-cols-3 space-x-5">
         {[
           "/assets/images/brand/cramstack.png",

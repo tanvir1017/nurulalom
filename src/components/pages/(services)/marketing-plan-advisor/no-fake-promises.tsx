@@ -40,17 +40,20 @@ const whatYouWillGet: MustMakeThisWorkDataType[] = [
 
 const NoFakePromises = () => {
   return (
-    <section className="container">
-      <Typography variant="h2" className="max-w-xl mx-auto text-center">
+    <section className="md:container px-3 md:mt-0 mt-14">
+      <Typography
+        variant="h2"
+        className="max-w-xl mx-auto text-center md:text-4xl text-2xl"
+      >
         <TextColor>
           No Fake Promises. Only Expert Marketing Advising & Mentorship
           Included.
         </TextColor>
       </Typography>
 
-      <div className="max-w-5xl mx-auto mt-24">
-        <div className="grid grid-cols-2 gap-6 bg-[#f0fbf7] p-10 rounded-lg">
-          <div className="space-y-5 border-r-2 border-gray-200 pr-5">
+      <div className="max-w-5xl mx-auto md:mt-24 mt-14">
+        <div className="grid md:grid-cols-2 gap-6 bg-[#f0fbf7] md:p-10 p-5 rounded-lg">
+          <div className="space-y-5 md:border-r-2 border-gray-200 md:pr-5">
             <Typography variant="h5">
               <TextColor>What Is Must To Make This Work:</TextColor>
             </Typography>
@@ -66,7 +69,7 @@ const NoFakePromises = () => {
               )}
             </ul>
           </div>{" "}
-          <div className="space-y-5 pl-5">
+          <div className="space-y-5 md:pl-5">
             <Typography variant="h5">
               <TextColor>What You Will Not Get:</TextColor>
             </Typography>

@@ -26,9 +26,9 @@ const SuccessFullyGenerateLeadsWithWeeklyMeetingCard: cardDataType[] = [
 
 const SuccessFullyGenerateLeadsWithWeeklyMeeting = () => {
   return (
-    <section className="container mt-28">
+    <section className="container md:mt-28 mt-14">
       <div className="max-w-2xl mx-auto text-center">
-        <Typography variant="h2" className="pb-6">
+        <Typography variant="h2" className="pb-6 md:text-4xl text-2xl">
           <TextColor>
             Here Is How To Successfully Generate Leads With These Weekly
             Meetings
@@ -41,13 +41,13 @@ const SuccessFullyGenerateLeadsWithWeeklyMeeting = () => {
       </div>
 
       <div className="max-w-5xl mx-auto my-28">
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-5">
           {SuccessFullyGenerateLeadsWithWeeklyMeetingCard.map(
             (item: cardDataType, index: number) => (
               <div className="shadow-md px-5 py-8 rounded-lg" key={index}>
                 <Typography
                   variant="h5"
-                  className="text-blue-500 pb-6 text-center"
+                  className="text-blue-500 pb-6 md:text-center"
                 >
                   Step {index + 1}
                 </Typography>
@@ -57,7 +57,7 @@ const SuccessFullyGenerateLeadsWithWeeklyMeeting = () => {
                     alt={item.title}
                     width={150}
                     height={100}
-                    className="mx-auto"
+                    className="md:mx-auto"
                   />
                 </div>
                 <div className="space-y-5">

@@ -7,10 +7,10 @@ import TrustedByForCMO from "../cmo/trustedbyforcmo";
 const MarketingAdvisor = () => {
   return (
     <>
-      <section className="bg-[#F0F7FB] py-10">
-        <div className="container mt-20 ">
+      <section className="bg-[#F0F7FB]  md:py-10 py-5">
+        <div className="md:container md:mt-20 mt-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl leading-[3.5rem] pb-6">
+            <h1 className="md:text-4xl text-2xl md:leading-[3.2rem] pb-6">
               <TextColor>
                 <strong> Marketing Advisor:</strong> Drive Growth With Tailored
                 Guidance And Effective Team-Building
@@ -22,12 +22,15 @@ const MarketingAdvisor = () => {
             customers for your business through weekly marketing advisory
             meetings.
           </Typography>
-          <Typography variant="h5" className="text-blue-500 text-center">
+          <Typography
+            variant="h5"
+            className="text-blue-500 text-center text-lg md:text-3xl"
+          >
             Weekly 2 Hours Meetings | 50,000 Taka, Monthly Retainer
           </Typography>
         </div>
       </section>
-      <div className="-mb-[22rem]">
+      <div className="md:-mb-[22rem] -mb-[5.2rem]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#F0F7FB"
@@ -47,7 +50,7 @@ const MarketingAdvisor = () => {
           />
         </div>
 
-        <div className="my-20">
+        <div className="md:my-20 my-10">
           <TrustedByForCMO />
         </div>
       </section>

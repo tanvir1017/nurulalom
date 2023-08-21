@@ -23,9 +23,9 @@ const remoteReviewData: RemoteReviewDataType[] = [
 const MidSizeClientReview = () => {
   return (
     <>
-      <section className="container mt-28">
-        <div className="max-w-xl mx-auto text-center space-y-6">
-          <Typography variant="h3">
+      <section className="md:container px-3 md:mt-28 mt-14">
+        <div className="max-w-xl mx-auto md:text-center space-y-6">
+          <Typography variant="h3" className="md:text-4xl text-2xl">
             <TextColor>
               One Thing ALL My Previous Mid-Size Clients Told Me
             </TextColor>
@@ -37,14 +37,14 @@ const MidSizeClientReview = () => {
             </TextColor>
           </p>
         </div>
-        <div className="max-w-6xl mx-auto mt-28">
-          <div className="grid grid-cols-2 gap-10 place-items-center">
+        <div className="max-w-6xl mx-auto md:mt-28 mt-14">
+          <div className="grid md:grid-cols-2 md:gap-10 gap-5 place-items-center">
             <div className="space-y-8">
               {remoteReviewData.map(
                 (item: RemoteReviewDataType, index: number) => (
                   <div className="space-y-5" key={index}>
                     <span className="bg-[#f0fbf7] border-l-2 border-blue-500 rounded-lg px-2 py-4 block">
-                      <h4 className="text-2xl font-bold">
+                      <h4 className="md:text-2xl text-xl md:font-bold font-semibold">
                         <TextColor>{item.title}</TextColor>
                       </h4>
                     </span>
@@ -66,7 +66,7 @@ const MidSizeClientReview = () => {
           </div>
         </div>
       </section>
-      <div className="container max-w-4xl mx-auto">
+      <div className="container max-w-4xl mx-auto md:block hidden">
         <hr className="border border-gray-300 my-32" />
       </div>
     </>
