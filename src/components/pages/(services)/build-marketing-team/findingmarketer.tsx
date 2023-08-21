@@ -8,7 +8,7 @@ const FindingMarketer = () => {
   return (
     <section className="container mt-28">
       <div className="max-w-3xl text-center mx-auto">
-        <h2 className="pb-6 text-4xl font-bold">
+        <h2 className="pb-6 md:text-4xl text-xl font-bold">
           <TextColor>
             It's Not About Finding A Marketer, It's About Creating A Marketing
             Department.
@@ -21,9 +21,9 @@ const FindingMarketer = () => {
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 gap-5 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-16">
           {/* YOU DON’T NEED 1,000 CVS. CARD */}
-          <div className="bg-[#F7FBFD] border-t-blue-500 border-t-4 rounded-lg p-10 shadow">
+          <div className="bg-[#F7FBFD] border-t-blue-500 border-t-4 rounded-lg md:p-10 p-5 shadow">
             <div>
               <Image
                 src="/assets/images/build-marketing-team/find-cvs-for-mkt.png.webp"
@@ -35,7 +35,7 @@ const FindingMarketer = () => {
             </div>
             <div>
               <div className="space-y-5">
-                <Typography variant="h3">
+                <Typography variant="h3" className="md:text-3xl text-xl">
                   <TextColor>
                     {" "}
                     You Don't Need 1,000 CVs. You Need 1 Right Candidate.
@@ -71,7 +71,7 @@ const FindingMarketer = () => {
             </div>
           </div>{" "}
           {/* THOROUGHLY VETTED TALENT. TRAINED, EVERY WEEK. CARD */}
-          <div className="bg-[#F7FBFD] border-t-blue-500 border-t-4 rounded-lg p-10 shadow">
+          <div className="bg-[#F7FBFD] border-t-blue-500 border-t-4 rounded-lg md:p-10 p-5 shadow">
             <div>
               <Image
                 src="/assets/images/build-marketing-team/vetted-talent.svg"
@@ -83,7 +83,7 @@ const FindingMarketer = () => {
             </div>
             <div>
               <div className="space-y-5">
-                <Typography variant="h3">
+                <Typography variant="h3" className="md:text-3xl text-xl">
                   <TextColor>
                     {" "}
                     Thoroughly Vetted Talent. Trained, Every Week.
@@ -94,21 +94,23 @@ const FindingMarketer = () => {
                   Rigorous testing, vetting, and training to guarantee top-notch
                   professionals for your team.
                 </Typography>
-                <p>
-                  <strong className="">Streamlined Processes:</strong>{" "}
-                  Transparent and accountable processes for smooth team
-                  operations
-                </p>
-                <p>
-                  <strong className="">Team Specialists:</strong> Marketing We
-                  exclusively build marketing teams, ensuring mastery in the
-                  field.
-                </p>
-                <p>
-                  <strong className="">Team Management: </strong> Expert Our
-                  marketing managers and CMOs oversee projects, ensuring
-                  success.
-                </p>
+                <span className="md:block hidden">
+                  <p>
+                    <strong className="">Streamlined Processes:</strong>{" "}
+                    Transparent and accountable processes for smooth team
+                    operations
+                  </p>
+                  <p>
+                    <strong className="">Team Specialists:</strong> Marketing We
+                    exclusively build marketing teams, ensuring mastery in the
+                    field.
+                  </p>
+                  <p>
+                    <strong className="">Team Management: </strong> Expert Our
+                    marketing managers and CMOs oversee projects, ensuring
+                    success.
+                  </p>
+                </span>
               </div>
             </div>
           </div>

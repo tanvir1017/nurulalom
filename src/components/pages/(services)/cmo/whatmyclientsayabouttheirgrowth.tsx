@@ -1,9 +1,9 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
+import ClientSuccessStoryYouTube from "@/shared/client-success-story-ytube/client-success-story-ytube";
+import FiveStarRating from "@/shared/five-star-rating";
 import { Typography } from "@material-tailwind/react";
-import ClientSuccessStoryYouTube from "../../shared/client-success-story-ytube/client-success-story-ytube";
-import FiveStarRating from "../../shared/five-star-rating";
 
 const WhatMyClientSayAboutTheirGrowth = () => {
   return (

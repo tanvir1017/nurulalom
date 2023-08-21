@@ -1,9 +1,9 @@
 "use client";
 import { TextColor } from "@/lib/customColorFunc";
+import DefaultButton from "@/shared/button/default-button";
 import { SuccessFullyGenerateLeadsWithWeeklyMeetingCardDataType as cardDataType } from "@/types/globaltypes";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import DefaultButton from "../../shared/button/default-button";
 
 const SuccessFullyGenerateLeadsWithWeeklyMeetingCard: cardDataType[] = [
   {

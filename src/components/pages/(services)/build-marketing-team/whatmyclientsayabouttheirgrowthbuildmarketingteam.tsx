@@ -1,8 +1,9 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
+import ClientSuccessStoryYouTube from "@/shared/client-success-story-ytube/client-success-story-ytube";
+import FiveStarRating from "@/shared/five-star-rating";
 import { Typography } from "@material-tailwind/react";
-import FiveStarRating from "../../shared/five-star-rating";
 
 const WhatMyClientSayAboutTheirGrowthBuildMarketingTeam = () => {
   return (
@@ -18,40 +19,15 @@ const WhatMyClientSayAboutTheirGrowthBuildMarketingTeam = () => {
           </div>
         </div>
 
-        <div className="max-w-fit mx-auto ">
-          <div className="mt-6">
-            <iframe
-              className="rounded-lg"
-              width="1120"
-              height="630"
-              src="https://www.youtube.com/embed/fsSuGoTpyQg"
-              title="Southtech CEO Syed Mamnun Quader talks about Najm | Marketing Consultant"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-
-            <div className="grid grid-cols-2 gap-5 pt-6">
-              <iframe
-                width="540"
-                height="304"
-                src="https://www.youtube.com/embed/rvNdnejqC6o"
-                title="Raisul Kabir Founder &amp; CEO of Brainstation 23 talks about Najm | Marketing Consultant"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-              <iframe
-                width="540"
-                height="304"
-                src="https://www.youtube.com/embed/3R4kuJo7bcg"
-                title="Shubho Al-Farooque- Co-Founder, CEO of Zantrik talks about Najm | Marketing Consultant"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+        <div className="max-w-fit mx-auto">
+          <ClientSuccessStoryYouTube
+            embadedURL1="https://www.youtube.com/embed/fsSuGoTpyQg"
+            title1="Southtech CEO Syed Mamnun Quader talks about Najm | Marketing Consultant"
+            embadedURL2="https://www.youtube.com/embed/rvNdnejqC6o"
+            title2="Raisul Kabir Founder &amp; CEO of Brainstation 23 talks about Najm | Marketing Consultant"
+            embadedURL3="https://www.youtube.com/embed/3R4kuJo7bcg"
+            title3="Shubho Al-Farooque- Co-Founder, CEO of Zantrik talks about Najm | Marketing Consultant"
+          />
         </div>
 
         <div className="max-w-fit mx-auto text-center my-24 space-y-6">

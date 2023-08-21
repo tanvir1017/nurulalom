@@ -1,8 +1,8 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
+import FiveStarRating from "@/shared/five-star-rating";
 import { Typography } from "@material-tailwind/react";
-import FiveStarRating from "../../shared/five-star-rating";
 
 const FoundersThinkAboutROIMoreThanAnythingElse = () => {
   return (
