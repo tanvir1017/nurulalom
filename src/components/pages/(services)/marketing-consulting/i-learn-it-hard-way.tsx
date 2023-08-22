@@ -32,7 +32,7 @@ const cardData: CardDataType[] = [
 
 const ILearnItHardWay = () => {
   return (
-    <section className="container md:mt-28">
+    <section className="container md:mt-28 mt-14">
       <div className="max-w-3xl mx-auto text-center mb-10">
         <h2 className="md:text-4xl text-2xl font-bold pb-6">
           <TextColor>
@@ -47,7 +47,7 @@ const ILearnItHardWay = () => {
         </p>
       </div>
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {cardData.map((item: CardDataType) => (
             <div
               key={item.title}

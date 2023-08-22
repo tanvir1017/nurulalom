@@ -19,7 +19,7 @@ const fewClientCardData: fewClientCardDataType[] = [
 
 const ThisIsHowDigitalMarketingConsultingHelpedAFewOfMyPastClients = () => {
   return (
-    <section className="container">
+    <section className="container md:block hidden">
       <div className="max-w-3xl mx-auto text-center mt-28">
         <h1
           className="md:text-4xl text-2xl font-bold pb-6"

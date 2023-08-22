@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const MinimumClientPerMonth = () => {
   return (
-    <section className="container md:mt-28">
+    <section className="container md:mt-28 mt-14">
       <div className="max-w-fit mx-auto">
         <div className="max-w-2xl mx-auto text-center space-y-6 ">
           <h2 className="md:text-4xl text-2xl font-bold ">
@@ -38,7 +38,7 @@ const MinimumClientPerMonth = () => {
             />
           </div>
           <div className="py-4">
-            <DefaultButton>
+            <DefaultButton className="md:py-4 py-3">
               Book consulting slot{" "}
               <ArrowRightIcon className={` h-5 w-5 ml-3 inline`} />
             </DefaultButton>

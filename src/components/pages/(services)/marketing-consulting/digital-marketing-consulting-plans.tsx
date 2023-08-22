@@ -11,10 +11,10 @@ import { useState } from "react";
 const DigitalMarketingConsultingPlans = () => {
   const [filterByCG, setFilterByCG] = useState<string>("small");
   return (
-    <section className="bg-[#F3F7FB] p-10">
-      <div className="container">
+    <section className="bg-[#F3F7FB] md:p-10 py-6 ">
+      <div className="md:container px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="md:text-5xl text-2xl md:font-bold py-6">
+          <h1 className="md:text-5xl text-3xl font-bold md:py-6 pb-8">
             <TextColor>Digital Marketing Consulting Plans</TextColor>
           </h1>
           <p>
@@ -23,10 +23,10 @@ const DigitalMarketingConsultingPlans = () => {
             clients. E.g. For a monthly <b>40-hours</b> plan, I will give{" "}
             <b>10 hours</b> every week.
           </p>
-          <h5 className="hidden md:block my-5">SELECT YOUR COMPANY SIZE</h5>
+          <h5 className="my-5">SELECT YOUR COMPANY SIZE</h5>
           <div className="pt-5">
             <Image
-              className="hidden md:block mx-auto rotate-45"
+              className=" mx-auto rotate-45"
               src="/assets/images/arrow.svg"
               alt="arrow indicate two options small company or mid size company"
               height={80}
@@ -35,7 +35,7 @@ const DigitalMarketingConsultingPlans = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center md:pt-6 md:space-x-4 space-x-2 ">
+        <div className="flex items-center justify-center pt-6 md:space-x-4 space-x-2 ">
           <Button
             variant={filterByCG === "small" ? "filled" : "outlined"}
             className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
