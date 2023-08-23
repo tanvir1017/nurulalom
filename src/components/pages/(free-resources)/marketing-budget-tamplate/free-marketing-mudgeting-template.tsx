@@ -1,6 +1,7 @@
 "use client";
 
 import { TextColor } from "@/lib/customColorFunc";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, Input } from "@material-tailwind/react";
 import Image from "next/image";
 
@@ -17,7 +18,10 @@ const Free_Marketing_Budgeting_Template = () => {
         <h5 className="text-xl font-bold text-[#09304C] pb-6">
           - Free Digital Marketing Budget Template -
         </h5>
-
+        <h1 className="md:text-4xl text-2xl font-bold text-[#09304C] pb-6">
+          A Step By Step Guide To Create A Digital Marketing Budget For 2023
+          Under 30 Minutes .
+        </h1>
         <p>
           <b>
             <TextColor>
@@ -72,17 +76,41 @@ const Free_Marketing_Budgeting_Template = () => {
           </div>
           <div className="bg-[#F3F7FB] border border-[#d1e3f5]  md:px-8 px-4 py-16 space-y-4">
             <h4 className="text-xl font-bold">
-              <TextColor>Subscribe And Download The Free Resource</TextColor>
+              <TextColor>Get The “Budget Template”</TextColor>
             </h4>
             <div className="space-y-5">
               <Input size="lg" label="name" color="blue" />
               <Input size="lg" label="email" color="blue" />
 
+              <div className="flex items-center">
+                <p>I am a: </p>
+                <div className="flex items-center justify-start md:ml-16 ml-9">
+                  <div>
+                    <input type="radio" name="position" />
+                    <label htmlFor="Founder" className="ml-1">
+                      Founder
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="position" className="md:ml-2" />
+                    <label htmlFor="Marketer" className="ml-1">
+                      Marketer
+                    </label>
+                  </div>
+                  <div>
+                    <input type="radio" name="position" className="md:ml-2" />
+                    <label htmlFor="Student" className="ml-1">
+                      Student
+                    </label>
+                  </div>
+                </div>
+              </div>
               <Button
                 color="blue"
                 className="rounded-full w-full text-xs md:text-sm"
               >
-                Show me the CMO Interview Questions & JD Templates
+                Get access now. It's free{" "}
+                <ArrowRightIcon className="h-5 w-5 inline-flex ml-3" />
               </Button>
             </div>
           </div>
