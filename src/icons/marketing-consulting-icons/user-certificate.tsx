@@ -13,15 +13,15 @@ const UserCertificate = () => {
         <g
           id="Welcome"
           stroke="none"
-          stroke-width="1"
+          strokeWidth="1"
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             id="Marketing_Consulting_Page"
             transform="translate(-1067.000000, -6768.000000)"
             fill="#00A2ED"
-            fill-rule="nonzero"
+            fillRule="nonzero"
           >
             <g id="Group-19" transform="translate(1049.000000, 6749.000000)">
               <g
