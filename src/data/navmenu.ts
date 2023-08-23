@@ -62,14 +62,6 @@ export const freeResource: NestedNavType[] = [
     href: "/build-marketing-team",
   },
   {
-    title: "Build a Marketing Strategy Free Course ",
-    href: "/courses/build-your-marketing-strategy-for-2022",
-  },
-  {
-    title: "Digital Marketing (Free Course)",
-    href: "/courses/digital-marketing-fundamentals-for-beginners",
-  },
-  {
     title: "Marketing Budget Template",
     href: "/marketing-budget-template",
   },
@@ -77,8 +69,8 @@ export const freeResource: NestedNavType[] = [
     title: "Buyer Persona Template",
     href: "/buyer-persona-template-for-download",
   },
-  {
-    title: "Marketing Blogs",
-    href: "/blog",
-  },
+  // {
+  //   title: "Marketing Blogs",
+  //   href: "/blog",
+  // },
 ];
