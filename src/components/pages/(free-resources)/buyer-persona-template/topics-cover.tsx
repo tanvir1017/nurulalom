@@ -1,39 +1,64 @@
-import { TextColor } from "@/lib/customColorFunc";
-import { CheckIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import { FaFingerprint } from "react-icons/fa";
+import { FaFileCircleQuestion } from "react-icons/fa6";
+import { MdOutlineSendTimeExtension, MdSyncProblem } from "react-icons/md";
 
 const TopicsCover = () => {
   return (
     <section>
-      <div className="bg-[#F3F7FB]"></div>
-      <div className="container md:my-28">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-5 place-items-center">
-            <Image
-              alt="What you can do with this template illustration"
-              src="/assets/images/buyer-persona-template/customers-persona.png.webp"
-              width={600}
-              height={100}
-            />
-            <div>
-              <h2 className="text-2xl md:text-4xl font-bold">
-                <TextColor>With This Template, You Can:</TextColor>
-              </h2>
-              <ul className="m-7">
-                <li className="my-2">
-                  <CheckIcon className="text-white bg-orange-300 w-5 h-5 rounded-full inline-flex mr-3 " />{" "}
-                  Easily add relevant information about your clients
-                </li>
-                <li className="my-2">
-                  <CheckIcon className="text-white bg-orange-300 w-5 h-5 rounded-full inline-flex mr-3 " />{" "}
-                  A template to follow and get customer insights
-                </li>
-                <li className="my-2">
-                  {" "}
-                  <CheckIcon className="text-white bg-orange-300 w-5 h-5 rounded-full inline-flex mr-3 " />{" "}
-                  Easily customizable
-                </li>
-              </ul>
+      <div className="bg-[#F8FAF9]">
+        <div className="container">
+          <div className="md:py-20 py-12 ">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-8 items-center">
+                <div className="col-span-3 ">
+                  <div className="bg-[#1C8BAA] md:h-1 h-0.5"></div>
+                </div>
+                <div className="text-center col-span-2">
+                  <h5 className="text-2xl font-bold ">Topics Covered</h5>
+                </div>
+                <div className="col-span-3">
+                  <div className=" bg-[#1C8BAA] md:h-1 h-0.5"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="max-w-5xl mx-auto md:py-24 py-12">
+              <div className="grid md:grid-cols-4 grid-cols-2 gap-3 md:place-items-center text-center md:text-start">
+                <div>
+                  <button className="bg-[#1C8BAA] p-4 mx-auto block">
+                    <FaFingerprint className="w-9 h-9 text-white" />
+                  </button>
+                  <h6 className="md:text-lg text-base font-semibold md:mt-7 mt-4 ">
+                    Personal Information
+                  </h6>
+                </div>
+                <div>
+                  <button className="bg-[#1C8BAA] p-4 mx-auto block">
+                    <MdSyncProblem className="w-9 h-9 text-white" />
+                  </button>
+
+                  <h6 className="md:text-lg text-base font-semibold md:mt-7 mt-4 ">
+                    Problems
+                  </h6>
+                </div>
+                <div>
+                  <button className="bg-[#1C8BAA] p-4 mx-auto block">
+                    <MdOutlineSendTimeExtension className="w-9 h-9 text-white" />
+                  </button>
+
+                  <h6 className="md:text-lg text-base font-semibold md:mt-7 mt-4 ">
+                    Solutions
+                  </h6>
+                </div>
+                <div>
+                  <button className="bg-[#1C8BAA] p-4 mx-auto block">
+                    <FaFileCircleQuestion className="w-9 h-9 text-white" />
+                  </button>
+                  <h6 className="md:text-lg text-base font-semibold md:mt-7 mt-4 ">
+                    Custom Questions
+                  </h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const BuyerPersonaTemplate = () => {
   return (
-    <section className="py-40 bg-gradient-to-t from-[#a3ccdd] via-[#EBF7FF] to-[#BBD2DE]">
+    <section className="md:py-40 py-28 bg-gradient-to-t from-[#a3ccdd] via-[#EBF7FF] to-[#BBD2DE]">
       <div className="container">
-        <div className="max-w-6xl mx-auto">
-          <div className="md:grid md:grid-cols-2 justify-items-end">
-            <div>
-              <h1 className="text-2xl md:text-5xl font-bold pb-6">
+        <div className="max-w-6xl mx-auto ">
+          <div className="md:grid md:grid-cols-2 md:justify-items-end flex flex-col-reverse">
+            <div className="">
+              <h1 className="text-center md:text-start text-3xl md:text-5xl font-bold pb-6 mt-6 md:mt-0">
                 <TextColor>Buyer Persona Template</TextColor>
               </h1>
               <p className="pb-6">
@@ -47,7 +47,14 @@ const BuyerPersonaTemplate = () => {
                 height={100}
                 alt="Buyer Persona Template Illustration"
                 src="/assets/images/buyer-persona-template/Still_not_sure_bg_shape.svg"
-                className=""
+                className="md:block hidden"
+              />
+              <Image
+                width={200}
+                height={100}
+                alt="Buyer Persona Template Illustration"
+                src="/assets/images/buyer-persona-template/Still_not_sure_bg_shape.svg"
+                className="md:hidden block mx-auto"
               />
             </div>
           </div>
