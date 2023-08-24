@@ -359,16 +359,18 @@ export default function ComplexNavbar() {
           </Typography>
           <div className="hidden lg:flex ">
             <NavList />
-            <Button
-              className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
-              size="lg"
-            >
-              Book a Meting{" "}
-              <ArrowRightIcon
-                strokeWidth={2.5}
-                className={` h-3 w-3 transition-transform ml-3`}
-              />
-            </Button>
+            <Link href="/inbound-marketing-consultation">
+              <Button
+                className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center "
+                size="lg"
+              >
+                Book a Meting{" "}
+                <ArrowRightIcon
+                  strokeWidth={2.5}
+                  className={` h-3 w-3 transition-transform ml-3`}
+                />
+              </Button>
+            </Link>
           </div>
           <IconButton
             variant="text"
