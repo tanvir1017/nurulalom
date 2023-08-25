@@ -8,7 +8,7 @@ import Image from "next/image";
 const Introduce = () => {
   return (
     <section className="container mt-20">
-      <div className="grid md:grid-cols-5 grid-cols-1 place-items-center md:px-20">
+      <div className="grid md:grid-cols-5 grid-cols-1 md:place-items-center md:px-20">
         <div className="col-span-3 md:order-1 order-2">
           <div className="pb-4">
             <Typography variant="h5" className="text-base md:text-2xl">
@@ -43,7 +43,7 @@ const Introduce = () => {
               width={80}
             />
             <Button
-              className="mx-auto md:mx-0    py-4 rounded-full bg-[#0C304A] text-xs  md:ml-5 md:mt-5 shadow-lg hover:scale-110 duration-300"
+              className="mx-auto md:mx-0 py-4 rounded-full bg-[#0C304A] text-xs  md:ml-5 md:mt-5 shadow-lg hover:scale-110 duration-300"
               size="lg"
             >
               Explore Growth Plans!
@@ -65,14 +65,16 @@ const Introduce = () => {
             height={100}
             width={350}
           />
-          <Image
-            className="block mb-5 md:hidden md:mb-0 "
-            priority
-            src="/assets/images/startup-marketing-consultant/3-hour-wide.jpg.webp"
-            alt=""
-            height={100}
-            width={400}
-          />
+          <div className="mb-5 md:hidden md:mb-0 flex justify-end">
+            <Image
+              className="rounded-xl"
+              priority
+              src="/assets/images/fev-icon-small.png.webp"
+              alt=""
+              height={100}
+              width={120}
+            />
+          </div>
         </div>
       </div>
     </section>
