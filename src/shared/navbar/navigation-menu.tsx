@@ -209,13 +209,13 @@ const MobileNavList = () => {
         >
           <li
             className={
-              " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
+              " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none"
             }
-            onClick={handleServiceOpen}
           >
             <Link
               href="/marketing-consulting"
               className="flex items-center justify-between"
+              onClick={handleServiceOpen}
             >
               <span className="flex items-center">
                 <BoltIcon className={cn("w-4 h-4 mr-2 text-blue-500")} />{" "}
@@ -241,11 +241,7 @@ const MobileNavList = () => {
                 <Link href={item.href} key={item.href}>
                   <li
                     className={cn(
-                      "p-3 font-normal text-sm cursor-pointer relative",
-                      {
-                        ["border-b-[1px] border-gray-100"]:
-                          i === Services.length - 1,
-                      }
+                      "p-3 font-normal text-sm cursor-pointer relative border-gray-100 border-b-[0.5px]"
                     )}
                   >
                     {item.title}
@@ -284,9 +280,9 @@ const MobileNavList = () => {
             className={
               " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
             }
-            onClick={handleFreeResourceOpen}
           >
             <Link
+              onClick={handleFreeResourceOpen}
               href="/resources"
               className="flex items-center justify-between"
             >
@@ -313,11 +309,7 @@ const MobileNavList = () => {
                 <Link href={item.href} key={item.href} className="py-3">
                   <li
                     className={cn(
-                      "p-3 font-normal text-sm cursor-pointer relative",
-                      {
-                        ["border-b-[1px] border-gray-100"]:
-                          i === freeResource.length - 1,
-                      }
+                      "p-3 font-normal text-sm cursor-pointer relative border-gray-100 border-b-[0.5px]"
                     )}
                   >
                     {item.title}
