@@ -37,6 +37,7 @@ const PricePlan = () => {
         </div>
         <div className="pt-6 flex items-center justify-center space-x-5">
           <Button
+            color="blue"
             variant={filterByCG === "mid" ? "filled" : "outlined"}
             className="md:text-sm text-xs md:py-4 py-2 rounded-full font-light"
             onClick={() => setFilterByCG("mid")}
@@ -44,6 +45,7 @@ const PricePlan = () => {
             Mid-Size Company
           </Button>
           <Button
+            color="blue"
             variant={filterByCG === "small" ? "filled" : "outlined"}
             className="md:text-sm text-xs md:py-4 py-2 rounded-full font-light"
             onClick={() => setFilterByCG("small")}

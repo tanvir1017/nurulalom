@@ -12,6 +12,7 @@ import {
 import { CmoCardDataType } from "@/types/globaltypes";
 import { ArrowLongRightIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CmoCard({ item }: { item: CmoCardDataType }) {
   return (
@@ -25,9 +26,11 @@ export default function CmoCard({ item }: { item: CmoCardDataType }) {
         <Image alt={item.title} src={item.image} width={400} height={100} />
       </CardHeader>
       <CardBody>
-        <Typography variant="h4" color="blue-gray">
-          {item.title}
-        </Typography>
+        <Link href={item.href} className="block">
+          <Typography variant="h4" color="blue-gray">
+            {item.title}
+          </Typography>
+        </Link>
         <div className="md:my-5 my-3 space-y-3">
           <p className="flex md:items-center md:text-base text-sm">
             <strong className="flex items-center mr-2 ">
@@ -57,10 +60,16 @@ export default function CmoCard({ item }: { item: CmoCardDataType }) {
       </CardBody>
       <CardFooter className="flex items-center justify-between">
         <div className="flex items-center -space-x-3">
-          <Button variant="text" className="flex items-center gap-2">
-            Explore Plan{" "}
-            <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
-          </Button>
+          <Link href={item.href} className="block">
+            <Button
+              variant="text"
+              className="flex items-center gap-2"
+              color="blue"
+            >
+              Explore Plan{" "}
+              <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>

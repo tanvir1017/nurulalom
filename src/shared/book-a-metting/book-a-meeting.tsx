@@ -10,6 +10,7 @@ import {
   Textarea,
   Typography,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import { BiRename } from "react-icons/bi";
 import { BsLink45Deg, BsPhone } from "react-icons/bs";
 import { CiSquareInfo } from "react-icons/ci";
@@ -157,13 +158,15 @@ const BookAMeeting = () => {
           />
         </div>
         <div className="mt-5">
-          <DefaultButton className="rounded-full">
-            Send A Consulting Request
-            <PaperAirplaneIcon
-              className="w-4 h-4 inline ml-3"
-              strokeWidth={2.5}
-            />
-          </DefaultButton>
+          <Link className="block" href="/inbound-marketing-consultation">
+            <DefaultButton className="rounded-full">
+              Send A Consulting Request
+              <PaperAirplaneIcon
+                className="w-4 h-4 inline ml-3"
+                strokeWidth={2.5}
+              />
+            </DefaultButton>
+          </Link>
         </div>
       </div>
     </>

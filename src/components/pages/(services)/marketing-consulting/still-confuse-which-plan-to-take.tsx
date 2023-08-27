@@ -2,6 +2,7 @@
 import { TextColor } from "@/lib/customColorFunc";
 import { Button } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import { PiScalesLight } from "react-icons/pi";
 
 const StillConfuseWhichPlanToTake = () => {
@@ -22,17 +23,19 @@ const StillConfuseWhichPlanToTake = () => {
           Let me help you guide through all the packages and benefits so that
           you can decide.
         </p>
-        <Button
-          color="blue"
-          className="rounded-full md:py-4 py-2 px-10"
-          variant="outlined"
-        >
-          Compare Prices{" "}
-          <PiScalesLight
-            className="w-6 h-6 text-blue-500 inline-flex ml-3"
-            strokeWidth={3.5}
-          />
-        </Button>
+        <Link className="block" href="/price">
+          <Button
+            color="blue"
+            className="rounded-full md:py-4 py-2 px-10"
+            variant="outlined"
+          >
+            Compare Prices{" "}
+            <PiScalesLight
+              className="w-6 h-6 text-blue-500 inline-flex ml-3"
+              strokeWidth={3.5}
+            />
+          </Button>
+        </Link>
       </div>
     </div>
   );

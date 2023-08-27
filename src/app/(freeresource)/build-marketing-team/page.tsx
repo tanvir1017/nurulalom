@@ -3,6 +3,11 @@ import TwoDimensionalSection from "@/components/pages/(free-resources)/build-mar
 import WhyListenToMe from "@/components/pages/(free-resources)/cmo-interview-questions/why-listen-to-me";
 
 import TrustedByForCMO from "@/components/pages/(services)/cmo/trustedbyforcmo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Build digital marketing team (Free guide)",
+};
 
 const BuildMarketingTeam = () => {
   return (

@@ -59,13 +59,16 @@ const NavList = () => {
             onMouseEnter={() => setIsServiceOpen(true)}
             onMouseLeave={() => setIsServiceOpen(!true)}
           >
-            <span className="flex items-center justify-between">
+            <Link
+              href="/marketing-consulting"
+              className="flex items-center justify-between"
+            >
               <span className="flex items-center">
                 <BoltIcon className={cn("w-4 h-4 mr-2 text-blue-500")} />{" "}
                 Services
               </span>{" "}
               <ChevronRightIcon className={cn("w-4 h-4 ml-2")} />
-            </span>
+            </Link>
             <ul
               className={cn(
                 "absolute -top-2 left-48 right-0 bg-white shadow-xl h-auto w-[17.375rem] rounded-xl p-2",
@@ -84,38 +87,47 @@ const NavList = () => {
               ))}
             </ul>
           </li>
-          <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
-            <span className="flex items-center">
-              <RocketLaunchIcon
-                className={cn("w-4 h-4 mr-2 text-purple-500")}
-              />{" "}
-              Price
-            </span>
-          </li>
-          <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
-            <span className="flex items-center">
-              <FaceSmileIcon className={cn("w-4 h-4 mr-2 text-orange-500")} />
-              Client Success
-            </span>
-          </li>
-          <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
-            <span className="flex items-center">
-              <FlagIcon className={cn("w-4 h-4 mr-2 text-[#e11d48]")} />
-              About
-            </span>
-          </li>
+          <Link href="/price">
+            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+              <span className="flex items-center">
+                <RocketLaunchIcon
+                  className={cn("w-4 h-4 mr-2 text-purple-500")}
+                />{" "}
+                Price
+              </span>
+            </li>
+          </Link>
+          <Link href="/marketing-case-studies">
+            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+              <span className="flex items-center">
+                <FaceSmileIcon className={cn("w-4 h-4 mr-2 text-orange-500")} />
+                Client Success
+              </span>
+            </li>
+          </Link>
+          <Link href="/about">
+            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+              <span className="flex items-center">
+                <FlagIcon className={cn("w-4 h-4 mr-2 text-[#e11d48]")} />
+                About
+              </span>
+            </li>
+          </Link>
           <li
             className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
             onMouseEnter={() => setIsOpenResources(true)}
             onMouseLeave={() => setIsOpenResources(!true)}
           >
-            <span className="flex items-center justify-between">
+            <Link
+              href="/resources"
+              className="flex items-center justify-between"
+            >
               <span className="flex items-center">
                 <GiftIcon className={cn("w-4 h-4 mr-2 text-[#059669]")} />
                 Free resources
               </span>
               <ChevronRightIcon className={cn("w-4 h-4 ml-2")} />
-            </span>
+            </Link>
             <ul
               className={cn(
                 "absolute -top-2 left-48 right-0 bg-white shadow-xl h-auto w-[19.375rem] rounded-xl p-2",

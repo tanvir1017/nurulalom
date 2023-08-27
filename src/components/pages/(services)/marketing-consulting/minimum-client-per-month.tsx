@@ -2,6 +2,7 @@ import { TextColor } from "@/lib/customColorFunc";
 import DefaultButton from "@/shared/button/default-button";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 const MinimumClientPerMonth = () => {
   return (
@@ -38,10 +39,12 @@ const MinimumClientPerMonth = () => {
             />
           </div>
           <div className="py-4">
-            <DefaultButton className="md:py-4 py-3">
-              Book consulting slot{" "}
-              <ArrowRightIcon className={` h-5 w-5 ml-3 inline`} />
-            </DefaultButton>
+            <Link href="/inbound-marketing-consultation" className="block">
+              <DefaultButton className="md:py-4 py-3">
+                Book consulting slot{" "}
+                <ArrowRightIcon className={` h-5 w-5 ml-3 inline`} />
+              </DefaultButton>
+            </Link>
           </div>
         </div>
       </div>
