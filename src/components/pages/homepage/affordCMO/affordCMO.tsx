@@ -13,7 +13,7 @@ const AffordCMO = () => {
   return (
     <section className="container my-7 md:my-14">
       <div className="text-center">
-        <div className="pb-6">
+        <div className="pb-6" id="go">
           <Typography variant="h2" className="hidden md:block">
             <TextColor>
               Can&#39;t Afford A Top-Of-The Line CMO? <br /> Now You Can.
@@ -50,6 +50,7 @@ const AffordCMO = () => {
         </div>
         <div className="flex items-center justify-center md:pt-6 md:space-x-4 space-x-2 ">
           <Button
+            color="blue"
             variant={filterByCG === "small" ? "filled" : "outlined"}
             className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
             onClick={() => setFilterByCG("small")}
@@ -57,6 +58,7 @@ const AffordCMO = () => {
             Small Company
           </Button>
           <Button
+            color="blue"
             variant={filterByCG === "mid" ? "filled" : "outlined"}
             className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
             onClick={() => setFilterByCG("mid")}

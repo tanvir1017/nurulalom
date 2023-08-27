@@ -1,17 +1,27 @@
 import { SiteMapType as ServicesAndSiteMapType } from "@/types/globaltypes";
 
 export const marketingResourceData: ServicesAndSiteMapType[] = [
-  { title: "CMO Interview Question & JD Template", href: "/" },
-  { title: "Build a Marketing Team (Free Guide)", href: "/" },
-  { title: "Marketing Budget Template", href: "/" },
-  { title: "Build a Marketing Strategy (Free Course)", href: "/" },
   {
-    title: "Digital Marketing Fundamentals For Beginners (Free Course)",
-    href: "/",
+    title: "CMO Interview Question & JD Template",
+    href: "/cmo-interview-questions",
   },
-  { title: "Marketing Blogs", href: "/" },
+  {
+    title: "Build a marketing team (Free Guide)",
+    href: "/build-marketing-team",
+  },
+  {
+    title: "Marketing Budget Template",
+    href: "/marketing-budget-template",
+  },
+  {
+    title: "Buyer Persona Template",
+    href: "/buyer-persona-template-for-download",
+  },
+  // {
+  //   title: "Marketing Blogs",
+  //   href: "/blog",
+  // },
 ];
-
 export const siteMapData: ServicesAndSiteMapType[] = [
   {
     title: "Home",
@@ -19,31 +29,28 @@ export const siteMapData: ServicesAndSiteMapType[] = [
   },
   {
     title: "Service",
-    href: "/",
+    href: "/marketing-consulting",
   },
   {
     title: "Client Proofs",
-    href: "/",
+    href: "/marketing-case-studies",
   },
   {
     title: "Price",
-    href: "/",
+    href: "/price",
   },
   {
     title: "About",
-    href: "/",
+    href: "/about",
   },
-  {
-    title: "Jobs",
-    href: "/",
-  },
+
   {
     title: "Resources",
-    href: "/",
+    href: "/resources",
   },
   {
     title: "Contact",
-    href: "/",
+    href: "/inbound-marketing-consultation",
   },
 ];
 

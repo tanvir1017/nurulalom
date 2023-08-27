@@ -37,20 +37,20 @@ const DigitalMarketingConsultingPlans = () => {
 
         <div className="flex items-center justify-center pt-6 md:space-x-4 space-x-2 ">
           <Button
-            variant={filterByCG === "small" ? "filled" : "outlined"}
-            className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
-            onClick={() => setFilterByCG("small")}
-            color="blue"
-          >
-            Small Company
-          </Button>
-          <Button
             variant={filterByCG === "mid" ? "filled" : "outlined"}
             className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
             onClick={() => setFilterByCG("mid")}
             color="blue"
           >
             Mid-Size Company
+          </Button>
+          <Button
+            variant={filterByCG === "small" ? "filled" : "outlined"}
+            className="md:text-sm text-xs  md:py-4 rounded-full  font-light normal-case"
+            onClick={() => setFilterByCG("small")}
+            color="blue"
+          >
+            Small Company
           </Button>
         </div>
         <div

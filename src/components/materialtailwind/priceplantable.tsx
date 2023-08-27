@@ -1,6 +1,7 @@
 import { TABLE_HEAD_MERGED, TABLE_ROWS } from "@/data/tabledata";
 import { TableData as TableDataType } from "@/types/globaltypes";
 import { Button, Card, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 import DeliverablesRow from "../pages/price/deliverablesrow";
 import ExecutionRow from "../pages/price/executionrow";
 
@@ -115,16 +116,34 @@ export function PricePlanTable({ companySize }: { companySize: string }) {
               Check Details
             </td>
             <td className="text-center">
-              <Button className="rounded-full">Explore</Button>
+              <Link href="/mid-size-company-strategy">
+                <Link href="/mid-size-company-strategy">
+                  <Button color="blue" className="rounded-full">
+                    Explore
+                  </Button>
+                </Link>
+              </Link>
             </td>
             <td className="text-center">
-              <Button className="rounded-full">Explore</Button>
+              <Link href="/marketing-advisor-plan">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
             <td className="text-center">
-              <Button className="rounded-full">Explore</Button>
+              <Link href="/build-a-marketing-team">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
             <td className="text-center">
-              <Button className="rounded-full">Explore</Button>
+              <Link href="/cmo">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
           </tr>
 
@@ -132,18 +151,34 @@ export function PricePlanTable({ companySize }: { companySize: string }) {
 
           <ExecutionRow companySize={companySize} />
           <tr>
-            <td className="p-4 border-b border-blue-gray-50 text-xl"></td>
-            <td className="text-center">
-              <Button className="rounded-full">Explore</Button>
+            <td className=""></td>
+            <td className="text-center p-4">
+              <Link href="/mid-size-company-strategy">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>
-            <td className="p-4 text-center">
-              <Button className="rounded-full">Explore</Button>
+            <td className="text-center p-4">
+              <Link href="/marketing-advisor-plan">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
-            <td className="p-4 text-center">
-              <Button className="rounded-full">Explore</Button>
+            <td className="text-center p-4">
+              <Link href="/build-a-marketing-team">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
-            <td className="p-4 text-center">
-              <Button className="rounded-full">Explore</Button>
+            <td className="text-center p-4">
+              <Link href="/cmo">
+                <Button color="blue" className="rounded-full">
+                  Explore
+                </Button>
+              </Link>
             </td>{" "}
           </tr>
         </tbody>

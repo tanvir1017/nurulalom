@@ -14,6 +14,7 @@ const StageWeWillGoThrough = () => {
         <div className="md:container px-4">
           <div className="text-center mx-auto md:max-w-2xl space-y-6">
             <Typography
+              id="how"
               variant="h2"
               className="md:text-4xl text-2xl font-extrabold"
             >
@@ -37,7 +38,7 @@ const StageWeWillGoThrough = () => {
               alt="process of fractional cmo picture"
               width={1100}
               height={794}
-              sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
+              // sizes="(min-width: 740px) 42.125rem, calc(95.48vw - 18px)"
             />
           </div>
         </div>

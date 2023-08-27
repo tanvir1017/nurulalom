@@ -4,6 +4,7 @@ import { TextColor } from "@/lib/customColorFunc";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const MeetYourFractionalCMO = () => {
   return (
@@ -82,17 +83,19 @@ const MeetYourFractionalCMO = () => {
                   & DigitalMarketer
                 </li>
               </ul>
-
-              <Button
-                className="py-3 rounded-full bg-blue-500 text-xs hover:shadow-none shadow-none flex items-center mt-12 "
-                size="lg"
-              >
-                Book a Meting{" "}
-                <ArrowRightIcon
-                  strokeWidth={2.5}
-                  className={` h-3 w-3 transition-transform ml-3`}
-                />
-              </Button>
+              <Link className="block" href="/inbound-marketing-consultation">
+                <Button
+                  className="py-3 rounded-full bg-blue-500 text-xs hover:shadow-none shadow-none flex items-center mt-12 "
+                  size="lg"
+                  color="blue"
+                >
+                  Book a Meting{" "}
+                  <ArrowRightIcon
+                    strokeWidth={2.5}
+                    className={` h-3 w-3 transition-transform ml-3`}
+                  />
+                </Button>
+              </Link>
             </div>
           </div>
 

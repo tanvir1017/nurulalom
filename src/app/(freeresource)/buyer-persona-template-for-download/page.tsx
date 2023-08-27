@@ -4,6 +4,11 @@ import TopicsCover from "@/components/pages/(free-resources)/buyer-persona-templ
 import WithThisTemplateYouCan from "@/components/pages/(free-resources)/buyer-persona-template/with-this-template-you-can";
 import { TextColor } from "@/lib/customColorFunc";
 import DefaultButton from "@/shared/button/default-button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Buyer persona template for download",
+};
 
 const BuyerPersonaTemplatePage = () => {
   return (

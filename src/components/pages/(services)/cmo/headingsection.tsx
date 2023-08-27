@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeadingSection = () => {
   return (
@@ -42,9 +43,14 @@ const HeadingSection = () => {
                 reach your customer acquisition goals.
               </Typography>
             </div>
-            <Button className="rounded-full normal-case tracking-wider flex items-center hover:bg-[#0C304A]  duration-300 mt-10">
-              Explore Now <ArrowRightIcon className="h-5 w-5 ml-3" />
-            </Button>
+            <Link href="#how">
+              <Button
+                color="blue"
+                className="rounded-full normal-case tracking-wider flex items-center hover:bg-[#0C304A]  duration-300 mt-10"
+              >
+                Explore Now <ArrowRightIcon className="h-5 w-5 ml-3" />
+              </Button>
+            </Link>
           </div>{" "}
         </div>
         <div>

@@ -4,6 +4,7 @@ import { TextColor } from "@/lib/customColorFunc";
 import FiveStarRating from "@/shared/five-star-rating";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Introduce = () => {
   return (
@@ -42,11 +43,12 @@ const Introduce = () => {
               height={80}
               width={80}
             />
+
             <Button
               className="mx-auto md:mx-0 py-4 rounded-full bg-[#0C304A] text-xs  md:ml-5 md:mt-5 shadow-lg hover:scale-110 duration-300"
               size="lg"
             >
-              Explore Growth Plans!
+              <Link href="#go">Explore Growth Plans!</Link>
             </Button>
           </div>
           <div className="flex items-center justify-start">

@@ -3,6 +3,7 @@
 import { TextColor } from "@/lib/customColorFunc";
 import { Button } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const IDontBite = () => {
@@ -27,7 +28,7 @@ const IDontBite = () => {
               </p>
               <p>
                 I promise you, our 1st conversation will REALLY help you even if
-                we don’t work together. So please..
+                we don't work together. So please..
               </p>
             </div>
             <div>
@@ -37,13 +38,15 @@ const IDontBite = () => {
                 <FaLinkedin className="bg-blue-500 w-8 h-8 rounded-full p-1 text-white cursor-pointer" />
               </div>
 
-              <Button
-                className="py-3 px-6 rounded-full hover:bg-[#0C304A] shadow-lg capitalize"
-                size="md"
-                color="blue"
-              >
-                Say Hi!
-              </Button>
+              <Link href="/inbound-marketing-consultation" className="block">
+                <Button
+                  className="py-3 px-6 rounded-full hover:bg-[#0C304A] shadow-lg capitalize"
+                  size="md"
+                  color="blue"
+                >
+                  Say Hi!
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

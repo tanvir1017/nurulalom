@@ -5,6 +5,7 @@ import { TextColor } from "@/lib/customColorFunc";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const MarketingSuccess = () => {
   return (
@@ -51,17 +52,19 @@ const MarketingSuccess = () => {
                 Inbound Marketing for small & medium businesses.
               </Typography>
             </div>
-            <Button
-              className="py-3 rounded-full hover:bg-[#0C304A] shadow-lg flex items-center capitalize tracking-wider"
-              size="md"
-              color="blue"
-            >
-              Book Consultation
-              <ArrowRightIcon
-                strokeWidth={2.5}
-                className={`h-5 w-5 transition-transform ml-3`}
-              />
-            </Button>
+            <Link href="/inbound-marketing-consultation" className="block">
+              <Button
+                className="py-3 rounded-full hover:bg-[#0C304A] shadow-lg flex items-center capitalize tracking-wider"
+                size="md"
+                color="blue"
+              >
+                Book Consultation
+                <ArrowRightIcon
+                  strokeWidth={2.5}
+                  className={`h-5 w-5 transition-transform ml-3`}
+                />
+              </Button>
+            </Link>
           </div>
           <div className="md:mb-0 mb-10">
             <Image

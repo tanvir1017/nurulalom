@@ -7,6 +7,7 @@ import FiveStarRating from "@/shared/five-star-rating";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const TestimonialCard = () => {
   return (
@@ -44,13 +45,15 @@ const TestimonialCard = () => {
           height={80}
           width={80}
         />
-        <DefaultButton className="md:ml-10 hover:scale-110 flex">
-          50+ Reviews & Case Studies{" "}
-          <ArrowRightIcon
-            strokeWidth={2.5}
-            className={`h-5 w-5 transition-transform ml-3 inline`}
-          />
-        </DefaultButton>
+        <Link href="/marketing-case-studies">
+          <DefaultButton className="md:ml-10 hover:scale-110 flex">
+            50+ Reviews & Case Studies{" "}
+            <ArrowRightIcon
+              strokeWidth={2.5}
+              className={`h-5 w-5 transition-transform ml-3 inline`}
+            />
+          </DefaultButton>
+        </Link>
       </div>
     </div>
   );

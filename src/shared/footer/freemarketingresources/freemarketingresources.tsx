@@ -14,15 +14,15 @@ const FreeMarketingResources = () => {
         </Typography>
       </div>
       <TextColor>
-        <ul className="space-y-3">
+        <ul>
           {marketingResourceData.map((item: SiteMapType, i: number) => (
-            <li key={i} className="flex items-center">
+            <li key={i} className="mb-3">
               {" "}
-              <ArrowRightIcon
-                strokeWidth={3.5}
-                className="h-3 w-3 text-gray-700 mr-3"
-              />{" "}
-              <Link href={item.href}>
+              <Link href={item.href} className="flex items-center">
+                <ArrowRightIcon
+                  strokeWidth={3.5}
+                  className="h-3 w-3 text-gray-700 mr-3"
+                />{" "}
                 <span>{item.title}</span>
               </Link>
             </li>
