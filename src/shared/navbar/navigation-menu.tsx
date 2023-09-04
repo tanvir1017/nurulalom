@@ -328,7 +328,7 @@ const MobileNavList = () => {
           </li>
           <div
             className={cn("p-2 w-full ml-2", {
-              ["duration-300 transition-all h-56 delay-200 opacity-100"]:
+              ["duration-300 transition-all h-48 delay-200 opacity-100"]:
                 isServiceOpen,
               ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
                 !isServiceOpen,
@@ -417,6 +417,7 @@ const MobileNavList = () => {
               " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
               {
                 ["bg-blue-500 text-white"]: pathname === "/resources",
+                [" text-black"]: pathname !== "/resources",
               }
             )}
           >
@@ -446,7 +447,7 @@ const MobileNavList = () => {
           </li>
           <div
             className={cn("ml-2 p-2 w-full", {
-              ["duration-300 transition-all h-48 delay-300 opacity-100"]:
+              ["duration-300 transition-all h-44 delay-300 opacity-100"]:
                 isOpenResources,
               ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
                 !isOpenResources,
