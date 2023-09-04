@@ -26,10 +26,10 @@ import { useState } from "react";
 const NavList = () => {
   const pathname = usePathname();
 
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isNavOpenForMobile, setIsNavOpenForMobile] = useState<boolean>(false);
-  const [isServiceOpen, setIsServiceOpen] = useState<boolean>(true);
-  const [isOpenResources, setIsOpenResources] = useState<boolean>(true);
+  const [isServiceOpen, setIsServiceOpen] = useState<boolean>(false);
+  const [isOpenResources, setIsOpenResources] = useState<boolean>(false);
 
   return (
     <>
