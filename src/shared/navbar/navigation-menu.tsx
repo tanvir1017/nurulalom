@@ -237,6 +237,7 @@ const NavList = () => {
   );
 };
 const MobileNavList = () => {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isNavOpenForMobile, setIsNavOpenForMobile] = useState<boolean>(false);
   const [isServiceOpen, setIsServiceOpen] = useState<boolean>(false);
@@ -293,9 +294,13 @@ const MobileNavList = () => {
           )}
         >
           <li
-            className={
-              "px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none"
-            }
+            className={cn(
+              "px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none",
+              {
+                ["bg-blue-500 text-white"]:
+                  pathname === "/marketing-consulting",
+              }
+            )}
           >
             <Link
               href="/marketing-consulting"
@@ -303,7 +308,12 @@ const MobileNavList = () => {
               onClick={handleServiceOpen}
             >
               <span className="flex items-center">
-                <BoltIcon className={cn("w-4 h-4 mr-2 text-blue-500")} />{" "}
+                <BoltIcon
+                  className={cn("w-4 h-4 mr-2", {
+                    [" text-white"]: pathname === "/marketing-consulting",
+                    ["text-blue-500"]: pathname !== "/marketing-consulting",
+                  })}
+                />{" "}
                 Services
               </span>{" "}
               <ChevronRightIcon
@@ -317,7 +327,7 @@ const MobileNavList = () => {
             </Link>
           </li>
           <div
-            className={cn("p-2 ml-5 w-3/4", {
+            className={cn("p-2 w-full ml-2", {
               ["duration-300 transition-all h-56 delay-200 opacity-100"]:
                 isServiceOpen,
               ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
@@ -329,7 +339,10 @@ const MobileNavList = () => {
                 <Link href={item.href} key={item.href}>
                   <li
                     className={cn(
-                      "p-3 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px]"
+                      "p-2 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px] rounded-lg",
+                      {
+                        ["bg-blue-500 text-white"]: pathname === item.href,
+                      }
                     )}
                   >
                     {item.title}
@@ -339,35 +352,73 @@ const MobileNavList = () => {
             </ul>
           </div>
           <Link href="/price">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer",
+                {
+                  ["bg-blue-500 text-white"]: pathname === "/price",
+                }
+              )}
+            >
               <span className="flex items-center">
                 <RocketLaunchIcon
-                  className={cn("w-4 h-4 mr-2 text-purple-500")}
+                  className={cn("w-4 h-4 mr-2 ", {
+                    ["text-purple-500"]: pathname !== "/price",
+                    ["text-white"]: pathname === "/price",
+                  })}
                 />{" "}
                 Price
               </span>
             </li>
           </Link>
           <Link href="/marketing-case-studies">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer",
+                {
+                  ["bg-blue-500 text-white"]:
+                    pathname === "/marketing-case-studies",
+                }
+              )}
+            >
               <span className="flex items-center">
-                <FaceSmileIcon className={cn("w-4 h-4 mr-2 text-orange-500")} />
+                <FaceSmileIcon
+                  className={cn("w-4 h-4 mr-2 ", {
+                    ["text-orange-500"]: pathname !== "/marketing-case-studies",
+                    ["text-white"]: pathname === "/marketing-case-studies",
+                  })}
+                />
                 Client Success
               </span>
             </li>
           </Link>
           <Link href="/about">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer",
+                {
+                  ["bg-blue-500 text-white"]: pathname === "/about",
+                }
+              )}
+            >
               <span className="flex items-center">
-                <FlagIcon className={cn("w-4 h-4 mr-2 text-[#e11d48]")} />
+                <FlagIcon
+                  className={cn("w-4 h-4 mr-2 ", {
+                    ["text-[#e11d48]"]: pathname !== "/about",
+                    ["text-white"]: pathname === "/about",
+                  })}
+                />
                 About
               </span>
             </li>
           </Link>
           <li
-            className={
-              " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
-            }
+            className={cn(
+              " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+              {
+                ["bg-blue-500 text-white"]: pathname === "/resources",
+              }
+            )}
           >
             <Link
               onClick={handleFreeResourceOpen}
@@ -375,7 +426,12 @@ const MobileNavList = () => {
               className="flex items-center justify-between"
             >
               <span className="flex items-center">
-                <GiftIcon className={cn("w-4 h-4 mr-2 text-[#059669]")} />
+                <GiftIcon
+                  className={cn("w-4 h-4 mr-2 ", {
+                    [" text-white"]: pathname === "/resources",
+                    [" text-[#059669]"]: pathname !== "/resources",
+                  })}
+                />
                 Free resources
               </span>
               <ChevronRightIcon
@@ -389,7 +445,7 @@ const MobileNavList = () => {
             </Link>
           </li>
           <div
-            className={cn("p-2 ml-5 w-3/4", {
+            className={cn("ml-2 p-2 w-full", {
               ["duration-300 transition-all h-48 delay-300 opacity-100"]:
                 isOpenResources,
               ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
@@ -400,7 +456,10 @@ const MobileNavList = () => {
               <Link href={item.href} key={item.href} className="py-3">
                 <li
                   className={cn(
-                    "p-3 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px]"
+                    "p-2 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px] rounded-md",
+                    {
+                      ["bg-blue-500 text-white"]: pathname === item.href,
+                    }
                   )}
                 >
                   {item.title}
@@ -409,10 +468,23 @@ const MobileNavList = () => {
             ))}
           </div>
           <Link href="/inbound-marketing-consultation">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer",
+                {
+                  ["bg-blue-500 text-white"]:
+                    pathname === "/inbound-marketing-consultation",
+                }
+              )}
+            >
               <span className="flex items-center">
                 <CalendarDaysIcon
-                  className={cn("w-4 h-4 mr-2 text-blue-gray-500")}
+                  className={cn("w-4 h-4 mr-2 ", {
+                    ["text-blue-gray-500"]:
+                      pathname !== "/inbound-marketing-consultation",
+                    ["text-white"]:
+                      pathname === "/inbound-marketing-consultation",
+                  })}
                 />
                 Book a consultation
               </span>
