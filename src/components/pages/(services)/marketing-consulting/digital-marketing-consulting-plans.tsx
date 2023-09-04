@@ -24,9 +24,9 @@ const DigitalMarketingConsultingPlans = () => {
             <b>10 hours</b> every week.
           </p>
           <h5 className="my-5">SELECT YOUR COMPANY SIZE</h5>
-          <div className="pt-5">
+          <div className="pt-5 ">
             <Image
-              className=" mx-auto rotate-45"
+              className="relative z-20 mx-auto rotate-45"
               src="/assets/images/arrow.svg"
               alt="arrow indicate two options small company or mid size company"
               height={80}

@@ -2,6 +2,7 @@
 import { Services, freeResource } from "@/data/navmenu";
 import { cn } from "@/lib/utils";
 import { NestedNavType } from "@/types/globaltypes";
+
 import {
   ArrowRightIcon,
   Bars3Icon,
@@ -19,13 +20,16 @@ import {
 import { Button, IconButton } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NavList = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(true);
   const [isNavOpenForMobile, setIsNavOpenForMobile] = useState<boolean>(false);
-  const [isServiceOpen, setIsServiceOpen] = useState<boolean>(false);
-  const [isOpenResources, setIsOpenResources] = useState<boolean>(false);
+  const [isServiceOpen, setIsServiceOpen] = useState<boolean>(true);
+  const [isOpenResources, setIsOpenResources] = useState<boolean>(true);
 
   return (
     <>
@@ -34,16 +38,18 @@ const NavList = () => {
         onMouseEnter={() => setIsMenuOpen(true)}
         onMouseLeave={() => setIsMenuOpen(!true)}
       >
-        <button className="flex items-center  p-5">
-          <Square3Stack3DIcon className="w-5 h-5 mr-3" />
-          Menu
-          <ChevronDownIcon
-            className={cn("w-4 h-4 ml-2", {
-              ["transform rotate-0 transition-all duration-200"]: isMenuOpen,
-              ["transform rotate-180 transition-all duration-200"]: !isMenuOpen,
-            })}
-          />
-        </button>
+        <div className="relative">
+          <button className="flex items-center  p-5 group/buttonHover">
+            <Square3Stack3DIcon className="w-5 h-5 mr-3" />
+            Menu
+            <ChevronDownIcon className={cn("w-4 h-4 ml-2")} />
+            <div
+              className={cn(
+                "absolute bg-blue-500 duration-300 transition-all h-1 w-0 bottom-0 group-hover/buttonHover:visible collapse group-hover/buttonHover:w-3/4"
+              )}
+            ></div>
+          </button>
+        </div>
 
         <ul
           className={cn(
@@ -55,23 +61,36 @@ const NavList = () => {
           )}
         >
           <li
-            className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
+            className={cn(
+              "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+              {
+                ["bg-blue-500"]: pathname === "/marketing-consulting",
+                ["hover:bg-gray-100 "]: pathname !== "/marketing-consulting",
+              }
+            )}
             onMouseEnter={() => setIsServiceOpen(true)}
             onMouseLeave={() => setIsServiceOpen(!true)}
           >
             <Link
               href="/marketing-consulting"
-              className="flex items-center justify-between"
+              className={cn("flex items-center justify-between", {
+                ["text-white"]: pathname === "/marketing-consulting",
+              })}
             >
               <span className="flex items-center">
-                <BoltIcon className={cn("w-4 h-4 mr-2 text-blue-500")} />{" "}
+                <BoltIcon
+                  className={cn("w-4 h-4 mr-2", {
+                    ["text-white"]: pathname === "/marketing-consulting",
+                    ["text-blue-500"]: pathname !== "/marketing-consulting",
+                  })}
+                />{" "}
                 Services
               </span>{" "}
               <ChevronRightIcon className={cn("w-4 h-4 ml-2")} />
             </Link>
             <ul
               className={cn(
-                "absolute -top-2 left-48 right-0 bg-white shadow-xl h-auto w-[17.375rem] rounded-xl p-2",
+                "absolute -top-2 md:-left-[17.5rem] lg:left-48 lg:right-0 left-0 right-0 bg-white  border h-auto w-[17.375rem] rounded-xl p-2 z-50",
                 {
                   ["block"]: isServiceOpen,
                   ["hidden"]: !isServiceOpen,
@@ -80,7 +99,15 @@ const NavList = () => {
             >
               {Services.map((item: NestedNavType) => (
                 <Link href={item.href} key={item.href}>
-                  <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative">
+                  <li
+                    className={cn(
+                      " duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                      {
+                        ["bg-blue-500 text-white"]: pathname === item.href,
+                        ["hover:bg-gray-100 "]: pathname !== item.href,
+                      }
+                    )}
+                  >
                     {item.title}
                   </li>
                 </Link>
@@ -88,33 +115,78 @@ const NavList = () => {
             </ul>
           </li>
           <Link href="/price">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                {
+                  ["bg-blue-500 text-white"]: pathname === "/price",
+                  ["hover:bg-gray-100 "]: pathname !== "/price",
+                }
+              )}
+            >
               <span className="flex items-center">
                 <RocketLaunchIcon
-                  className={cn("w-4 h-4 mr-2 text-purple-500")}
+                  className={cn("w-4 h-4 mr-2", {
+                    ["text-white"]: pathname === "/price",
+                    ["text-purple-500"]: pathname !== "/price",
+                  })}
                 />{" "}
                 Price
               </span>
             </li>
           </Link>
           <Link href="/marketing-case-studies">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                {
+                  ["bg-blue-500 text-white"]:
+                    pathname === "/marketing-case-studies",
+                  ["hover:bg-gray-100 "]:
+                    pathname !== "/marketing-case-studies",
+                }
+              )}
+            >
               <span className="flex items-center">
-                <FaceSmileIcon className={cn("w-4 h-4 mr-2 text-orange-500")} />
+                <FaceSmileIcon
+                  className={cn("w-4 h-4 mr-2", {
+                    ["text-white"]: pathname === "/marketing-case-studies",
+                    ["text-orange-500"]: pathname !== "/marketing-case-studies",
+                  })}
+                />
                 Client Success
               </span>
             </li>
           </Link>
           <Link href="/about">
-            <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
+            <li
+              className={cn(
+                "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                {
+                  ["bg-blue-500 text-white"]: pathname === "/about",
+                  ["hover:bg-gray-100 "]: pathname !== "/about",
+                }
+              )}
+            >
               <span className="flex items-center">
-                <FlagIcon className={cn("w-4 h-4 mr-2 text-[#e11d48]")} />
+                <FlagIcon
+                  className={cn("w-4 h-4 mr-2", {
+                    ["text-white"]: pathname === "/about",
+                    ["text-[#e11d48]"]: pathname !== "/about",
+                  })}
+                />
                 About
               </span>
             </li>
           </Link>
           <li
-            className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative"
+            className={cn(
+              "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+              {
+                ["bg-blue-500 text-white"]: pathname === "/resources",
+                ["hover:bg-gray-100 "]: pathname !== "/resources",
+              }
+            )}
             onMouseEnter={() => setIsOpenResources(true)}
             onMouseLeave={() => setIsOpenResources(!true)}
           >
@@ -123,14 +195,19 @@ const NavList = () => {
               className="flex items-center justify-between"
             >
               <span className="flex items-center">
-                <GiftIcon className={cn("w-4 h-4 mr-2 text-[#059669]")} />
+                <GiftIcon
+                  className={cn("w-4 h-4 mr-2 ", {
+                    ["text-white"]: pathname === "/resources",
+                    ["text-[#059669]"]: pathname !== "/resources",
+                  })}
+                />
                 Free resources
               </span>
               <ChevronRightIcon className={cn("w-4 h-4 ml-2")} />
             </Link>
             <ul
               className={cn(
-                "absolute -top-2 left-48 right-0 bg-white shadow-xl h-auto w-[19.375rem] rounded-xl p-2",
+                "absolute top-0 md:-left-[19rem] lg:left-48 lg:right-0 left-0 right-0  bg-white border h-auto w-[19.375rem] rounded-xl p-2",
                 {
                   ["block"]: isOpenResources,
                   ["hidden"]: !isOpenResources,
@@ -139,7 +216,15 @@ const NavList = () => {
             >
               {freeResource.map((item: NestedNavType) => (
                 <Link href={item.href} key={item.href}>
-                  <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative">
+                  <li
+                    className={cn(
+                      "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                      {
+                        ["bg-blue-500 text-white"]: pathname === item.href,
+                        ["hover:bg-gray-100 "]: pathname !== item.href,
+                      }
+                    )}
+                  >
                     {item.title}
                   </li>
                 </Link>
@@ -185,7 +270,7 @@ const MobileNavList = () => {
   };
   return (
     <>
-      <div className="mr-8 z-50 ">
+      <div className="mr-8 z-50 overflow-hidden">
         <IconButton
           color="white"
           onClick={handleMobileNav}
@@ -200,7 +285,7 @@ const MobileNavList = () => {
 
         <ul
           className={cn(
-            "absolute top-14 left-0 bg-white shadow-xl w-full h-auto p-2",
+            "absolute top-14 left-0 bg-white shadow-xl w-full h-auto p-2 z-50",
             {
               ["block"]: isMenuOpen,
               ["hidden"]: !isMenuOpen,
@@ -209,7 +294,7 @@ const MobileNavList = () => {
         >
           <li
             className={
-              " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none"
+              "px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none"
             }
           >
             <Link
@@ -230,18 +315,21 @@ const MobileNavList = () => {
                 )}
               />
             </Link>
-
-            <ul
-              className={cn("h-auto w-full rounded-xl p-2", {
-                ["block"]: isServiceOpen,
-                ["hidden"]: !isServiceOpen,
-              })}
-            >
+          </li>
+          <div
+            className={cn("p-2 ml-5 w-3/4", {
+              ["duration-300 transition-all h-56 delay-200 opacity-100"]:
+                isServiceOpen,
+              ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
+                !isServiceOpen,
+            })}
+          >
+            <ul className={cn("p-2")}>
               {Services.map((item: NestedNavType, i: number) => (
                 <Link href={item.href} key={item.href}>
                   <li
                     className={cn(
-                      "p-3 font-normal text-sm cursor-pointer relative border-gray-100 border-b-[0.5px]"
+                      "p-3 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px]"
                     )}
                   >
                     {item.title}
@@ -249,7 +337,7 @@ const MobileNavList = () => {
                 </Link>
               ))}
             </ul>
-          </li>
+          </div>
           <Link href="/price">
             <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
               <span className="flex items-center">
@@ -292,32 +380,34 @@ const MobileNavList = () => {
               </span>
               <ChevronRightIcon
                 className={cn(
-                  "w-4 h-4 ml-2 rotate-0 duration-300 transition-transform",
+                  "w-4 h-4 ml-2 rotate-0 delay-200 transition-transform",
                   {
                     [" rotate-90 "]: isOpenResources,
                   }
                 )}
               />
             </Link>
-            <ul
-              className={cn("h-auto w-full rounded-xl p-2", {
-                ["block"]: isOpenResources,
-                ["hidden"]: !isOpenResources,
-              })}
-            >
-              {freeResource.map((item: NestedNavType, i: number) => (
-                <Link href={item.href} key={item.href} className="py-3">
-                  <li
-                    className={cn(
-                      "p-3 font-normal text-sm cursor-pointer relative border-gray-100 border-b-[0.5px]"
-                    )}
-                  >
-                    {item.title}
-                  </li>
-                </Link>
-              ))}
-            </ul>
           </li>
+          <div
+            className={cn("p-2 ml-5 w-3/4", {
+              ["duration-300 transition-all h-48 delay-300 opacity-100"]:
+                isOpenResources,
+              ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
+                !isOpenResources,
+            })}
+          >
+            {freeResource.map((item: NestedNavType, i: number) => (
+              <Link href={item.href} key={item.href} className="py-3">
+                <li
+                  className={cn(
+                    "p-3 font-normal text-xs cursor-pointer relative border-gray-100 border-b-[0.5px]"
+                  )}
+                >
+                  {item.title}
+                </li>
+              </Link>
+            ))}
+          </div>
           <Link href="/inbound-marketing-consultation">
             <li className="hover:bg-gray-100 duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer">
               <span className="flex items-center">
@@ -364,10 +454,10 @@ const NavigationMenu = () => {
                   className="md:block hidden"
                 >
                   <Button
-                    className="py-3 rounded-full bg-[#0C304A] text-xs hover:shadow-none shadow-none flex items-center"
+                    className="py-3 rounded-full bg-[#0C304A] hover:bg-blue-500 text-xs hover:shadow-none shadow-none flex items-center"
                     size="lg"
                   >
-                    Book a Meting{" "}
+                    Book a Meting
                     <ArrowRightIcon
                       strokeWidth={2.5}
                       className={` h-3 w-3 transition-transform ml-3`}
