@@ -218,7 +218,7 @@ const NavList = () => {
                 <Link href={item.href} key={item.href}>
                   <li
                     className={cn(
-                      "duration-300 transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
+                      "duration-300 text-black transition-colors px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
                       {
                         ["bg-blue-500 text-white"]: pathname === item.href,
                         ["hover:bg-gray-100 "]: pathname !== item.href,
