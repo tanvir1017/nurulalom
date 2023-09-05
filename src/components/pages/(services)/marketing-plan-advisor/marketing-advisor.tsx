@@ -12,8 +12,8 @@ const MarketingAdvisor = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="md:text-4xl text-2xl md:leading-[3.2rem] pb-6">
               <TextColor>
-                <strong> Marketing Advisor:</strong> Drive Growth With Tailored
-                Guidance And Effective Team-Building
+                <b> Marketing Advisor:</b> Drive Growth With Tailored Guidance
+                And Effective Team-Building
               </TextColor>
             </h1>
           </div>
@@ -30,7 +30,7 @@ const MarketingAdvisor = () => {
           </Typography>
         </div>
       </section>
-      <div className="md:-mb-[22rem] -mb-[5.2rem]">
+      <div className="lg:-mb-[22rem] -mb-[5.2rem] md:-mb-[8.2rem]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#F0F7FB"

@@ -109,7 +109,10 @@ const BookAMeeting = () => {
                         }}
                       />
                     </ListItemPrefix>
-                    <Typography color="blue-gray" className="font-medium">
+                    <Typography
+                      color="blue-gray"
+                      className="md:font-medium font-normal md:text-lg text-xs"
+                    >
                       {labelText}
                     </Typography>
                   </label>
@@ -140,7 +143,10 @@ const BookAMeeting = () => {
                         }}
                       />
                     </ListItemPrefix>
-                    <Typography color="blue-gray" className="font-medium">
+                    <Typography
+                      color="blue-gray"
+                      className="md:font-medium font-normal md:text-lg text-xs"
+                    >
                       {labelText}
                     </Typography>
                   </label>

@@ -294,6 +294,7 @@ const MobileNavList = () => {
           )}
         >
           <li
+            onClick={handleServiceOpen}
             className={cn(
               "px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative focus:outline-none focus:border-none",
               {
@@ -305,7 +306,6 @@ const MobileNavList = () => {
             <Link
               href="/marketing-consulting"
               className="flex items-center justify-between"
-              onClick={handleServiceOpen}
             >
               <span className="flex items-center">
                 <BoltIcon
@@ -328,9 +328,9 @@ const MobileNavList = () => {
           </li>
           <div
             className={cn("p-2 w-full ml-2", {
-              ["duration-300 transition-all h-48 delay-200 opacity-100"]:
+              ["duration-300 transition-all h-48 delay-200 opacity-100 visible"]:
                 isServiceOpen,
-              ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
+              ["h-0 transition-all opacity-0 duration-300 invisible -mt-4"]:
                 !isServiceOpen,
             })}
           >
@@ -413,6 +413,7 @@ const MobileNavList = () => {
             </li>
           </Link>
           <li
+            onClick={handleFreeResourceOpen}
             className={cn(
               " px-3 py-2 font-normal text-sm rounded-lg  cursor-pointer relative",
               {
@@ -422,7 +423,6 @@ const MobileNavList = () => {
             )}
           >
             <Link
-              onClick={handleFreeResourceOpen}
               href="/resources"
               className="flex items-center justify-between"
             >
@@ -447,9 +447,9 @@ const MobileNavList = () => {
           </li>
           <div
             className={cn("ml-2 p-2 w-full", {
-              ["duration-300 transition-all h-44 delay-300 opacity-100"]:
+              ["duration-300 transition-all h-44 delay-300 opacity-100 visible"]:
                 isOpenResources,
-              ["h-0 transition-all opacity-0 duration-300 -mt-4"]:
+              ["h-0 transition-all opacity-0 duration-300 -mt-4 invisible"]:
                 !isOpenResources,
             })}
           >
@@ -499,7 +499,7 @@ const MobileNavList = () => {
 
 const NavigationMenu = () => {
   return (
-    <nav className="bg-[#f0f7fb] lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none py-2 shadow-lg">
+    <nav className="bg-[#f0f7fb] lg:max-w-none lg:rounded-none lg:border-none md:max-w-none md:rounded-none md:border-none py-2 shadow-lg sticky top-0 z-50">
       <div className="md:container">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between">

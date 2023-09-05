@@ -2,7 +2,7 @@ import InboundMarketingConsultation from "@/shared/inbound-marketing-consultatio
 
 const page = () => {
   return (
-    <section className="container">
+    <section className="md:container px-2 z-20 relative">
       <InboundMarketingConsultation />
     </section>
   );

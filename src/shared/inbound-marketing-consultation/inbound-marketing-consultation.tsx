@@ -6,7 +6,7 @@ import BookAMeeting from "../book-a-metting/book-a-meeting";
 
 const InboundMarketingConsultation = () => {
   return (
-    <div className="">
+    <div className="lg:mt-28 md:mt-20 mt-16">
       <div className="max-w-xl mx-auto text-center">
         <Typography variant="h2" className="md:pb-6 pb-2">
           <TextColor>Contact Me</TextColor>
@@ -17,11 +17,15 @@ const InboundMarketingConsultation = () => {
         <div className="flex flex-col md:flex-row items-center justify-center  md:justify-around md:mt-7 mt-4 md:space-y-0 space-y-2">
           <span className="flex items-center space-x-3 mr-5">
             <PhoneIcon className="w-5 h-5" />
-            <Typography variant="h5">+8801721853227 </Typography>
+            <Typography variant="h5" className="md:text-xl text-base">
+              +8801721853227{" "}
+            </Typography>
           </span>
           <span className="flex items-center space-x-3">
-            <EnvelopeIcon className="w-5 h-5" />
-            <Typography variant="h5">hello@najmc.com</Typography>
+            <EnvelopeIcon className="md:w-5 md:h-5 w-4 h-4" />
+            <Typography variant="h5" className="md:text-xl text-base">
+              hello@najmc.com
+            </Typography>
           </span>
         </div>
       </div>
